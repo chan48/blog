@@ -1,10 +1,11 @@
 {
-  "version": "1.1.0",
-  "name": "gatsby-starter-lumen",
-  "description": "Simple starter for Gatsby",
+  "version": "1.0.0",
+  "name": "blog",
+  "description": "rhostem's blog powered by Gatsby",
   "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
+    "serve:build": "gatsby serve-build",
     "build": "npm run clean & gatsby build & copy",
     "clean:public": "rm -rf public",
     "clean": "npm run clean:public",
@@ -15,11 +16,9 @@
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
   },
   "keywords": [
-    "gatsby",
-    "lumen",
-    "starter"
+    "gatsby"
   ],
-  "author": "Alexander Shelepenok <a.shelepenok@gmail.com>",
+  "author": "rhostem",
   "license": "MIT",
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
