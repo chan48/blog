@@ -3,6 +3,7 @@
   "globals": {
     "__PREFIX_LINKS__": true,
   },
+  "parser": "babel-eslint",
   "rules": {
     "no-console": [0],
     "func-names": [0],
@@ -10,6 +11,7 @@
     "space-infix-ops": [0],
     "react/prefer-es6-class": [0],
     "react/prefer-stateless-function": [0],
+    "react/jsx-filename-extension": [0],
     "import/no-unresolved": [0],
     "global-require": [0],
     "arrow-body-style": [0],
@@ -17,3 +19,4 @@
     "import/no-extraneous-dependencies": [0],
   }
 }
+`
