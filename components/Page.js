@@ -4,17 +4,17 @@ import { RouteHandler, Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import access from 'safe-access'
 import { config } from 'config'
-import SiteSidebar from '../SiteSidebar'
-import './style.css';
+import Sidebar from './Sidebar'
+import './Page.css';
 
-class SitePage extends React.Component {
+class Page extends React.Component {
     render() {
         const {route} = this.props
         const post = route.page.data
 
         return (
             <div>
-              <SiteSidebar {...this.props}/>
+              <Sidebar {...this.props}/>
               <div className='content'>
                 <div className='main'>
                   <div className='main-inner'>
@@ -32,9 +32,9 @@ class SitePage extends React.Component {
     }
 }
 
-SitePage.propTypes = {
+Page.propTypes = {
     post: React.PropTypes.object.isRequired,
     pages: React.PropTypes.array,
 }
 
-export default SitePage
+export default Page

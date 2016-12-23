@@ -6,58 +6,30 @@ import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 import access from 'safe-access';
-// import SitePost from '../components/SitePost';
-import SiteSidebar from '../components/SiteSidebar';
+// import Post from '../components/Post';
+import PostList from '../components/PostList';
+import Sidebar from '../components/Sidebar';
 
 class SiteIndex extends React.Component {
   render() {
-    const pageLinks = [];
-
-    // Sort pages.
-    const sortedPages = sortBy(this.props.route.pages, (page) => access(page, 'data.date')
-    ).reverse();
-
-    sortedPages.forEach((page) => {
-      if (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post') {
-        const title = access(page, 'data.title') || page.path;
-        const description = access(page, 'data.description');
-        const datePublished = access(page, 'data.date');
-        const category = access(page, 'data.category');
-
-        pageLinks.push(
-          <div className='blog-post'>
-            <time dateTime={moment(datePublished).format('YYYY.MM.d ')}>
-              {moment(datePublished).format('YYYY.MM.DD')}
-            </time>
-            <span style={ {    padding: '5px'} }></span>
-            <span className='blog-category'>{ category }</span>
-            <h2><Link style={ {    borderBottom: 'none',} } to={ prefixLink(page.path) } > { title } </Link></h2>
-            <p dangerouslySetInnerHTML={ {    __html: description} } />
-            <Link className='readmore' to={ prefixLink(page.path) }> Read
-            </Link>
-          </div>
-        )
-      }
-    })
-
     return (
       <div>
-        <Helmet title={ config.siteTitle }/>
-        <SiteSidebar {...this.props}/>
-        <div className='content'>
-          <div className='main'>
-            <div className='main-inner'>
-            { pageLinks }
+        <Helmet title={config.siteTitle} />
+        <Sidebar {...this.props} />
+        <div className="content">
+          <div className="main">
+            <div className="main-inner">
+              <PostList {...this.props} />
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 SiteIndex.propTypes = {
   route: React.PropTypes.object,
-}
+};
 
-export default SiteIndex
+export default SiteIndex;

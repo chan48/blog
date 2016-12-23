@@ -1,0 +1,10 @@
+.blogPost {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  & > time {
+    /* color: #f0f; */
+  }
+}
+

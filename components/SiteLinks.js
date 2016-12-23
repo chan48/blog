@@ -2,23 +2,22 @@ import React from 'react';
 import { RouteHandler, Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
-import './style.css';
-import '../../static/fonts/fontawesome/style.css';
+import './SiteLinks.css';
+import '../static/fonts/fontawesome/style.css';
 
 class SiteLinks extends React.Component {
   render() {
-
     return (
-      <div className='blog-social'>
+      <div className="blog-social">
         <ul>
           <li>
-            <a href={ config.siteGithubUrl }><i className='fa fa-github-alt'></i></a>
+            <a href={config.siteGithubUrl}><i className="fa fa-github-alt" /></a>
           </li>
           <li>
-            <a href={ config.siteEmailUrl }><i className='fa fa-envelope-o'></i></a>
+            <a href={config.siteEmailUrl}><i className="fa fa-envelope-o" /></a>
           </li>
           <li>
-            <a href={ config.siteRssUrl }><i className='fa fa-rss'></i></a>
+            <a href={config.siteRssUrl}><i className="fa fa-rss" /></a>
           </li>
         </ul>
       </div>

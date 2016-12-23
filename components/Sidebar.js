@@ -2,12 +2,12 @@ import React from 'react'
 import { RouteHandler, Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
-import SiteNav from '../SiteNav'
-import SiteLinks from '../SiteLinks';
-import './style.css';
+import Navigation from './Navigation'
+import SiteLinks from './SiteLinks';
+import './Sidebar.css';
 // import profilePic from '../../pages/photo.jpg';
 
-class SiteSidebar extends React.Component {
+class Sidebar extends React.Component {
     render() {
         const {location, children} = this.props
         const isHome = location.pathname === prefixLink('/')
@@ -45,7 +45,7 @@ class SiteSidebar extends React.Component {
                   </header>
                 </div>
                 <div className='blog-options'>
-                  <SiteNav {...this.props}/>
+                  <Navigation {...this.props}/>
                   <footer>
                     <SiteLinks {...this.props}/>
                     <p className='copyright'>
@@ -60,9 +60,9 @@ class SiteSidebar extends React.Component {
     }
 }
 
-SiteSidebar.propTypes = {
+Sidebar.propTypes = {
     children: React.PropTypes.any,
     location: React.PropTypes.object,
 }
 
-export default SiteSidebar
+export default Sidebar
