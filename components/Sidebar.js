@@ -24,7 +24,7 @@ class Sidebar extends React.Component {
               }}
               to={prefixLink('/')}
             >
-              rhostem's note
+              Rhostem's note
             </Link>
           </h1>
           <h2>
