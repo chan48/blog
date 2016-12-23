@@ -12,7 +12,9 @@ class Template extends React.Component {
 
     return (
       <div className="wrapper">
+        <nav>navigator</nav>
         { children }
+        <footer>footer</footer>
       </div>
     );
   }
@@ -22,6 +24,6 @@ Template.propTypes = {
   children: React.PropTypes.any,
   location: React.PropTypes.object,
   route: React.PropTypes.object,
-}
+};
 
-export default Template
+export default Template;

@@ -45,8 +45,8 @@ class Post extends React.Component {
 }
 
 Post.propTypes = {
-    post: React.PropTypes.object.isRequired,
-    pages: React.PropTypes.array,
-}
+  post: React.PropTypes.object.isRequired,
+  pages: React.PropTypes.array,
+};
 
-export default Post
+export default Post;

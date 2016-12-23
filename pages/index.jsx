@@ -9,6 +9,9 @@ import access from 'safe-access';
 // import Post from '../components/Post';
 import PostList from '../components/PostList';
 import Sidebar from '../components/Sidebar';
+import styles from './index.css';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 class SiteIndex extends React.Component {
   render() {
@@ -16,9 +19,9 @@ class SiteIndex extends React.Component {
       <div>
         <Helmet title={config.siteTitle} />
         <Sidebar {...this.props} />
-        <div className="content">
-          <div className="main">
-            <div className="main-inner">
+        <div className={cx('content')}>
+          <div className={cx('main')}>
+            <div className={cx('main-inner')}>
               <PostList {...this.props} />
             </div>
           </div>

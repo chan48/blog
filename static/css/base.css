@@ -1,36 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  background-color: #fafafa;
+}
+
 .wrapper {
+  /* 사이트 최대 넓이 */
   lost-center: 1070px;
-}
-.content {
-  lost-column: 2/3;
-}
-.main-inner {
-  padding: 40px 35px;
-}
-
-@media screen and (max-width:1100px) {
-  .content {
-    lost-column: 2/4;
-  }
-  .main-inner {
-    padding: 35px 20px;
-  }
-}
-
-@media screen and (max-width:900px) {
-  .content {
-    lost-column: 7/12;
-  }
-  .main-inner {
-    padding: 30px 20px;
-  }
-}
-
-@media screen and (max-width:500px) {
-  .content {
-    lost-column: 4/4;
-  }
-  .main-inner {
-    padding: 25px 20px;
-  }
 }
