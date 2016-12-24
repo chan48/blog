@@ -14,7 +14,7 @@ tags: "javascript"
 
 ---
 
-![react ecosystem](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/0.png)
+![react ecosystem](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/0.png)
 
 많은 이들처럼 나도 최근 Jose Aguinaga의 글 [“How it feels to learn JavaScript in 2016”](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.5wjpn7svo)을 읽었다.
 
@@ -63,7 +63,7 @@ tags: "javascript"
 
 먼저 약 2008년경의 "전통적인" 웹앱의 형태를 보자.
 
-![전통적인 웹앱](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/1.png)
+![전통적인 웹앱](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/1.png)
 
 1. 데이터베이스가 백엔드로 데이터를 보낸다.(당신의 PHP 또는 rails 앱)
 2. 백엔드가 데이터를 읽어서 HTML을 내보낸다.
@@ -73,7 +73,7 @@ tags: "javascript"
 
 이제 이것을 SPA(Single Page App)이라고도 알려져 있는 2016년의 "모던" 웹 앱과 비교해 보자.
 
-![2016 모던 웹앱](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/2.png)
+![2016 모던 웹앱](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/2.png)
 
 차이점을 알겠는가? 서버은 이제 HTML을 보내는대신 *데이터*를 보낸다. 그리고 "데이터에서 HTML로의 전환" 단계는 서버 대신 클라이언트에서 일어난다.(그래서 당신은 클라이언트에게 데이터에서 HTML로의 전환이 어떻게 일어나는지를 설명해주는 코드를 전달해줘야만 한다)
 
@@ -104,7 +104,7 @@ tags: "javascript"
 
 하지만 핵심은 *그 스펙트럼은 연속적이지 않다*는 점이다. 순수한 서버 사이드 앱에서 순수한 클라이언트 사이드 앱으로 조금씩 이동해 나갈 수는 없다. 어떤 지점(the Divide)이 되면 작업을 멈춰야 하고 모든 것을 서버와 클라이언트로 분리하는 리팩토링 과정을 강요받게 된다. 그렇게 하지 않으면 유지보수가 불가능한 스파게티 코드만이 남을 것이다.
 
-![the divide](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/3.png)
+![the divide](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/3.png)
 
 이것이 당신이 '그냥 jQuery만 쓰자'라고 생각하면 안되는 이유다. jQuery는 접착테이프 같은 존재라고 생각하면 된다. 집안에 있는 조그만 것들을 고치기에는 정말 편리하다. 하지만 자꾸 쓰게 되면 점점 엉망이 되어가는 집을 발견하게 될 것이다.
 
@@ -122,7 +122,7 @@ tags: "javascript"
 
 나는 그 답이 [리액트(React)](https://facebook.github.io/react/)라고 믿는다.
 
-![react homepage screenshot](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/4.png)
+![react homepage screenshot](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/4.png)
 
 
 리액트는 페이스북이 만든 오프소스 UI 라이브러리다. UI 라이브러리라는 것은 즉 '데이터에서 HTML로 전환'하는 단계(뷰 레이어)에 사용된다는 말이다.
@@ -165,7 +165,7 @@ tags: "javascript"
 
 싱글 페이지 앱으로 스태틱 페이지를 만드는 것은 맞지 않는 일이지만 리액트는 비밀 무기: [개츠비(Gatsby)](https://github.com/gatsbyjs/gatsby)를 가지고 있다. 개츠비는 리액트 기반의 스태틱 사이트 제네레이터(static site generator)로서 아무런 어려움 없이 리액트의 모든 장점을 가져올 수 있는 치트키라고 할 수 있다.
 
-![gatsby](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/5.gif)
+![gatsby](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/5.gif)
 
 개츠비가 리액트를 시작하기 좋은 도구인 이유는 아래와 같다.
 
@@ -199,11 +199,11 @@ ES6를 마스터하기에 좋은 실습은 ES6 이전의 문법들을 더 짧고
 
 여기가 바로 **상태 관리**가 필요한 지점이다. 상태를 각각의 컴포넌트 대신 하나의 전역 저장소에 저장한 후 리액트 컴포넌트에 전달(dispatch)하는 방식을 사용하자.
 
-![redux data flow](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/6.png)
+![redux data flow](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/6.png)
 
 리액트 생태계에서 가장 인기있는 상태 관리 라이브러리는 리덕스(Redux)다. 리덕스는 데이터를 집중화해줄 뿐만 아니라 데이터를 조작할 때 엄격한 프로토콜을 강제한다.
 
-![redux document](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/7.png)
+![redux document](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/7.png)
 
 리덕스는 일종의 '은행'으로 생각할 수 있다. 은행을 이용할 때 당신은 지역 지점으로 가서 계좌 잔액을 임의로 변경할 수는 없다. 대신 입출금 양식을 작성해서 인증받은 은행원에게 전달해서 관련 작업을 할 수 있도록 요청해야 한다.
 
@@ -211,7 +211,7 @@ ES6를 마스터하기에 좋은 실습은 ES6 이전의 문법들을 더 짧고
 
 이러한 추가적인 작업은 앱 전반적으로 매우 유지보수성이 좋고 표준화된 데이터 흐름을 제공한다. 그리고 [Redux devtool](https://github.com/gaearon/redux-devtools)같은 툴은 리덕스와 관련된 일련의 작업들을 시각화해준다.
 
-![redux dev tool](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/8.gif)
+![redux dev tool](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/8.gif)
 
 리덕스 관련 강의로 다시 한번 우리의 친구 Wes의 [리덕스 강의](https://learnredux.com/)를 들어도 되고(이건 무료다!) egghead.io에 올라와 있는 리덕스를 개발한 Dan Abramov의 [비디오](https://egghead.io/courses/getting-started-with-redux)를 참고해도 좋다. 이 비디오도 역시 무료다.
 
@@ -222,7 +222,7 @@ ES6를 마스터하기에 좋은 실습은 ES6 이전의 문법들을 더 짧고
 
 기술은 너무나 빠르게 변하고 있기 때문에 [GraphQL](http://graphql.org/)(Facebook의 또 다른 오픈소스 프로젝트)이 전통적인 REST API의 진지한 대안으로 여겨지고 있다는 사실은 또 그렇게 놀랍지 않다.
 
-![GraphQL homepage](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/9.png)
+![GraphQL homepage](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/9.png)
 
 REST API가 사전 정의된 데이터 집합에 접근하기 위한 여러개의 REST 경로(ex. /api/posts, /api/comments, ...)를 제공하는 것에 반해서 GraphQL은 단 1개의 경로만 제공하고 클라이언트가 필요한 데이터에 접근하기 위한 쿼리를 던지게 한다.
 
@@ -239,7 +239,7 @@ GraphQL은 1년간 뜨거운 관심을 받아 왔고 많은 프로젝트(2주차
 
 [Vue](http://vuejs.org/)는 상대적으로 새로운 라이브러리지만 기록적인 속도로 성장하고 있고 이미 중국의 바이두와 알리바바(중국의 구글과 아마존)같은 메이저급 회사들이 도입한 상태다. 또 PHP 프레임워크 [Laravel](https://laravel.com/)의 공식 프론트엔드 레이어이기도 하다.
 
-![vue.js](https://dl.dropboxusercontent.com/u/11714767/blog/2016-12-19/10.png)
+![vue.js](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/10.png)
 
 리액트와 비교해서 주목할점은 특징은 아래와 같다.
 
