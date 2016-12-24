@@ -11,7 +11,9 @@ class Navigation extends React.Component {
     return (
       <nav className={cx('wrap')}>
         <div className={cx('navigation')}>
-          <h1 className={cx('header')}>Rhostem's note</h1>
+          <Link to={prefixLink('/')}>
+            <h1 className={cx('header')}>Rhostem's note</h1>
+          </Link>
         </div>
       </nav>
     );
