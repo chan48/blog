@@ -1,6 +1,6 @@
 node_modules/
+npm-debug.log
 public
-
 .gatsby-context.js
 pages/.manifest
 .idea
@@ -8,7 +8,6 @@ gatsby-starter-lumen.iml
 
 
 ###SublimeText###
-
 # cache files for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache
