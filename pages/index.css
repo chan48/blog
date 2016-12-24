@@ -1,16 +1,17 @@
 @import '../static/css/config.css';
 
 .wrapper {
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
   /* 사이트 최대 넓이 */
   lost-center: 1070px;
+  background-color: #fff;
 }
 
 .content {
-
+  background-color: $color-body;
 }
 
-.main-inner {
+.main {
   padding: 2rem 1.5rem;
 }
 

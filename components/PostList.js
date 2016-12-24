@@ -8,8 +8,6 @@ import styles from './PostList.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-function createMarkup(html) { return { html }; }
-
 class PostList extends Component {
   static propTypes = {
     routes: PropTypes.object.isRequired,
@@ -37,10 +35,10 @@ class PostList extends Component {
         const datePublished = postData.date;
         const category = postData.category;
         const postBody = postData.body;
-
-
-        let desc = createMarkup(postBody).html;
-        desc = desc.replace(/<(?:.|\n|("))*?>/gm, '').replace(/&quot;/g, '"').slice(0, 350);
+        const desc = postBody
+          .replace(/<(?:.|\n|("))*?>/gm, '')
+          .replace(/&quot;/g, '"')
+          .slice(0, 350);
 
         pageLinks.push(
           <Link
@@ -48,10 +46,10 @@ class PostList extends Component {
             className={cx('post')}
           >
             <div key={index}>
+              <h2 className={cx('title')}>{title}</h2>
               <time
                 dateTime={moment(datePublished).format('YYYY.MM.d')}
-              >{moment(datePublished).format('YYYY.MM.DD')}</time>
-              <h2 className={cx('title')}>{title}</h2>
+              >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
               {mainImage &&
                 <div
                   className={cx('mainImage')}
@@ -61,7 +59,7 @@ class PostList extends Component {
                 />
               }
               <div className={cx('preview')}>{desc}</div>
-              <div className={cx('readMore')}>더 보기 ...</div>
+              <div className={cx('readMore')}>더 보기</div>
             </div>
           </Link>
         );
