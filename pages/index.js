@@ -21,9 +21,7 @@ class SiteIndex extends React.Component {
         <Helmet title={config.siteTitle} />
         <div className={cx('content')}>
           <div className={cx('main')}>
-            <div className={cx('main-inner')}>
-              <PostList {...this.props} />
-            </div>
+            <PostList {...this.props} />
           </div>
         </div>
       </div>

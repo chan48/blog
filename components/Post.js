@@ -5,8 +5,8 @@ import { prefixLink } from 'gatsby-helpers';
 import access from 'safe-access';
 import { config } from 'config';
 import ReadNext from './ReadNext';
-import './Post.css';
 import '../static/css/highlight.css';
+import './Post.css';
 
 class Post extends React.Component {
   render() {

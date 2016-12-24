@@ -10,8 +10,3 @@
 	line-height: 26px;
 	margin-bottom: 26px;
 }
-@media (max-width:900px) {
-	.blog-single .text, .blog-single .footer {
-		padding: 0 15px;
-	}
-}
