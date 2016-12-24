@@ -1,0 +1,44 @@
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  clear: fix;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.navigation {
+  lost-center: 1070px;
+  padding: * 1.5rem;
+}
+
+.header {
+  float: left;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-family: 'PT Sans Narrow', sans-serif;
+  line-height: 2.5rem;
+  margin: 0;
+}
+
+.menuBar {
+  float: left;
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu {
+  font-size: 16px;
+  line-height: 2.5rem;
+  font-weight: 400;
+  color: #222;
+}
+
+.blog-nav ul li a.current {
+  border-bottom: 1px solid;
+}
+
+.blog-nav ul li a:hover {
+  border-bottom: 1px solid;
+}

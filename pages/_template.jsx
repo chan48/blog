@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
+import Navigation from '../components/Navigation.js';
 import '../static/css/reset.css';
 import '../static/css/base.css';
 import '../static/css/typography.css';
@@ -12,7 +13,7 @@ class Template extends React.Component {
 
     return (
       <div className="wrapper">
-        <nav>navigator</nav>
+        <Navigation />
         { children }
       </div>
     );

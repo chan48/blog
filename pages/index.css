@@ -1,34 +1,27 @@
+@import '../static/css/config.css';
+
+.wrapper {
+  margin-top: 2.5rem;
+  /* 사이트 최대 넓이 */
+  lost-center: 1070px;
+}
+
 .content {
-  lost-column: 2/3;
+
 }
 
 .main-inner {
-  padding: 40px 35px;
+  padding: 2rem 1.5rem;
 }
 
-@media screen and (max-width:1100px) {
-  .content {
-    lost-column: 2/4;
-  }
-  .main-inner {
-    padding: 35px 20px;
-  }
+/* desktop */
+@media (max-width: 1100px) {
 }
 
-@media screen and (max-width:900px) {
-  .content {
-    lost-column: 7/12;
-  }
-  .main-inner {
-    padding: 30px 20px;
-  }
+/* tablet(=small desktop) */
+@media (max-width: 900px) {
 }
 
-@media screen and (max-width:500px) {
-  .content {
-    lost-column: 4/4;
-  }
-  .main-inner {
-    padding: 25px 20px;
-  }
+/* mobile */
+@media (max-width: 500px) {
 }
