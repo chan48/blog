@@ -4,13 +4,14 @@ import { prefixLink } from 'gatsby-helpers';
 import sortBy from 'lodash/sortBy';
 import moment from 'moment';
 import access from 'safe-access';
-import styles from './PostList.css';
+import styles from './PostList.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 class PostList extends Component {
   static propTypes = {
     routes: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -25,30 +26,51 @@ class PostList extends Component {
     ).reverse();
 
     sortedPages.forEach((page, index) => {
-      if (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post') {
-        const title = access(page, 'data.title') || page.path;
-        const description = access(page, 'data.description');
-        const datePublished = access(page, 'data.date');
-        const category = access(page, 'data.category');
+      if (access(page, 'file.ext') === 'md'
+        && access(page, 'data.layout') === 'post') {
+        const postData = page.data;
+        const title = postData.title || page.path;
+        const mainImage = postData.mainImage;
+        const description = postData.description;
+        const datePublished = postData.date;
+        const category = postData.category;
+        const postBody = postData.body;
+        function strip(html)
+        {
+           var tmp = document.createElement("DIV");
+           tmp.innerHTML = html;
+           return tmp.textContent || tmp.innerText || "";
+        }
+        const desc = strip(postBody).slice(0, 350).concat('...');
 
         pageLinks.push(
-          <div className='blogPost' key={index} >
-            <time dateTime={moment(datePublished).format('YYYY.MM.d ')}>
-              {moment(datePublished).format('YYYY.MM.DD')}
-            </time>
-            <span style={{ padding: '5px'} }></span>
-            <span className='blog-category'>{ category }</span>
-            <h2><Link style={ {    borderBottom: 'none',} } to={ prefixLink(page.path) } > { title } </Link></h2>
-            <p dangerouslySetInnerHTML={ {    __html: description} } />
-            <Link className='readmore' to={ prefixLink(page.path) }> Read
-            </Link>
-          </div>
-        )
+          <Link
+            to={prefixLink(page.path)}
+            className={cx('post')}
+          >
+            <div key={index}>
+              <time
+                dateTime={moment(datePublished).format('YYYY.MM.d')}
+              >{moment(datePublished).format('YYYY.MM.DD')}</time>
+              <h2 className={cx('title')}>{title}</h2>
+              {mainImage &&
+                <div
+                  className={cx('mainImage')}
+                  style={{
+                    backgroundImage: `url(${mainImage})`,
+                  }}
+                />
+              }
+              <div className={cx('preview')}>{desc}</div>
+            </div>
+          </Link>
+        );
       }
-    })
+    });
+              // <p dangerouslySetInnerHTML={{ __html: postBody }} />
 
     return (
-      <div>
+      <div className={cx('postList')}>
         {pageLinks}
       </div>
     );

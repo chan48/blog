@@ -2,10 +2,15 @@
 @custom-media --tablet (max-width: 900px);
 @custom-media --mobile (max-width: 500px);
 
+$desktopMax: 1100px;
+$tabletMax: 900px;
+$mobileMax: 500px;
+
 $wrapper-max: 1070px;
 $color-body: #fafafa;
 $color-border: #ebebeb;
 $color-01: #efa48d;
+
 
 @define-mixin drawGuideline $isDev {
   @if $isDev == true {
