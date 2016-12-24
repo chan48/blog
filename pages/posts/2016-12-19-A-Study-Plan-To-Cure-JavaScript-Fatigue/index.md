@@ -2,9 +2,9 @@
 title: "자바스크립트의 피로감을 덜어주기 위한 학습 계획."
 date: "2016-12-19"
 layout: post
-description: "\"A Study Plan To Cure JavaScript Fatigue\"의 번역"
-category: "translation"
-tags: "javascript"
+mainImage: "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/0.png"
+tags: "Javascript, 번역, React, Redux, ES6, gatsby, GraphQL"
+category: "번역"
 ---
 <!-- path: "/hello-world/" -->
 

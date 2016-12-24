@@ -1,0 +1,48 @@
+@import '../static/css/config.css';
+.postList {
+
+}
+
+.post {
+  display: block;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .09);
+
+  & .title {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+  }
+
+  & .mainImage {
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: $mobileMax) {
+      height: 12rem;
+    }
+  }
+
+  & .preview {
+    display: -webkit-box;
+    width: 100%;
+    max-height: 2.1rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  & time {
+    font-size: 0.8rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+

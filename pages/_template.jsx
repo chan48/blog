@@ -8,6 +8,24 @@ import '../static/css/base.css';
 import '../static/css/typography.css';
 
 class Template extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onScroll = this.onScroll.bind(this);
+  }
+
+  // componentDidMount() {
+  //   window.addEventListener('scroll', this.onScroll);
+  // }
+
+  // onScroll(e) {
+  //   clearTimeout(this.scrollTimeout);
+  //   this.scrollTimeout = setTimeout(() => {
+  //     console.log(e);
+  //   }, 300);
+  //   console.log(e.target);
+  // }
+
+
   render() {
     const { location, children } = this.props;
 

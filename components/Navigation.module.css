@@ -1,3 +1,5 @@
+@import '../static/css/config.css';
+
 .wrap {
   position: absolute;
   top: 0;
@@ -9,7 +11,7 @@
 }
 
 .navigation {
-  lost-center: 1070px;
+  lost-center: $wrapper-max;
   padding: * 1.5rem;
 }
 
