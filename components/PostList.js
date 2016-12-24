@@ -8,6 +8,8 @@ import styles from './PostList.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
+function createMarkup(html) { return { html }; }
+
 class PostList extends Component {
   static propTypes = {
     routes: PropTypes.object.isRequired,
@@ -35,13 +37,10 @@ class PostList extends Component {
         const datePublished = postData.date;
         const category = postData.category;
         const postBody = postData.body;
-        function strip(html)
-        {
-           var tmp = document.createElement("DIV");
-           tmp.innerHTML = html;
-           return tmp.textContent || tmp.innerText || "";
-        }
-        const desc = strip(postBody).slice(0, 350).concat('...');
+
+
+        let desc = createMarkup(postBody).html;
+        desc = desc.replace(/<(?:.|\n|("))*?>/gm, '').replace(/&quot;/g, '"').slice(0, 350);
 
         pageLinks.push(
           <Link
@@ -62,6 +61,7 @@ class PostList extends Component {
                 />
               }
               <div className={cx('preview')}>{desc}</div>
+              <div className={cx('readMore')}>더 보기 ...</div>
             </div>
           </Link>
         );

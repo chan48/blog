@@ -16,7 +16,7 @@ category: "번역"
 
 ![react ecosystem](https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/0.png)
 
-많은 이들처럼 나도 최근 Jose Aguinaga의 글 [“How it feels to learn JavaScript in 2016”](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.5wjpn7svo)을 읽었다.
+많은 이들처럼 나도 최근 Jose Aguinaga의 글 ["How it feels to learn JavaScript in 2016"](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.5wjpn7svo)을 읽었다.
 
 
 그의 글은 정곡을 찔렀던 것이 분명한 모양이다.(나는 그 포스트가 Hacker News에 한번도 아니고 두번이나 탑 스팟에 오르는 것을 보았다.) 그건 [/r/javascript](https://www.reddit.com/r/javascript/)에서도 가장 인기있는 글이었고 Medium에서는 1만개의 'like'를 기록했다.

@@ -10,29 +10,22 @@ import '../static/css/highlight.css';
 
 class Post extends React.Component {
   render() {
-    const {route} = this.props
-    const post = route.page.data
-    const home = (
-      <div>
-        <Link className='gohome' to={ prefixLink('/') }> All Articles
-        </Link>
-      </div>
-    )
+    const { route } = this.props;
+    const post = route.page.data;
 
     return (
       <div>
-        { home }
-        <div className='blog-single'>
-          <div className='text'>
+        <div className="blog-single">
+          <div className="text">
             <h1>{ post.title }</h1>
-            <div dangerouslySetInnerHTML={ {    __html: post.body} } />
-            <div className='date-published'>
-              <em>Published { moment(post.date).format('D MMM YYYY') }</em>
+            <div dangerouslySetInnerHTML={{ __html: post.body }} />
+            <div className="date-published">
+              <em>Published {moment(post.date).format('D MMM YYYY')}</em>
             </div>
           </div>
-          <div className='footer'>
-            <ReadNext post={ post } {...this.props}/>
-            <hr></hr>
+          <div className="footer">
+            <ReadNext post={post} {...this.props} />
+            <hr />
             <p>
               &copy; <a href="https://www.github.com/rhostem">rhotsem</a>
               <span>&nbsp;All rights reserved.</span>
