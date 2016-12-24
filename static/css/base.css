@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 body {
-  font-family: 'Nanum Gothic', sans-serif;
+
   background-color: #fafafa;
 }
 
@@ -10,3 +10,4 @@ body {
   /* 사이트 최대 넓이 */
   lost-center: 1070px;
 }
+

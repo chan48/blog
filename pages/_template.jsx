@@ -14,7 +14,6 @@ class Template extends React.Component {
       <div className="wrapper">
         <nav>navigator</nav>
         { children }
-        <footer>footer</footer>
       </div>
     );
   }

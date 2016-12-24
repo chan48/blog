@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import Post from '../components/Post';
 import Page from '../components/Page';
+import SamplePage from '../components/SamplePage';
 
 class MarkdownWrapper extends React.Component {
   render() {
@@ -11,10 +12,21 @@ class MarkdownWrapper extends React.Component {
     const layout = post.layout;
     let template;
 
-    if (layout !== 'page') {
-      template = <Post {...this.props} />;
-    } else {
-      template = <Page {...this.props} />;
+    switch (layout) {
+      case 'post':
+        template = <Post {...this.props} />;
+        break;
+
+      case 'page':
+        template = <Page {...this.props} />;
+        break;
+
+      case 'sample':
+        template = <SamplePage {...this.props} />;
+        break;
+
+      default:
+        break;
     }
 
     return (
