@@ -17,5 +17,7 @@
     "arrow-body-style": [0],
     // 'gatsby-helper', 'config'
     "import/no-extraneous-dependencies": [0],
+    "import/imports-first": [0],
+    "import/newline-after-import": [0],
   }
 }
