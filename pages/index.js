@@ -12,13 +12,13 @@ import Sidebar from '../components/Sidebar';
 import styles from './index.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
+        // <Sidebar {...this.props} />
 
 class SiteIndex extends React.Component {
   render() {
     return (
       <div>
         <Helmet title={config.siteTitle} />
-        <Sidebar {...this.props} />
         <div className={cx('content')}>
           <div className={cx('main')}>
             <div className={cx('main-inner')}>

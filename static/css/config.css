@@ -1,0 +1,31 @@
+@custom-media --desktop (max-width: 1100px);
+@custom-media --tablet (max-width: 900px);
+@custom-media --mobile (max-width: 500px);
+
+@define-mixin drawGuideline $isDev {
+  @if $isDev == true {
+    * {
+      outline: 1px solid #f00;
+    }
+
+    input {
+      outline: 1px solid #0f0;
+    }
+
+    a {
+      outline: 1px solid #00f;
+    }
+
+    button {
+      outline: 1px solid #0ff;
+    }
+
+    li {
+      outline: 1px solid #ff0;
+    }
+
+    span {
+      outline: 1px solid #f0f;
+    }
+  }
+}

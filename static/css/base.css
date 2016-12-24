@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import './config.css';
+
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+/* $isDev: true; */
+@mixin drawGuideline $isDev;
 
 body {
-
   background-color: #fafafa;
 }
-
-.wrapper {
-  /* 사이트 최대 넓이 */
-  lost-center: 1070px;
-}
-

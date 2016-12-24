@@ -10,3 +10,4 @@ siteTwitterUrl = "#"
 googleAnalyticsId = ""
 
 linkPrefix = "/blog"
+cdn = "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn"
