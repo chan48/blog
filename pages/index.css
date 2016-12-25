@@ -1,7 +1,7 @@
 @import '../static/css/config.css';
 
 .wrapper {
-  padding-top: 2.5rem;
+  padding-top: $nav-height;
   /* 사이트 최대 넓이 */
   lost-center: 1070px;
   background-color: #fff;
@@ -12,7 +12,7 @@
 }
 
 .main {
-  padding: 2rem 1.5rem;
+  padding: 1.1rem 1rem;
 }
 
 /* desktop */

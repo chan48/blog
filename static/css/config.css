@@ -2,9 +2,9 @@
 @custom-media --tablet (max-width: 900px);
 @custom-media --mobile (max-width: 500px);
 
-$desktopMax: 1100px;
-$tabletMax: 900px;
-$mobileMax: 500px;
+$desktop-max: 1100px;
+$tablet-max: 900px;
+$mobile-max: 500px;
 
 
 $post-width: 740px;
@@ -13,7 +13,7 @@ $wrapper-max: 1070px;
 $color-body: #fafafa;
 $color-border: #ebebeb;
 $color-01: #efa48d;
-
+$color-gray-01: rgba(0, 0, 0, 0.44);
 
 @define-mixin drawGuideline $isDev {
   @if $isDev == true {

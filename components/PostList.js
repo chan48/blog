@@ -4,13 +4,14 @@ import { prefixLink } from 'gatsby-helpers';
 import sortBy from 'lodash/sortBy';
 import moment from 'moment';
 import access from 'safe-access';
+import Tags from './Tags';
 import styles from './PostList.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 class PostList extends Component {
   static propTypes = {
-    routes: PropTypes.object.isRequired,
+    routes: PropTypes.array.isRequired,
     route: PropTypes.object.isRequired,
   };
 
@@ -35,21 +36,19 @@ class PostList extends Component {
         const datePublished = postData.date;
         const category = postData.category;
         const postBody = postData.body;
+        const tags = postData.tags && postData.tags.toString().split(',');
         const desc = postBody
           .replace(/<(?:.|\n|("))*?>/gm, '')
           .replace(/&quot;/g, '"')
           .slice(0, 350);
 
         pageLinks.push(
-          <Link
-            to={prefixLink(page.path)}
+          <div
+            key={index}
             className={cx('post')}
           >
-            <div key={index}>
+            <Link to={prefixLink(page.path)}>
               <h2 className={cx('title')}>{title}</h2>
-              <time
-                dateTime={moment(datePublished).format('YYYY.MM.d')}
-              >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
               {mainImage &&
                 <div
                   className={cx('mainImage')}
@@ -59,13 +58,26 @@ class PostList extends Component {
                 />
               }
               <div className={cx('preview')}>{desc}</div>
-              <div className={cx('readMore')}>더 보기</div>
+            </Link>
+            {tags &&
+              <div className={cx('tagWrapper')}>
+                <Tags tags={tags} />
+              </div>
+            }
+            <div className={cx('postFooter')}>
+              <time
+                dateTime={moment(datePublished).format('YYYY.MM.d')}
+              >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
+              <Link to={prefixLink(page.path)}>
+                <div className={cx('readMore')}>더 보기</div>
+              </Link>
             </div>
-          </Link>
+          </div>
         );
       }
     });
               // <p dangerouslySetInnerHTML={{ __html: postBody }} />
+                // {tags.map((tag) => <span className={cx('tag')}>{tag.trim()}</span>)}
 
     return (
       <div className={cx('postList')}>

@@ -1,11 +1,21 @@
 @import './config.css';
 
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 /* $isDev: true; */
 @mixin drawGuideline $isDev;
 
+html {
+  font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
 body {
   background-color: $color-body;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  letter-spacing: -0.05em;
+}
+h2, h3, h4, h5, h6 {
+  letter-spacing: -0.03em;
 }
