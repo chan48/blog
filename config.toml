@@ -7,7 +7,7 @@ siteEmailUrl = "syoung.j@gmail.com"
 siteRssUrl = "#"
 siteTwitterUrl = "#"
 
-googleAnalyticsId = ""
+googleAnalyticsId = "UA-83587837-3"
 
 linkPrefix = "/blog"
 cdn = "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn"
