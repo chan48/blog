@@ -5,6 +5,8 @@ import { prefixLink } from 'gatsby-helpers';
 import access from 'safe-access';
 import { config } from 'config';
 import ReadNext from './ReadNext';
+import Tags from './Tags';
+
 import '../static/css/highlight.css';
 import './Post.css';
 
@@ -12,6 +14,7 @@ class Post extends React.Component {
   render() {
     const { route } = this.props;
     const post = route.page.data;
+    const tags = post.tags && post.tags.split(',');
 
     return (
       <div>
@@ -24,6 +27,9 @@ class Post extends React.Component {
             </div>
           </div>
           <div className="footer">
+            <div>
+              {tags && <Tags tags={tags} />}
+            </div>
             <ReadNext post={post} {...this.props} />
             <hr />
             <p>
@@ -38,7 +44,6 @@ class Post extends React.Component {
 }
 
 Post.propTypes = {
-  post: React.PropTypes.object.isRequired,
   pages: React.PropTypes.array,
 };
 

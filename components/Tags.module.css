@@ -1,14 +1,17 @@
+.wrapper {
+  @util clearfix;
+}
+
 .tag {
-  font-size: 0.8rem;
+  float: left;
+  display: block;
   padding: 5px 10px;
-  display: inline-block;
-  border-radius: 3px;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  font-size: 0.8rem;
   color: rgba(0,0,0, 0.6);
   background-color: rgba(0,0,0, 0.04);
-  margin: 0 4px 4px 0;
-  &:not(:last-child) {
-    margin-right: 4px;
-  }
+  border-radius: 3px;
 
   &:hover {
     background-color: rgba(0,0,0, 0.1);

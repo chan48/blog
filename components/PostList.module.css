@@ -51,27 +51,14 @@
     word-wrap: break-word;
     font-size: 1rem;
     line-height: 1.4;
+
+    @media (max-width: $mobile-max) {
+      margin-top: 1rem;
+    }
   }
 
   .tagWrapper {
     margin-top: 1rem;
-  }
-
-  .tag {
-    font-size: 0.8rem;
-    padding: 5px 10px;
-    display: inline-block;
-    border-radius: 3px;
-    color: rgba(0,0,0, 0.6);
-    background-color: rgba(0,0,0, 0.04);
-    margin: 0 4px 4px 0;
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
-
-    &:hover {
-      background-color: rgba(0,0,0, 0.1);
-    }
   }
 
   .postFooter {
