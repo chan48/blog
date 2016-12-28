@@ -1,1 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-regular.woff2') format('woff2'),
+       url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-medium.woff2') format('woff2'),
+       url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-bold.woff2') format('woff2'),
+       url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: bold;
+}
+
