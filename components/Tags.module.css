@@ -5,9 +5,8 @@
 .tag {
   float: left;
   display: block;
-  padding: 5px 10px;
+  padding: 4px 10px;
   margin-bottom: 4px;
-  margin-right: 4px;
   font-size: 0.8rem;
   color: rgba(0,0,0, 0.6);
   background-color: rgba(0,0,0, 0.04);
@@ -15,5 +14,9 @@
 
   &:hover {
     background-color: rgba(0,0,0, 0.1);
+  }
+
+  &:not(:last-child) {
+    margin-right: 4px;
   }
 }

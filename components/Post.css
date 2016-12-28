@@ -10,6 +10,7 @@
 	text-align: left;
 	word-break: keep-all;
 	margin-top: 5rem;
+	font-weight: 500;
 }
 
 .blog-single .text {
@@ -22,10 +23,15 @@
 	text-decoration: underline;
 }
 
-.blog-single h1,
+/* .blog-single h1,
 .blog-single .date-published,
 .blog-single .text *:not(div),
 .blog-single .text *:not(hr) {
+	max-width: $post-width;
+	margin-left: auto;
+	margin-right: auto;
+} */
+.blog-single .text {
 	max-width: $post-width;
 	margin-left: auto;
 	margin-right: auto;

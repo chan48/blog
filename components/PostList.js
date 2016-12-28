@@ -48,7 +48,6 @@ class PostList extends Component {
             className={cx('post')}
           >
             <Link to={prefixLink(page.path)}>
-              <h2 className={cx('title')}>{title}</h2>
               {mainImage &&
                 <div
                   className={cx('mainImage')}
@@ -57,9 +56,10 @@ class PostList extends Component {
                   }}
                 />
               }
+              <h2 className={cx('title')}>{title}</h2>
               <div className={cx('preview')}>{desc}</div>
             </Link>
-            {tags &&
+            {!tags &&
               <div className={cx('tagWrapper')}>
                 <Tags tags={tags} />
               </div>

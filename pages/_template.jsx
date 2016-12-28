@@ -6,6 +6,11 @@ import Navigation from '../components/Navigation.js';
 import '../static/css/reset.css';
 import '../static/css/base.css';
 import '../static/css/typography.css';
+import '../static/css/font.css';
+import '../static/fonts/NotoKR-Regular/stylesheet.css';
+import '../static/fonts/NotoKR-Medium/stylesheet.css';
+import '../static/fonts/NotoKR-Bold/stylesheet.css';
+
 
 class Template extends React.Component {
   constructor(props) {

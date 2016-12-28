@@ -25,7 +25,7 @@ module.exports = React.createClass({
               <meta charSet="utf-8" />
               <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=5.0" />
-              <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+              <link rel="icon" type="image/x-icon" href={prefixLink('/favicon.ico')} />
               { title.toComponent() }
               { css }
             </head>

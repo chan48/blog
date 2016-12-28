@@ -21,15 +21,15 @@ class Post extends React.Component {
         <div className="blog-single">
           <div className="text">
             <h1>{ post.title }</h1>
+            <div>
+              {tags && <Tags tags={tags} />}
+            </div>
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
             <div className="date-published">
               <em>Published {moment(post.date).format('D MMM YYYY')}</em>
             </div>
           </div>
           <div className="footer">
-            <div>
-              {tags && <Tags tags={tags} />}
-            </div>
             <ReadNext post={post} {...this.props} />
             <hr />
             <p>
