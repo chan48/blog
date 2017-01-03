@@ -1,4 +1,12 @@
-p > code, span > code {
+h1 > code,
+h2 > code,
+h3 > code,
+h4 > code,
+h5 > code,
+p > code,
+span > code,
+li > code,
+a > code {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
