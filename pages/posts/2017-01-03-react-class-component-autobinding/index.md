@@ -25,7 +25,7 @@ var Button = React.createClass({
 
 위의 예제에서 `div` 컴포넌트를 클릭하면 `Button` 컴포넌트의 메소드로서 `_onClick`이 실행되는 것이 아니라 **onClick 속성에 할당된 함수로서 호출**된다. 코드로 풀어내면 아래와 같다.
 
-```
+```js
 onClick = this._onClick;
 onClick(); // div 클릭시 호출
 ```
@@ -76,7 +76,7 @@ class SelfBinding extends component {
 
 특정 메소드에만 적용할 수도 있고 컴포넌트에 적용하면 모든 메소드가 바인딩된다.
 
-```
+```javascript
 ...
 import { autobind } from 'core-decorators';
 
@@ -94,7 +94,7 @@ class DecoratedComponent extends Component {
 
 
 ## 참조
-- [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes#Prototype_methods](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes#Prototype_methods)
+- [Classes - Prototype methods (MDN references)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes#Prototype_methods)
 - [React v0.13.0 Beta 1 # autobinding](https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding)
 - [React and ES6 - Part 3, Binding to methods of React class (ES7 included)](http://egorsmirnov.me/2015/08/16/react-and-es6-part3.html)
 - [React.createClass](https://facebook.github.io/react/docs/react-api.html#createclass)

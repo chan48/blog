@@ -90,6 +90,7 @@ a {
 	color: #222;
 	text-decoration: none;
 	transition: all .3s;
+	word-break: break-all;
 }
 a:active, a:hover {
 	outline: 0;
@@ -127,12 +128,12 @@ pre {
 	overflow: auto;
 }
 code, kbd, pre, samp {
-	font-family: monospace, monospace;
+	font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
 }
 code {
+	display: block;
 	padding: 26px;
 	padding: 1.625rem;
-	display: block;
 }
 @media screen and (min-width:40em) {
 	code {
@@ -253,6 +254,12 @@ h6 {
 	margin-top: 4.0625rem;
 	margin-bottom: 13px;
 	margin-bottom: 0.8125rem;
+}
+
+/* 제목은 단어 줄바꿈 적용 */
+h1, h2, h3, h4, h5, h6 {
+	word-break: keep-all;
+  word-wrap: break-word;
 }
 @media screen and (min-width:40em) {
 	h1 {

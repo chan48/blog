@@ -20,11 +20,12 @@ a > code {
 	word-wrap: break-word;
 	background: #f8f8f8;
 	display: inline;
-	font-family: Inconsolata, monospace, serif;
+	/* font-family: Inconsolata, monospace, serif; */
 	max-width: 100%;
 	overflow: auto;
-	padding: 0.25em 0.5em;
+	padding: 0.1em 0.5em;
 }
+
 pre code {
 	display: block;
 	border-radius: 3px;
