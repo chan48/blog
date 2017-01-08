@@ -160,11 +160,13 @@ figcaption {
 	figcaption {
 		line-height: 31px;
 		line-height: 1.722222222222222rem;
+		margin-top: 0.75rem;
 		margin-bottom: 0;
 	}
 }
 figure {
 	display: block;
+	margin: 2rem auto;
 }
 @media screen and (min-width:40em) {
 	figure.floatLeft, figure.floatRight {
@@ -449,7 +451,9 @@ abbr[title] {
 	border-bottom: 1px dotted;
 }
 b, strong {
-	font-weight: bold;
+	font-weight: normal;
+	background-color: transparent;
+	background-image: linear-gradient(to bottom,rgba(39,243,106,.1),rgba(39,243,106,.1));
 }
 dfn {
 	font-style: italic;
