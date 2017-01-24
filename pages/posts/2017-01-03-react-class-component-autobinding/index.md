@@ -3,7 +3,7 @@ title: "데코레이터를 이용한 React 컴포넌트 메소드 자동 바인�
 date: "2017-01-03"
 layout: post
 mainImage: ""
-tags: "Javascript, React, ES6, ES7"
+tags: "Javascript, React, ES6, ES7, Front-end"
 ---
 
 ## React 컴포넌트 메소드에 자동으로 바인딩되는 `this`
