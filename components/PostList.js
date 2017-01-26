@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
 import sortBy from 'lodash/sortBy';
 import moment from 'moment';
 import access from 'safe-access';
@@ -47,7 +46,7 @@ class PostList extends Component {
             key={index}
             className={cx('post')}
           >
-            <Link to={prefixLink(page.path)}>
+            <Link to={page.path}>
               {mainImage &&
                 <div
                   className={cx('mainImage')}
@@ -68,7 +67,7 @@ class PostList extends Component {
               <time
                 dateTime={moment(datePublished).format('YYYY.MM.d')}
               >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
-              <Link to={prefixLink(page.path)}>
+              <Link to={page.path}>
                 <div className={cx('readMore')}>더 보기</div>
               </Link>
             </div>

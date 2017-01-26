@@ -2,12 +2,12 @@ siteTitle = "Rhostem's note"
 siteDescr = "blog powered by Gatsby"
 siteAuthor = "rhostem"
 
-siteGithubUrl = "https://github.com/rhostem"
+siteGithubUrl = "https://github.com/rhostem/blog"
 siteEmailUrl = "syoung.j@gmail.com"
 siteRssUrl = "#"
 siteTwitterUrl = "#"
 
 googleAnalyticsId = "UA-83587837-3"
 
-linkPrefix = "/blog"
+linkPrefix = "/"
 cdn = "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn"

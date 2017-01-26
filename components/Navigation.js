@@ -1,6 +1,6 @@
 import React from 'react';
-import { RouteHandler, Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+import { Link } from 'react-router';
+// import { prefixLink } from 'gatsby-helpers';
 import styles from './Navigation.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
@@ -11,7 +11,7 @@ class Navigation extends React.Component {
     return (
       <nav className={cx('wrap')}>
         <div className={cx('navigation')}>
-          <Link to={prefixLink('/')}>
+          <Link to={'/'}>
             <h1 className={cx('header')}>Rhostem's note</h1>
           </Link>
         </div>
@@ -19,17 +19,6 @@ class Navigation extends React.Component {
     );
   }
 }
-        // <ul className={cx('menuBar')}>
-          // <li>
-            // <Link
-              // to={prefixLink('/')}
-              // className={cx('menu')}
-              // activeClassName={cx('current')}
-              // onlyActiveOnIndex
-            // >Articles
-            // </Link>
-          // </li>
-        // </ul>
 
 Navigation.propTypes = {
   location: React.PropTypes.object,

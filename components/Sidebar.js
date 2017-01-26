@@ -1,6 +1,5 @@
 import React from 'react'
 import { RouteHandler, Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Navigation from './Navigation'
 import SiteLinks from './SiteLinks';
@@ -10,7 +9,7 @@ import './Sidebar.css';
 class Sidebar extends React.Component {
     render() {
         const {location, children} = this.props
-        const isHome = location.pathname === prefixLink('/')
+        const isHome = location.pathname === '/'
 
         let header = (
         <header>
@@ -22,13 +21,13 @@ class Sidebar extends React.Component {
                 borderBottom: 'none',
                 outline: 'none',
               }}
-              to={prefixLink('/')}
+              to={'/'}
             >
               Rhostem's note
             </Link>
           </h1>
           <h2>
-            <Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={prefixLink('/')}>{ config.siteAuthor }</Link>
+            <Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={'/'}>{ config.siteAuthor }</Link>
           </h2>
           <p>
             { config.siteDescr }
