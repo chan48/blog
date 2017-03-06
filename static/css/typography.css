@@ -83,6 +83,9 @@ section {
 	display: block;
 }
 
+p {
+	margin: 1.45rem auto;
+}
 /* Links
    ========================================================================== */
 a {
@@ -408,7 +411,7 @@ blockquote {
 	padding-left: calc(1em - 3px);
 	font-style: italic;
 	border-left: 3px solid #222;
-	color:
+	color: rgba(0, 0, 0, 0.6);
 	/* padding-left: 1.4375rem; */
 }
 @media screen and (min-width:40em) {
