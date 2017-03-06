@@ -12,7 +12,7 @@ class Navigation extends React.Component {
       <nav className={cx('wrap')}>
         <div className={cx('navigation')}>
           <Link to={'/'}>
-            <h1 className={cx('header')}>Rhostem's note</h1>
+            <h1 className={cx('header')}>rhostem.github.io</h1>
           </Link>
         </div>
       </nav>
