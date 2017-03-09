@@ -18,7 +18,19 @@ class SiteIndex extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title={config.siteTitle} />
+        <Helmet
+          title={config.siteTitle}
+          meta={[
+            { name: 'description', content: `${config.siteDesc}` },
+            { property: 'og:type', content: 'article' },
+            { property: 'og:url', content: `${config.siteUrl}` },
+            { property: 'og:title', content: `${config.siteTitle}` },
+            { property: 'og:description', content: `${config.siteDesc}` },
+          ]}
+          link={[
+            { rel: 'canonical', href: `${config.siteUrl}` },
+          ]}
+        />
         <div className={cx('content')}>
           <div className={cx('main')}>
             <PostList {...this.props} />

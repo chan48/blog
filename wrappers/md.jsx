@@ -31,7 +31,18 @@ class MarkdownWrapper extends React.Component {
 
     return (
       <div>
-        <Helmet title={`${post.title} - ${config.siteTitle}`} />
+        <Helmet
+          title={`${post.title} - ${config.siteTitle}`}
+          meta={[
+            { property: 'og:type', content: 'article' },
+            { name: 'description', content: `${post.tags}` },
+            { property: 'og:title', content: `${post.title}` },
+            { property: 'og:description', content: `${post.tags}` },
+          ]}
+          link={[
+            { rel: 'canonical', href: `${config.siteUrl}` },
+          ]}
+        />
         { template }
       </div>
     );

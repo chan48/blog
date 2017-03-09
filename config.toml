@@ -1,8 +1,8 @@
-siteTitle = "Rhostem's note"
-siteDescr = "blog powered by Gatsby"
+siteTitle = "rhostem.github.io"
 siteAuthor = "rhostem"
-
+siteDesc = "static site generator gatsby 기반의 웹 어플리케이션 개발 기술 블로그"
 siteGithubUrl = "https://github.com/rhostem/blog"
+siteUrl = "https://rhostem.github.io"
 siteEmailUrl = "syoung.j@gmail.com"
 siteRssUrl = "#"
 siteTwitterUrl = "#"
