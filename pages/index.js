@@ -22,6 +22,7 @@ class SiteIndex extends React.Component {
           title={config.siteTitle}
           meta={[
             { name: 'description', content: `${config.siteDesc}` },
+            { name: 'google-site-verification', content: 'HZS4pN5-8-N7GBYIuK0Il6fy2644h8iqxwkeTBbSFcA' },
             { property: 'og:type', content: 'article' },
             { property: 'og:url', content: `${config.siteUrl}` },
             { property: 'og:title', content: `${config.siteTitle}` },

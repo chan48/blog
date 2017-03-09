@@ -35,6 +35,7 @@ class MarkdownWrapper extends React.Component {
           title={`${post.title} - ${config.siteTitle}`}
           meta={[
             { property: 'og:type', content: 'article' },
+            { name: 'google-site-verification', content: 'HZS4pN5-8-N7GBYIuK0Il6fy2644h8iqxwkeTBbSFcA' },
             { name: 'description', content: `${post.tags}` },
             { property: 'og:title', content: `${post.title}` },
             { property: 'og:description', content: `${post.tags}` },
