@@ -10,8 +10,7 @@
     "clean:public": "rm -rf public/*",
     "clean": "npm run clean:public",
     "copy:files": "cp pages/*.{pdf,txt,png,jpg,jpeg,gif} public/",
-    "copy:google-verifi": "cp static/google9e6000d11639fd52.html public/",
-    "copy": "npm run copy:files & npm run copy:google-verifi",
+    "copy": "npm run copy:files",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build && gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\""

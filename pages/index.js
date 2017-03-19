@@ -1,18 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
-import sortBy from 'lodash/sortBy';
-import moment from 'moment';
 import Helmet from 'react-helmet';
-import { prefixLink } from 'gatsby-helpers';
+// import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
-import access from 'safe-access';
-// import Post from '../components/Post';
 import PostList from '../components/PostList';
-import Sidebar from '../components/Sidebar';
 import styles from './index.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
-        // <Sidebar {...this.props} />
 
 class SiteIndex extends React.Component {
   render() {
@@ -22,7 +16,6 @@ class SiteIndex extends React.Component {
           title={config.siteTitle}
           meta={[
             { name: 'description', content: `${config.siteDesc}` },
-            { name: 'google-site-verification', content: 'HZS4pN5-8-N7GBYIuK0Il6fy2644h8iqxwkeTBbSFcA' },
             { property: 'og:type', content: 'article' },
             { property: 'og:url', content: `${config.siteUrl}` },
             { property: 'og:title', content: `${config.siteTitle}` },
