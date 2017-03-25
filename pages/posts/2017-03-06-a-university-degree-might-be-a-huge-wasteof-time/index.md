@@ -6,7 +6,7 @@ mainImage:
 tags: "번역, 교육, 컴퓨터 과학"
 ---
 
-이 글은 [Eric Elliott](https://medium.com/@_ericelliott)의 [Want to Code? A University Degree Might be a Huge Waste of Time](https://medium.com/javascript-scene/https://medium.com/javascript-scene/want-to-code-a-university-degree-might-be-a-huge-waste-of-time-81e1817a2ef0#.jdu89qa4a)를 번역한 글입니다.
+이 글은 [Eric Elliott](https://medium.com/@_ericelliott)의 [Want to Code? A University Degree Might be a Huge Waste of Time](https://medium.com/javascript-scene/want-to-code-a-university-degree-might-be-a-huge-waste-of-time-81e1817a2ef0#.jdu89qa4a)를 번역한 글입니다.
 
 ---
 
@@ -193,5 +193,4 @@ big O 표기법에 대한 요약서를 읽어보고 기초에 대한 이해는 �
 
 만약 최신 기술 스택을 기반으로 훌륭한 앱을 만드는 좋은 직업을 가지고 싶다면 학위를 가질 필요가 없다. 그건 엄청난 돈과 시간 낭비다.
 
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

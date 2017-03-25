@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import moment from 'moment';
 import 'moment/locale/ko';
+import Helmet from 'react-helmet';
 // import { RouteHandler, Link } from 'react-router';
 // import access from 'safe-access';
 // import { config } from 'config';
@@ -20,8 +21,31 @@ class Post extends React.Component {
     const post = route.page.data;
     const tags = post.tags && post.tags.split(',');
 
+    const scripts = [];
+    const scriptRegex = /<script[^>].*<\/script>/ig;
+    let match = [];
+
+    // get script tags
+    while (match) {
+      match = scriptRegex.exec(post.body);
+      if (match) {
+        scripts.push(match[0]);
+      } else {
+        break;
+      }
+    }
+    // parse src from script tags
+    const scriptSrc = scripts.map((script) => {
+      return /(src=)"(.+)"/.exec(script)[2];
+    });
+
     return (
       <div>
+        <Helmet>
+          {scriptSrc.map((src) =>
+            <script async src={src} type="text/javascript" />
+          )}
+        </Helmet>
         <div className="blog-single">
           <div className="text">
             <h1>{ post.title }</h1>
