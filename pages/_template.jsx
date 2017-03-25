@@ -3,18 +3,18 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 import Navigation from '../components/Navigation.js';
-import '../static/css/reset.css';
-import '../static/css/base.css';
-import '../static/css/typography.css';
-import '../static/css/font.css';
+import '../css/reset.css';
+import '../css/base.css';
+import '../css/typography.css';
+import '../css/font.css';
 // import '../static/fonts/NotoKR-Regular/stylesheet.css';
 
 
 class Template extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.onScroll = this.onScroll.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.onScroll = this.onScroll.bind(this);
+  // }
 
   // componentDidMount() {
   //   window.addEventListener('scroll', this.onScroll);

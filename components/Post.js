@@ -8,7 +8,7 @@ import Helmet from 'react-helmet';
 import ReadNext from './ReadNext';
 import Tags from './Tags';
 
-import '../static/css/highlight.css';
+import '../css/highlight.css';
 import './Post.css';
 
 class Post extends React.Component {
@@ -42,8 +42,8 @@ class Post extends React.Component {
     return (
       <div>
         <Helmet>
-          {scriptSrc.map((src) =>
-            <script async src={src} type="text/javascript" />
+          {scriptSrc.map((src, i) =>
+            <script async src={src} type="text/javascript" key={i} />
           )}
         </Helmet>
         <div className="blog-single">

@@ -1,4 +1,4 @@
-@import '../static/css/config.css';
+@import '..//css/config.css';
 
 .postList {
   max-width: $post-width;
@@ -23,19 +23,18 @@
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
-
-    /* @media (max-width: $mobile-max) {
-      margin: 0.5rem auto;
-      height: 11rem;
-    } */
   }
 
 
   .title {
-    margin: 0 0 0.5rem;
-    font-size: 1.75rem;
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.625;
+
+    @media (min-width: $mobile-max) {
+      font-size: 1.75rem;
+    }
   }
 
   .mainImage + .title {
@@ -45,14 +44,14 @@
   .preview {
     display: -webkit-box;
     width: 100%;
-    max-height: 2.4rem;
+    max-height: 2.8rem;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
     font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.4rem;
 
     @media (max-width: $mobile-max) {
       margin-top: 1rem;
@@ -64,7 +63,7 @@
   }
 
   .postFooter {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     clear: fix;
     @media (max-width: $mobile-max) {
       margin-top: 0.75rem;

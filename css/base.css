@@ -3,11 +3,6 @@
 /* $isDev: true; */
 @mixin drawGuideline $isDev;
 
-html {
-  font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
 body {
   background-color: $color-body;
   letter-spacing: -0.02em;

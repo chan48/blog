@@ -44,8 +44,10 @@ html {
 	/* rucksack's responive font size */
 	font-size: responsive 16px 18px;
 	font-range: 480px 1280px;
-	/* font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif; */
+	line-height: 1.625;
 	color: #222;
+	font-family: 'Spoqa Han Sans', 'Nanum Gothic', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+  -webkit-font-smoothing: antialiased;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -84,7 +86,7 @@ section {
 }
 
 p {
-	margin: 1.45rem auto;
+	margin: 1.75rem auto;
 }
 /* Links
    ========================================================================== */
@@ -131,7 +133,7 @@ pre {
 	overflow: auto;
 }
 code, kbd, pre, samp {
-	font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
+	font-family: 'Droid Sans Mono', monospace, Courier;
 }
 code {
 	display: block;
@@ -200,7 +202,7 @@ figure {
    ========================================================================== */
 h1 {
 	font-size: 40px;
-	font-size: 2.5xrrem;
+	font-size: 2.5rem;
 	line-height: 52px;
 	line-height: 3.25rem;
 	margin-top: 104px;
