@@ -1,9 +1,3 @@
-/* PT Sans Narrow */
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
-
-/* Menlo */
-@import url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/menlo-regular.css');
-
 /* Noto Sans */
 @font-face {
   font-family: 'Noto Sans KR';
@@ -19,3 +13,10 @@
   font-weight: 700;
   font-style: bold;
 }
+
+/* @import를 이용한 폰트 추가는 AMP 스펙에 맞지 않음 */
+/* PT Sans Narrow */
+/* @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow'); */
+
+/* Menlo */
+/* @import url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/menlo-regular.css'); */

@@ -17,16 +17,17 @@
   }
 
   .mainImage {
-    height: 16rem;
+    width: 100%;
+    height: auto;
     margin: 0 auto 1rem;
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
 
-    @media (max-width: $mobile-max) {
+    /* @media (max-width: $mobile-max) {
       margin: 0.5rem auto;
       height: 11rem;
-    }
+    } */
   }
 
 

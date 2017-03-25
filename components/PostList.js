@@ -48,11 +48,11 @@ class PostList extends Component {
           >
             <Link to={page.path}>
               {mainImage &&
-                <div
+                <img
+                  data-layout="responsive"
                   className={cx('mainImage')}
-                  style={{
-                    backgroundImage: `url(${mainImage})`,
-                  }}
+                  src={mainImage}
+                  alt={`${title}: 메인이미지`}
                 />
               }
               <h2 className={cx('title')}>{title}</h2>
