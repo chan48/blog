@@ -6,6 +6,12 @@ import Page from '../components/Page';
 import SamplePage from '../components/SamplePage';
 
 class MarkdownWrapper extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.pagesByTag = this.getPagesByTag();
+  }
+
   render() {
     const { route } = this.props;
     const post = route.page.data;

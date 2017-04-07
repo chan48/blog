@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import sortBy from 'lodash/sortBy';
 import moment from 'moment';
 import access from 'safe-access';
+import getPagesByTag from '../utils/getPagesByTag';
 import Tags from './Tags';
 import styles from './PostList.module.css';
 import classNames from 'classnames/bind';
@@ -14,9 +15,10 @@ class PostList extends Component {
     route: PropTypes.object.isRequired,
   };
 
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+    console.log(`getPagesByTag(this.props.route.pages)`, getPagesByTag(this.props.route.pages));
+  }
 
   render() {
     const pageLinks = [];
