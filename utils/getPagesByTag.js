@@ -1,38 +1,48 @@
 import R from 'ramda';
+/**
+ * gatsby에서 제공하는 pages 배열의 구조는 아래와 같다.
 
-export default function getPagesByTag (pages) {
-  // const pages = [ // this.props.route.pages
-  //   {
-  //     data: { tags: 'a,b,c' },
-  //   },
-  //   {
-  //     data: { tags: 'a,c' },
-  //   },
-  // ];
-  const isNotNil = R.compose(R.not, R.isNil);
-  const getTagStringFromPage = R.partial(R.path, [['data', 'tags']]);
+  const pages = [ // this.props.route.pages
+    {
+      data: {
+        tags: 'a,b,c'
+        ...
+      },
+      ...
+    }
+  ];
+ */
 
+const isNotNil = R.compose(R.not, R.isNil);
+const splitByComma = (str = '') => str.split(',');
+const isIncludingTag = (tag, target = '') => target.includes(tag);
+
+export const getTagStringFromPage = R.partial(R.path, [['data', 'tags']]);
+
+export const getTagsFromPages = (pages) => {
   const tagStrList = R.pipe(
     R.map(getTagStringFromPage),
     R.filter(isNotNil)
   )(pages);
 
-  const splitByComma = (str = '') => str.split(',');
-
-  const uniqTags = R.pipe(
+  return R.pipe(
     R.map(splitByComma),
     R.flatten,
     R.map(R.trim),
-    R.uniq
+    R.uniq, // 중복 결과 제거
   )(tagStrList);
+};
 
-  // 태그별 페이지 가져오기
-  const isIncludingTag = (tag, target = '') => target.includes(tag);
-  const pagesByTag = uniqTags.map(tag => Object.assign({}, {
+export const getPagesByTag = (pages = [], tag = '') => {
+  return pages.filter(page => isIncludingTag(tag, getTagStringFromPage(page)));
+};
+
+export const getPagesByTagCollection = (pages) => {
+  const tags = getTagsFromPages(pages);
+  const pagesByTag = tags.map(tag => Object.assign({}, {
     tag,
-    pages: pages.filter(page => isIncludingTag(tag, getTagStringFromPage(page))),
+    pages: getPagesByTag(pages, tag),
   }));
 
-  // console.log(`pagesByTag`, pagesByTag);
   return pagesByTag;
-}
+};

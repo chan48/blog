@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import sortBy from 'lodash/sortBy';
 import moment from 'moment';
 import access from 'safe-access';
-import getPagesByTag from '../utils/getPagesByTag';
+import { getPagesByTag } from '../utils/getPagesByTag';
 import Tags from './Tags';
 import styles from './PostList.module.css';
 import classNames from 'classnames/bind';
