@@ -6,9 +6,9 @@ $desktop-max: 1100px;
 $tablet-max: 900px;
 $mobile-max: 500px;
 
-
 $post-width: 740px;
 $nav-height: 3rem;
+$footer-height: 3.5rem;
 $wrapper-max: 1070px;
 $color-body: #fafafa;
 $color-border: #ebebeb;

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router';
-import Helmet from 'react-helmet';
+// import { Link } from 'react-router';
 // import { prefixLink } from 'gatsby-helpers';
+import Helmet from 'react-helmet';
 import { config } from 'config';
+import Footer from '../components/Footer';
 import PostList from '../components/PostList';
 import styles from './index.css';
 import classNames from 'classnames/bind';
@@ -26,10 +27,9 @@ class SiteIndex extends React.Component {
           ]}
         />
         <div className={cx('content')}>
-          <div className={cx('main')}>
-            <PostList {...this.props} />
-          </div>
+          <PostList {...this.props} />
         </div>
+        <Footer {...this.props} />
       </div>
     );
   }

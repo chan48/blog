@@ -3,7 +3,6 @@ import { RouteHandler, Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 import './SiteLinks.css';
-import '../static/fonts/fontawesome/style.css';
 
 class SiteLinks extends React.Component {
   render() {

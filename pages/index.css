@@ -1,18 +1,18 @@
-@import '..//css/config.css';
+@import '../css/config.css';
 
+/* 최상위 요소 */
 .wrapper {
+  position: relative;
   padding-top: $nav-height;
+  padding-bottom: $footer-height;
   /* 사이트 최대 넓이 */
-  lost-center: 1070px;
-  background-color: #fff;
+  min-height: 100vh;
+  /* background-color: $color-body; */
 }
 
 .content {
-  background-color: $color-body;
-}
-
-.main {
-  padding: 1.1rem 1rem;
+  lost-center: $wrapper-max;
+  background-color: #fff;
 }
 
 /* desktop */

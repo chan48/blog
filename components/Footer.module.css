@@ -1,0 +1,35 @@
+@import '../css/config.css';
+
+.wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid $color-border;
+}
+
+.Footer {
+  position: relative;
+  lost-center: $wrapper-max;
+  min-height: $footer-height;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.copyright {
+  float: left;
+}
+
+.owner {
+  text-decoration: underline;
+}
+
+.Footer-links {
+  float: right;
+  font-size: 1rem;
+
+  & > * {
+    margin-left: 0.5em;
+  }
+}
+

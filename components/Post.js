@@ -7,6 +7,7 @@ import Helmet from 'react-helmet';
 // import { config } from 'config';
 import ReadNext from './ReadNext';
 import Tags from './Tags';
+import Footer from './Footer';
 
 import '../css/highlight.css';
 import './Post.css';
@@ -46,25 +47,24 @@ class Post extends React.Component {
             <script async src={src} type="text/javascript" key={i} />
           )}
         </Helmet>
-        <div className="blog-single">
-          <div className="text">
-            <h1>{ post.title }</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.body }} />
-          </div>
-          <div className="footer">
-            <ReadNext post={post} {...this.props} />
-            <div>
-              {tags && <Tags tags={tags} />}
+        <div className="content">
+          <div className="blog-single">
+            <div className="text">
+              <h1>{ post.title }</h1>
+              <div dangerouslySetInnerHTML={{ __html: post.body }} />
             </div>
-            <div className="date-published">
-              {moment(post.date).format('LL')}
+            <div className="footer">
+              <ReadNext post={post} {...this.props} />
+              <div>
+                {tags && <Tags tags={tags} />}
+              </div>
+              <div className="date-published">
+                {moment(post.date).format('LL')}
+              </div>
             </div>
-            <p>
-              &copy; <a href="https://www.github.com/rhostem">rhotsem</a>
-              <span>&nbsp;All rights reserved.</span>
-            </p>
           </div>
         </div>
+        <Footer {...this.props} />
       </div>
     );
   }

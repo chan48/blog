@@ -23,13 +23,11 @@ const pages = [ // this.props.route.pages
   },
 ];
 
-
 describe('getTagStringFromPage 메소드 테스트', () => {
   it('page 객체에 객체에서 tags키의 값을 리턴한다.', () => {
     expect(getTagStringFromPage(pages[0])).to.equal(pages[0].data.tags);
   });
 });
-
 
 describe('getTagsFromPages 메소드 테스트', () => {
   it('pages 배열에서 태그 스트링을 파싱해서 중복을 제거한 태그 배열을 리턴한다.', () => {

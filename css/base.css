@@ -4,7 +4,6 @@
 @mixin drawGuideline $isDev;
 
 body {
-  background-color: $color-body;
   letter-spacing: -0.02em;
 }
 
