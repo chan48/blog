@@ -12,8 +12,8 @@ $footer-height: 3.5rem;
 $wrapper-max: 1070px;
 $color-body: #fafafa;
 $color-border: #ebebeb;
-$color-01: #efa48d;
 $color-gray-01: rgba(0, 0, 0, 0.44);
+
 
 @define-mixin drawGuideline $isDev {
   @if $isDev == true {

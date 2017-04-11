@@ -48,19 +48,19 @@ class Post extends React.Component {
           )}
         </Helmet>
         <div className="content">
-          <div className="blog-single">
+          <div className="Post">
             <div className="text">
               <h1>{ post.title }</h1>
+              <div className="Post-postDesc">
+                {tags && <Tags tags={tags} />}
+                <div className="date-published">
+                  {moment(post.date).format('LL')}
+                </div>
+              </div>
               <div dangerouslySetInnerHTML={{ __html: post.body }} />
             </div>
             <div className="footer">
               <ReadNext post={post} {...this.props} />
-              <div>
-                {tags && <Tags tags={tags} />}
-              </div>
-              <div className="date-published">
-                {moment(post.date).format('LL')}
-              </div>
             </div>
           </div>
         </div>

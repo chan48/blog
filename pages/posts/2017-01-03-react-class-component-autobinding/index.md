@@ -1,5 +1,6 @@
 ---
 title: "데코레이터를 이용한 React 컴포넌트 메소드 자동 바인딩"
+description: "데코레이터를 이용한 React 컴포넌트 메소드 자동 바인딩"
 date: "2017-01-03"
 layout: post
 mainImage: ""

@@ -78,7 +78,8 @@
   .readMore {
     float: right;
     font-size: 0.8rem;
-    color: $color-01;
+    color: #b06ab3;
+    background: #b06ab3ee;
   }
 
   &:not(:last-child) {

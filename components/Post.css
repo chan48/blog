@@ -1,38 +1,43 @@
 @import '..//css/config.css';
 
-.blog-single {
+.Post {
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 3.444rem;
 	background-color: #fff;
 }
 
-.blog-single h1 {
+.Post h1 {
 	text-align: left;
 	font-weight: 700;
 }
 
-.blog-single .text {
+.Post-postDesc {
+	margin-bottom: 3.4444rem;
+}
+
+.Post .text {
 	margin-bottom: 31px;
 	padding: * 1rem;
 }
 
-.blog-single a {
+.Post a {
 	text-decoration: underline;
 }
 
-.blog-single .text {
+.Post .text {
 	max-width: $post-width;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.blog-single .text img {
+.Post .text img {
 	max-width: 100%;
 	height: auto;
 	margin: 0 auto;
 }
 
-.blog-single .footer {
+.Post .footer {
 	max-width: $post-width;
 	margin-left: auto;
 	margin-right: auto;
@@ -40,16 +45,16 @@
 }
 
 @media (max-width: 900px) {
-	.blog-single .text,
-	.blog-single .footer {
+	.Post .text,
+	.Post .footer {
 		padding: 0 1.5rem;
 		margin-bottom: 26px;
 	}
 }
 
 @media (max-width: $mobile-max) {
-	.blog-single .text,
-	.blog-single .footer {
+	.Post .text,
+	.Post .footer {
 		padding: 0 1.2rem;
 		margin-bottom: 26px;
 	}

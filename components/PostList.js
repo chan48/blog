@@ -17,7 +17,6 @@ class PostList extends Component {
 
   constructor(props) {
     super(props);
-    console.log(`getPagesByTag(this.props.route.pages)`, getPagesByTag(this.props.route.pages));
   }
 
   render() {
@@ -44,11 +43,12 @@ class PostList extends Component {
           .slice(0, 350);
 
         pageLinks.push(
-          <div
-            key={index}
+          <Link
+            to={page.path}
             className={cx('post')}
+            key={index}
           >
-            <Link to={page.path}>
+            <div>
               {mainImage &&
                 <img
                   data-layout="responsive"
@@ -59,26 +59,22 @@ class PostList extends Component {
               }
               <h2 className={cx('title')}>{title}</h2>
               <div className={cx('preview')}>{desc}</div>
-            </Link>
-            {!tags &&
-              <div className={cx('tagWrapper')}>
-                <Tags tags={tags} />
-              </div>
-            }
-            <div className={cx('postFooter')}>
-              <time
-                dateTime={moment(datePublished).format('YYYY.MM.d')}
-              >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
-              <Link to={page.path}>
-                <div className={cx('readMore')}>더 보기</div>
-              </Link>
             </div>
-          </div>
+          </Link>
         );
       }
     });
-              // <p dangerouslySetInnerHTML={{ __html: postBody }} />
-                // {tags.map((tag) => <span className={cx('tag')}>{tag.trim()}</span>)}
+              // {
+              //   tags &&
+              //   <div className={cx('tagWrapper')}>
+              //     <Tags tags={tags} />
+              //   </div>
+              // }
+              // <div className={cx('postFooter')}>
+              //   <time
+              //     dateTime={moment(datePublished).format('YYYY.MM.d')}
+              //   >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
+              // </div>
 
     return (
       <div className={cx('postList')}>
