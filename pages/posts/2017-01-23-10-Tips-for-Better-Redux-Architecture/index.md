@@ -5,6 +5,7 @@ date: "2017-01-23"
 layout: post
 mainImage:
 tags: "Redux, React, Javascript, Front-end, 번역"
+path: "/posts/2017-01-23-10-Tips-for-Better-Redux-Architecture"
 ---
 
 이 글은 [Eric Elliott](https://medium.com/@_ericelliott)의 [10 Tips for Better Redux Architecture](https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.ffjkpicnd)를 번역한 글입니다.

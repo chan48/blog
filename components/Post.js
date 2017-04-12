@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 import moment from 'moment';
 import 'moment/locale/ko';
 import Helmet from 'react-helmet';
+// import { prefixLink } from 'gatsby-helpers';
 // import { RouteHandler, Link } from 'react-router';
-// import access from 'safe-access';
-// import { config } from 'config';
-import ReadNext from './ReadNext';
+import { config } from 'config';
+// import ReadNext from './ReadNext';
 import Tags from './Tags';
 import Footer from './Footer';
 
@@ -16,40 +16,77 @@ class Post extends React.Component {
   constructor(props) {
     super(props);
     moment.locale();
+    this.getScriptSrc = this.getScriptSrc.bind(this);
   }
-  render() {
-    const { route } = this.props;
-    const post = route.page.data;
-    const tags = post.tags && post.tags.split(',');
 
+  getScriptSrc() {
     const scripts = [];
     const scriptRegex = /<script[^>].*<\/script>/ig;
     let match = [];
 
     // get script tags
     while (match) {
-      match = scriptRegex.exec(post.body);
+      match = scriptRegex.exec(this.props.route.page.data.body);
       if (match) {
         scripts.push(match[0]);
       } else {
         break;
       }
     }
+
     // parse src from script tags
-    const scriptSrc = scripts.map((script) => {
+    return scripts.map((script) => {
       return /(src=)"(.+)"/.exec(script)[2];
     });
+  }
+
+  render() {
+    const { route } = this.props;
+    const post = route.page.data;
+    const tags = post.tags && post.tags.split(',');
 
     return (
       <div>
-        <Helmet>
-          {scriptSrc.map((src, i) =>
+        <Helmet
+          link={[
+            { rel: 'canonical', href: `${config.siteUrl}${post.path}/` },
+          ]}
+        >
+          {this.getScriptSrc().map((src, i) =>
             <script async src={src} type="text/javascript" key={i} />
           )}
+
+          // Disqus 댓글
+          // https://rhostem.disqus.com/admin/settings/universalcode/
+          <script type="text/javascript">{`
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+            /*
+            var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = 'https://rhostem.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+          `}</script>
+
+          <noscript>{`
+            Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+          `}</noscript>
+
         </Helmet>
         <div className="content">
           <div className="Post">
-            <div className="text">
+            <div className="Post-text">
               <h1>{ post.title }</h1>
               <div className="Post-postDesc">
                 {tags && <Tags tags={tags} />}
@@ -59,14 +96,18 @@ class Post extends React.Component {
               </div>
               <div dangerouslySetInnerHTML={{ __html: post.body }} />
             </div>
-            <div className="footer">
-              <ReadNext post={post} {...this.props} />
-            </div>
+
+            <div className="Post-disqus" id="disqus_thread" />
+
           </div>
         </div>
         <Footer {...this.props} />
       </div>
     );
+
+            // <div className="footer">
+            //   <ReadNext post={post} {...this.props} />
+            // </div>
   }
 }
 

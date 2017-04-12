@@ -5,6 +5,7 @@ date: "2017-01-03"
 layout: post
 mainImage: ""
 tags: "Javascript, React, ES6, ES7, Front-end"
+path: "/posts/2017-01-03-react-class-component-autobinding"
 ---
 
 ## React 컴포넌트 메소드에 자동으로 바인딩되는 `this`

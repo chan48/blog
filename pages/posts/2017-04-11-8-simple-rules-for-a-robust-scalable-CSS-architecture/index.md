@@ -5,6 +5,7 @@ date: "2017-04-11"
 layout: post
 mainImage:
 tags: "Front-end, CSS"
+path: "/posts/2017-04-11-8-simple-rules-for-a-robust-scalable-CSS-architecture"
 ---
 
 CSS는 쉬운 듯하면서도 어렵다. 복잡한 로직은 없지만 이름 그대로 중첩(cascading)되는 성질 때문에 기대했던 결과가 나오지 않는 경우가 무척 많다. 때에 따라서는 디버깅에 자바스크립트 버그 수정보다 많은 시간을 투자해야 하는 경우가 생기기도 한다. 까다로운 CSS를 상대하기 위해 [SMACSS](https://smacss.com/), [BEM](http://getbem.com/)같은 방법론을 적용하기도 하고 [CSS module](https://github.com/css-modules/css-modules), [shadow DOM](https://developer.mozilla.org/ko/docs/Web/Web_Components/Shadow_DOM)처럼 기술적인 대안을 마련하기도 한다. 하지만 모든 것을 만족하게 할 수 있는 방법론은 없기에 CSS의 특성을 잘 이해한 상태에서 앞서 언급한 기술들을 필요한 곳에 적용해야 제대로 된 스타일 시트 작성이 가능할 것이다.

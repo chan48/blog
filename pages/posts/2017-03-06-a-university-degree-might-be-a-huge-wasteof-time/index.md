@@ -5,6 +5,7 @@ date: "2017-03-06"
 layout: post
 mainImage:
 tags: "번역, 교육, 컴퓨터 과학"
+path: "/posts/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time"
 ---
 
 이 글은 [Eric Elliott](https://medium.com/@_ericelliott)의 [Want to Code? A University Degree Might be a Huge Waste of Time](https://medium.com/javascript-scene/want-to-code-a-university-degree-might-be-a-huge-waste-of-time-81e1817a2ef0#.jdu89qa4a)를 번역한 글입니다.
