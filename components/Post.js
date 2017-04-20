@@ -43,7 +43,7 @@ class Post extends React.Component {
   render() {
     const { route } = this.props;
     const post = route.page.data;
-    const tags = post.tags && post.tags.split(',');
+    const tags = post.tags;
 
     return (
       <div>
