@@ -4,7 +4,15 @@ description: "자바스크립트 피로감을 줄여주기 위한 학습 계획"
 date: "2016-12-19"
 layout: post
 mainImage: "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/0.png"
-tags: "번역, Javascript, React, Redux, ES6, gatsby, GraphQL, Front-end"
+tags:
+  - 번역
+  - Javascript
+  - React
+  - Redux
+  - ES6
+  - gatsby
+  - GraphQL
+  - Front-end
 path: "/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue"
 ---
 <!-- path: "/hello-world/" -->

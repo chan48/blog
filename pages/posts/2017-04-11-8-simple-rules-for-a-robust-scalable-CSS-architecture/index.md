@@ -4,7 +4,9 @@ description: "견고하고 확장성있는 CSS 구조를 위한 8가지 규칙"
 date: "2017-04-11"
 layout: post
 mainImage:
-tags: "Front-end, CSS"
+tags:
+  - Front-end
+  - CSS
 path: "/posts/2017-04-11-8-simple-rules-for-a-robust-scalable-CSS-architecture"
 ---
 

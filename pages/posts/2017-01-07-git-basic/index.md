@@ -4,7 +4,11 @@ description: "버전 관리 시스템 Git 기초"
 date: "2017-01-08"
 layout: post
 mainImage: "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/file-status.png"
-tags: "VCS, Git, SVN, Git flow"
+tags:
+  - VCS
+  - Git
+  - SVN
+  - Git flow
 path: "/posts/2017-01-07-git-basic"
 ---
 

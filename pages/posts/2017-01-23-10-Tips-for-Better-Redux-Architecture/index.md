@@ -4,7 +4,12 @@ description: "Redux 아키텍쳐를 위한 10가지 팁"
 date: "2017-01-23"
 layout: post
 mainImage:
-tags: "Redux, React, Javascript, Front-end, 번역"
+tags:
+  - Redux
+  - React
+  - Javascript
+  - Front-end
+  - 번역
 path: "/posts/2017-01-23-10-Tips-for-Better-Redux-Architecture"
 ---
 

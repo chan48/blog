@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import sortBy from 'lodash/sortBy';
-import moment from 'moment';
+// import moment from 'moment';
 import access from 'safe-access';
-import { getPagesByTag } from '../utils/getPagesByTag';
-import Tags from './Tags';
+// import { getPagesByTag } from '../utils/getPagesByTag';
+// import Tags from './Tags';
 import styles from './PostList.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
@@ -15,9 +15,9 @@ class PostList extends Component {
     route: PropTypes.object.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     const pageLinks = [];
@@ -32,11 +32,11 @@ class PostList extends Component {
         const postData = page.data;
         const title = postData.title || page.path;
         const mainImage = postData.mainImage;
-        const description = postData.description;
-        const datePublished = postData.date;
-        const category = postData.category;
+        // const description = postData.description;
+        // const datePublished = postData.date;
+        // const category = postData.category;
         const postBody = postData.body;
-        const tags = postData.tags && postData.tags.toString().split(',');
+        // const tags = postData.tags && postData.tags.toString().split(',');
         const desc = postBody
           .replace(/<(?:.|\n|("))*?>/gm, '')
           .replace(/&quot;/g, '"')

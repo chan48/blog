@@ -4,7 +4,12 @@ description: "데코레이터를 이용한 React 컴포넌트 메소드 자동 �
 date: "2017-01-03"
 layout: post
 mainImage: ""
-tags: "Javascript, React, ES6, ES7, Front-end"
+tags:
+  - Javascript
+  - React
+  - ES6
+  - ES7
+  - Front-end
 path: "/posts/2017-01-03-react-class-component-autobinding"
 ---
 

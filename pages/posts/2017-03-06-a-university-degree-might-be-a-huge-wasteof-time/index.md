@@ -4,7 +4,10 @@ description: "프로그래머가 되고 싶은가? 그렇다면 대학 학위를
 date: "2017-03-06"
 layout: post
 mainImage:
-tags: "번역, 교육, 컴퓨터 과학"
+tags:
+  - 번역
+  - 교육
+  - 컴퓨터 과학
 path: "/posts/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time"
 ---
 
