@@ -50,15 +50,21 @@ class PostList extends Component {
           >
             <div>
               {mainImage &&
-                <img
+                <div
                   data-layout="responsive"
                   className={cx('mainImage')}
-                  src={mainImage}
-                  alt={`${title}: 메인이미지`}
+                  style={{
+                    backgroundImage: `url(${mainImage})`
+                  }}
+                  // src={mainImage}
+                  // alt={`${title}: 메인이미지`}
                 />
               }
               <h2 className={cx('title')}>{title}</h2>
-              <div className={cx('preview')}>{desc}</div>
+              <div
+                className={cx('preview')}
+                dangerouslySetInnerHTML={{ __html: desc }}
+              />
             </div>
           </Link>
         );

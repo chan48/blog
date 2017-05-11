@@ -46,7 +46,7 @@ html {
 	font-range: 480px 1280px;
 	line-height: 1.625;
 	color: #222;
-	font-family: 'Spoqa Han Sans', 'Nanum Gothic', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+	font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
   -webkit-font-smoothing: antialiased;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -158,8 +158,9 @@ figcaption {
 	color: #222;
 	display: block;
 	font-size: .8125rem;
-	font-style: italic;
+	/* font-style: italic; */
 	margin-bottom: 0;
+	color: rgba(#222, 0.7);
 	text-align: center;
 }
 @media screen and (min-width:40em) {

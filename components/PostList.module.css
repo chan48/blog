@@ -17,10 +17,10 @@
 
   .mainImage {
     width: 100%;
-    height: auto;
+    height: 250px;
     margin: 0 auto 1rem;
-    background-size: auto 100%;
-    background-position: center;
+    background-size: cover;
+    background-position: 50% 0;
     background-repeat: no-repeat;
   }
 

@@ -56,8 +56,8 @@ class Post extends React.Component {
             <script async src={src} type="text/javascript" key={i} />
           )}
 
-          // Disqus 댓글
-          // https://rhostem.disqus.com/admin/settings/universalcode/
+          {/*Disqus 댓글
+          https://rhostem.disqus.com/admin/settings/universalcode/*/}
           <script type="text/javascript">{`
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
