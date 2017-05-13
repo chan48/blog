@@ -5,13 +5,14 @@
   "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
+    "build": "npm run clean && gatsby build && node ampify.js && npm run copy:html",
     "serve:build": "npm run build && gatsby serve-build",
-    "build": "npm run clean && gatsby build && node ampify.js",
+    "copy:html": "cp -r html/ public/",
     "clean:public": "rm -rf public/*",
     "clean": "npm run clean:public",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "jest --watch",
-    "deploy": "gatsby build && node ampify.js && gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\""
+    "deploy": "gatsby build && gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\""
   },
   "keywords": [
     "gatsby"

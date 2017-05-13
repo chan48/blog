@@ -21,9 +21,9 @@ partial application은 함수 인자의 일부를 미리 전달해 둔 함수를
 
 ```javascript
 function partial(fn, ...presetArgs) {
- return function partiallyApplied(...laterArgs){
- return fn( ...presetArgs, ...laterArgs );
- };
+  return function partiallyApplied(...laterArgs){
+    return fn( ...presetArgs, ...laterArgs );
+  };
 }
 ```
 
@@ -40,7 +40,7 @@ partial 함수를 이용해서 첫번째 인자 a에 10이 고정된 새로운 �
 
 ```javascript
 function partiallyApplied(...laterArgs) {
- return adder(10, ...laterArgs);
+  return adder(10, ...laterArgs);
 }(20);
 ```
 
@@ -48,16 +48,16 @@ partial에 의해 만들어진 partiallyApplied 함수에 고정되지 않은 �
 
 ```javascript
 function ajax(endPoint = '', search = {}) {
- ... //
- return Promise.resolve(res);
+  // ...
+  return Promise.resolve(res);
 }
 
 const getUser = partial(ajax, '/user');
 
 getUser({ id: 'A1' })
- .then((res) => {
- // ...
- })
+  .then((res) => {
+    // ...
+  })
 ```
 
 위의 예제에서는 ajax 함수에 요청 경로를 사전에 할당해 둔 후 search 객체만 전달해서 사용할 수 있는 getUser라는 함수를 만들었다. 이렇게 일부 인자를 고정해서 호출할 필요가 있으면 partial application을 사용하면 중복 코드를 줄이고 적절한 함수명을 통해 가독성을 높일 수 있다.
@@ -68,9 +68,9 @@ curry는 partial application의 특수한 형태다. partial application이 미�
 
 ```javascript
 curry(ajax)('/user')({ id: 'A1' })
- .then((res) => {
- // ...
- });
+  .then((res) => {
+    // ...
+  });
 ```
 
 위의 예제에서는 ajax 함수를 curry한 후 함수를 2번 더 호출했다. curried 함수를 호출할 때마다 변수에 할당해서 보다 직관적으로 작성하자면  아래와 같다.
@@ -80,27 +80,27 @@ const curriedGet = curry(ajax);
 const curriedGetUser = curriedGet('/user')
 
 curriedGetUser({ id: 'A1' })
- .then((res) => {
- // ...
- });
+  .then((res) => {
+    // ...
+  });
 ```
 
 curry 함수의 실제 구현을 살펴보자.
 
 ```javascript
 function curry(fn, arity = fn.length) {
- return (function nextCurried(prevArgs){
- return function curried(nextArg){
- var args = prevArgs.concat( [nextArg] );
+  return (function nextCurried(prevArgs){
+    return function curried(nextArg){
+      var args = prevArgs.concat( [nextArg] );
 
- if (args.length >= arity) {
- return fn( ...args );
- }
- else {
- return nextCurried( args );
- }
- };
- })( [] );
+      if (args.length >= arity) {
+        return fn( ...args );
+      }
+      else {
+        return nextCurried( args );
+      }
+    };
+  })( [] );
 }
 ```
 

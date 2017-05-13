@@ -48,7 +48,7 @@ function pagesToSitemap(pages) {
 function generateSiteMap(pages) {
   var sitemap = sm.createSitemap({
     hostname: 'https://rhostem.github.io',
-    cacheTime: '60000',
+    cacheTime: '600000',
     urls: pagesToSitemap(pages),
   })
   console.log('Generating sitemap.xml')
