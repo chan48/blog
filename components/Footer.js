@@ -8,7 +8,7 @@ function Footer({}) {
     <div className={cx('wrap')}>
       <div className={cx('Footer')}>
         <div className={cx('copyright')}
-        >@2016 <a className={cx('owner')} href="https://www.github.com/rhostem" target="blank">rhostem</a> All rights reserved</div>
+        >@2016 <a className={cx('owner')} href="https://www.github.com/rhostem" target="_blank">rhostem</a> All rights reserved</div>
 
         <div className={cx('Footer-links')}>
           <a href="https://www.github.com/rhostem">
