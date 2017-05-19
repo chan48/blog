@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import sortBy from 'lodash/sortBy';
-// import moment from 'moment';
+import moment from 'moment';
 import access from 'safe-access';
 // import { getPagesByTag } from '../utils/getPagesByTag';
 // import Tags from './Tags';
@@ -33,7 +33,7 @@ class PostList extends Component {
         const title = postData.title || page.path;
         const mainImage = postData.mainImage;
         // const description = postData.description;
-        // const datePublished = postData.date;
+        const datePublished = postData.date;
         // const category = postData.category;
         const postBody = postData.body;
         // const tags = postData.tags && postData.tags.toString().split(',');
@@ -48,7 +48,6 @@ class PostList extends Component {
             className={cx('post')}
             key={index}
           >
-            <div>
               {mainImage &&
                 <div
                   data-layout="responsive"
@@ -60,16 +59,20 @@ class PostList extends Component {
                   // alt={`${title}: 메인이미지`}
                 />
               }
+            <div className={cx('postInfo')}>
               <h2 className={cx('title')}>{title}</h2>
-              <div
-                className={cx('preview')}
-                dangerouslySetInnerHTML={{ __html: desc }}
-              />
+              <time className={cx('time')}
+                dateTime={moment(datePublished).format('YYYY.MM.d')}
+              >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
             </div>
           </Link>
         );
       }
     });
+              // <div
+                // className={cx('preview')}
+                // dangerouslySetInnerHTML={{ __html: desc }}
+              // />
               // {
               //   tags &&
               //   <div className={cx('tagWrapper')}>
@@ -77,9 +80,6 @@ class PostList extends Component {
               //   </div>
               // }
               // <div className={cx('postFooter')}>
-              //   <time
-              //     dateTime={moment(datePublished).format('YYYY.MM.d')}
-              //   >{moment(datePublished).format('YYYY년 MM월 DD일')}</time>
               // </div>
 
     return (
