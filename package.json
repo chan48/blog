@@ -12,7 +12,7 @@
     "clean": "npm run clean:public",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "jest --watch",
-    "deploy": "gatsby build && gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\""
+    "deploy": "npm run build && gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\""
   },
   "keywords": [
     "gatsby"

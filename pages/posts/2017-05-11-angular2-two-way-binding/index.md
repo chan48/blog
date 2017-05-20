@@ -67,7 +67,7 @@ Angular에서는 컴포넌트에 속성(property)과 이벤트(event)를 바인�
 
 ```js
 @Component(
-  selector: 'app-sample'
+  selector: 'app-sample',
   template: `
     <div>
       <label>data: </label>
@@ -98,7 +98,7 @@ SampleComponent의 버튼을 클릭하면 increase 메소드가 실행된다. in
 
 ```js
 @Component(
-  selector: 'app-sample'
+  selector: 'app-sample',
   template: `
     <div>
       <label>data: </label>
@@ -133,7 +133,7 @@ banana-in-box 표기법에 ngModel이라는 이름을 사용하면 AngularJS에�
 
 ```js
 @Component(
-  selector: 'app-ngModel-sample'
+  selector: 'app-ngModel-sample',
   template: `
     <label for="search">
       search:

@@ -1,5 +1,5 @@
 @import '../css/config.css';
-$post-vertical-gap: 3rem;
+$post-vertical-gap: 2rem;
 
 .postList {
   lost-center: $post-width;
@@ -15,6 +15,9 @@ $post-vertical-gap: 3rem;
 
   &:first-child {
     margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

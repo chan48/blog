@@ -19,7 +19,7 @@
   float: left;
   margin: 0;
   color: #fff;
-  font-weight: bold;
+  font-weight: 100;
   font-size: 1.2rem;
   font-family: 'PT Sans Narrow', sans-serif;
   line-height: $nav-height;
