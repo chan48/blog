@@ -1,6 +1,6 @@
 ---
-title: "자바스크립트 피로감을 줄여주기 위한 학습 계획"
-description: "자바스크립트 피로감을 줄여주기 위한 학습 계획"
+title: "[번역] 자바스크립트 피로감을 줄여주기 위한 학습 계획"
+description: "[번역] 자바스크립트 피로감을 줄여주기 위한 학습 계획"
 date: "2016-12-19"
 layout: post
 mainImage: "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2016-12-19/0.png"

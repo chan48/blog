@@ -1,6 +1,6 @@
 ---
-title: "Redux 아키텍쳐를 위한 10가지 팁"
-description: "Redux 아키텍쳐를 위한 10가지 팁"
+title: "[번역] Redux 아키텍쳐를 위한 10가지 팁"
+description: "[번역] Redux 아키텍쳐를 위한 10가지 팁"
 date: "2017-01-23"
 layout: post
 mainImage:

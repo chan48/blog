@@ -468,7 +468,7 @@ abbr[title] {
 	border-bottom: 1px dotted;
 }
 b, strong {
-	font-weight: normal;
+	font-weight: 700;
 	background-color: transparent;
 	background-image: linear-gradient(to bottom,rgba(39,243,106,.1),rgba(39,243,106,.1));
 }
