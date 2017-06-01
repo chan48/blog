@@ -3,7 +3,7 @@ title: "버전 관리 시스템 Git 기초"
 description: "버전 관리 시스템 Git 기초"
 date: "2017-01-08"
 layout: post
-mainImage: "https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/file-status.png"
+mainImage: "/posts/2017-01-07-git-basic/file-status.png"
 tags:
   - VCS
   - Git
@@ -51,14 +51,14 @@ Git은 분산형 파일 버전 관리 시스템이다. *파일 버전*, *관리 
 SVN은 개별 파일별로 변화를 감지해서 스냅샷을 저장한다. 버전 생성은 시간순으로 파일들의 집합을 구성하는 방식을 이용한다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/snapshot-svn.png">
+<img src="/posts/2017-01-07-git-basic/snapshot-svn.png">
 <figcaption>SVN 스냅샷</figcaption>
 </figure>
 
 반면에 **Git은 저장소의 파일 시스템 전체를 스냅샷으로 취급**한다. 커밋 시점의 저장소 상태가 하나의 버전이 된다. 파일이 변경되지 않았다면 Git은 파일을 새로 저장하지 않고 링크만 저장한다. Git은 데이터를 스냅샷의 스트림으로 취급한다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/snapshot-git.png">
+<img src="/posts/2017-01-07-git-basic/snapshot-git.png">
 <figcaption>Git 스냅샷</figcaption>
 </figure>
 
@@ -68,7 +68,7 @@ SVN은 개별 파일별로 변화를 감지해서 스냅샷을 저장한다. 버
 Git에서 커밋을 하면 워크스페이스 전체가 스냅샷으로 저장되지만 덩치가 배로 불어나지는 않는다. Git은 마지막 커밋의 스냅샷만 통째로 저장하고 나머지 커밋에 대해서는 스냅샷과 스냅샷이 차이를 기록한 ‘델타’를 저장하기 때문이다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/snapshot-delta.png">
+<img src="/posts/2017-01-07-git-basic/snapshot-delta.png">
 <figcaption>Git의 스냅샷과 델타 구성</figcaption>
 </figure>
 
@@ -95,7 +95,7 @@ Git에서는 파일을 4가지 상태로 구분한다.
     + `staged` - 수정된 파일을 커밋하기 위한 준비 상태. 커밋을 하게 되면 새로운 스냅샷이 생성되고 staged 상태의 파일은 다시 unmodified로 돌아간다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/file-status.png">
+<img src="/posts/2017-01-07-git-basic/file-status.png">
 <figcaption>Git 파일 라이프사이클</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ Git의 강점은 브랜치를 쉽게 만들고 병합할 수 있다는 점이다
 Git 저장소를 초기화하면 `master`라는 이름의 기본 브랜치가 만들어져 있다. `master`와는 다른 `testing`이라는 브랜치를 만들고 커밋을 진행한 예제 히스토리를 살펴보자.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/branch.png">
+<img src="/posts/2017-01-07-git-basic/branch.png">
 <figcaption>2개의 브랜치 히스토리(좌측이 과거 커밋)</figcaption>
 </figure>
 
@@ -138,7 +138,7 @@ Git 저장소를 초기화하면 `master`라는 이름의 기본 브랜치가 �
 #### 1의 경우
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/merge-same-ancestor.png">
+<img src="/posts/2017-01-07-git-basic/merge-same-ancestor.png">
 <figcaption></figcaption>
 </figure>
 
@@ -151,14 +151,14 @@ Git 저장소를 초기화하면 `master`라는 이름의 기본 브랜치가 �
 이 경우에는 두 브랜치가 갈라져 나온 공통 조상 커밋, 병합할 두 브랜치의 커밋, 총 3개의 커밋을 비교해서 병합을 진행한다. 이를 `3-way merge`라고 한다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/3-way-merge.png">
+<img src="/posts/2017-01-07-git-basic/3-way-merge.png">
 <figcaption>3-way merge</figcaption>
 </figure>
 
 `c4`, `c5`는 모두 `c2`를 공통 조상 커밋으로 기지므로 `c2`를 기준으로 두 브랜치의 커밋을 비교해서 병합을 진행한다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/3-way-merge-result.png">
+<img src="/posts/2017-01-07-git-basic/3-way-merge-result.png">
 <figcaption>3-way merge 실행 결과</figcaption>
 </figure>
 
@@ -188,19 +188,19 @@ Git 저장소를 초기화하면 `master`라는 이름의 기본 브랜치가 �
 재배치는 브랜치를 병합하는 다른 방식이다. 재배치를 사용하면 복수의 브랜치를 커밋 히스토리가 분기된 것처럼 보이지 않고 처음부터 1개의 브랜치였던 것처럼 구성할 수 있다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/basic-rebase-1.png">
+<img src="/posts/2017-01-07-git-basic/basic-rebase-1.png">
 <figcaption>재배치 시작 전 분기된 브랜치 히스토리</figcaption>
 </figure>
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/basic-rebase-2.png">
+<img src="/posts/2017-01-07-git-basic/basic-rebase-2.png">
 <figcaption>3-way merge 완료</figcaption>
 </figure>
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/basic-rebase-3.png">
+<img src="/posts/2017-01-07-git-basic/basic-rebase-3.png">
 <figcaption>C4를 C4'으로 재배치해서 experiment 브랜치를 앞으로 이동</figcaption>
 </figure>
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/basic-rebase-4.png">
+<img src="/posts/2017-01-07-git-basic/basic-rebase-4.png">
 <figcaption>master 브랜치를 C4'로 이동</figcaption>
 </figure>
 
@@ -234,7 +234,7 @@ Git flow는 역할에 따라서 브랜치를 분리해서 사용한다.
 배포된 버전을 수정할 필요가 생기면 `master` 브랜치의 커밋을 기반으로 생성한다. 작업이 완료되면 `hotfix` 브랜치는 `master`와 `develop`에 병합된 후 삭제된다.
 
 <figure class="">
-<img src="https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/2017-01-09-git-basic/git-flow.png">
+<img src="/posts/2017-01-07-git-basic/git-flow.png">
 <figcaption>Git flow 브랜치 히스토리 샘플</figcaption>
 </figure>
 

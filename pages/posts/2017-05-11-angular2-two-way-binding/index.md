@@ -62,7 +62,7 @@ Angular에서는 컴포넌트에 속성(property)과 이벤트(event)를 바인�
 /></SampleComponent>
 ```
 
-`prop = $event`부분은 콜백 함수를 선언하지 않고 함수 본문을 직접 할당한 방식이다. dataChange 이벤트가 발생하면 부모 컴포넌트의 prop 속성에 $event 변수가 할당되어서 부모의 상태가 업데이트된다. 그런데 $event라는 변수는 어디서 온 것일까? 다음 코드를 살펴보자.
+`prop = $event`부분은 콜백 함수를 선언하지 않고 함수 본문을 직접 할당한 방식이다. `dataChange` 이벤트가 발생하면 부모 컴포넌트의 `prop` 속성에 `$event` 변수가 할당되어서 부모의 상태가 업데이트된다. 그런데 `$event`라는 변수는 어디서 온 것일까? 다음 코드를 살펴보자.
 
 
 ```js
@@ -87,9 +87,9 @@ export class SampleComponent {
 }
 ```
 
-SampleComponent의 버튼을 클릭하면 increase 메소드가 실행된다. increase 메소드는 data 속성의 값을 변경한 후 EventEmiiter인 dataChange의 emit 메소드를 실행해서 이벤트를 발생시키는 과정을 확인할 수 있다. 앞서 예제의 `(dataChange)="prop = $event"` 부분에 등장한 &#36event가 바로 emit 메소드가 전달한 값에 해당한다.
+`SampleComponent`의 버튼을 클릭하면 `increase` 메소드가 실행된다. `increase` 메소드는 `data` 속성의 값을 변경한 후 EventEmiiter인 `dataChange`의 `emit` 메소드를 실행해서 이벤트를 발생시키는 과정을 확인할 수 있다. 앞서 예제의 `(dataChange)="prop = $event"` 부분에 등장한 `$event`가 바로 `emit` 메소드가 전달한 값에 해당한다.
 
-컴포넌트에서 버튼을 클릭하면 data 속성이 변경되고, 그 값은 다시 부모 컴포넌트로 전달된다. 이렇게 양방향 연결이 구현된다.
+컴포넌트에서 버튼을 클릭하면 `data` 속성이 변경되고, 그 값은 다시 부모 컴포넌트로 전달된다. 이렇게 양방향 연결이 구현된다.
 
 
 ## getter와 setter를 이용한 양방향 바인딩
@@ -122,9 +122,9 @@ export class SampleComponent {
 }
 ```
 
-핵심은 컴포넌트 로컬 속성을 따로 관리한다는 점이다. data 속성은 Input 데코레이터가 적용되었기에 컴포넌트와 그 부모에서 모두 값을 참조하고 할당할 수 있다. 대신 단순 참조와 할당을 하지 않고 getter로 로컬 속성인 componentData를 반환하고, setter로는 input에 입력된 값을 로컬 속성(componentData)에 할당한 후 다시 그 값을 부모 컴포넌트로 올려보낸다.
+핵심은 컴포넌트 로컬 속성을 따로 관리한다는 점이다. `data` 속성은 Input 데코레이터가 적용되었기에 컴포넌트와 그 부모에서 모두 값을 참조하고 할당할 수 있다. 대신 단순 참조와 할당을 하지 않고 getter로 로컬 속성인 `componentData`를 반환하고, setter로는 `input`에 입력된 값을 로컬 속성(componentData)에 할당한 후 다시 그 값을 부모 컴포넌트로 올려보낸다.
 
-setter에서 이벤트를 발생시키지 않으면 컴포넌트는 부모 컴포넌트로 변경된 값을 전달하지 않는다. UI에서 값이 변경되고 있지만 그것은 SampleComponent의 독립된 공간에서만 일어나는 일일 뿐이며 부모 컴포넌트와는 관계가 없게 된다. 이 예제를 통해 Angular는 단방향 데이터 흐름을 가지며, 직접 지시를 하지 않으면 데이터가 아래에서 위로 거슬러 올라가는 일은 발생하지 않는다는 사실을 확인할 수 있다.
+setter에서 이벤트를 발생시키지 않으면 컴포넌트는 부모 컴포넌트로 변경된 값을 전달하지 않는다. UI에서 값이 변경되고 있지만 그것은 `SampleComponent`의 독립된 공간에서만 일어나는 일일 뿐이며 부모 컴포넌트와는 관계가 없게 된다. 이 예제를 통해 Angular는 단방향 데이터 흐름을 가지며, 직접 지시를 하지 않으면 데이터가 아래에서 위로 거슬러 올라가는 일은 발생하지 않는다는 사실을 확인할 수 있다.
 
 
 ## ngModel과 banana-in-box
