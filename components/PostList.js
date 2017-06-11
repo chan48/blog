@@ -1,6 +1,7 @@
+// @flow
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import sortBy from 'lodash/sortBy';
+import { sortBy } from 'lodash';
 import moment from 'moment';
 import access from 'safe-access';
 // import { getPagesByTag } from '../utils/getPagesByTag';
