@@ -21,9 +21,9 @@
   color: #fff;
   font-weight: 100;
   font-size: 1.2rem;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
   line-height: $nav-height;
-  letter-spacing: 0;
+  letter-spacing: -1px;
 }
 
 .menuBar {

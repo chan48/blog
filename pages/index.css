@@ -1,5 +1,11 @@
 @import '../css/config.css';
 
+/* @font-face {
+  font-family: 'Iropke Batang';
+  src: url('../fonts/IropkeBatangM.eot');
+  src: url('../fonts/IropkeBatangM.woff') format('woff');
+} */
+
 /* 최상위 요소 */
 .wrapper {
   position: relative;

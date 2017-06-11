@@ -1,21 +1,31 @@
 /* @import를 이용한 폰트 추가는 AMP 스펙에 맞지 않음 */
 
-/* Menlo */
-/* @import url('https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/menlo-regular.css'); */
+/* Noto Sans KR */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-/* latin */
+/* Menlo */
 @font-face {
+  font-family: 'Menlo Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/menlo-regular.woff') format('woff');
+}
+
+/* Droid Sans Mono */
+/* @font-face {
   font-family: 'Droid Sans Mono';
   font-style: normal;
   font-weight: 400;
   src: local('Droid Sans Mono'), local('DroidSansMono'), url(https://fonts.gstatic.com/s/droidsansmono/v7/ns-m2xQYezAtqh7ai59hJVlgUn8GogvcKKzoM9Dh-4E.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+} */
+
+/* Iropke Batang */
+@font-face {
+  font-family: 'Iropke Batang';
+  src: url('../fonts/IropkeBatangM.eot');
+  src: url('../fonts/IropkeBatangM.woff') format('woff');
 }
-
-/* Noto Sans KR */
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-
 /*
  * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
  * font-family: 'Nanum Gothic'
@@ -73,7 +83,7 @@
  * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+ *
  * font-family: 'Spoqa Han Sans',
  */
 /*
@@ -113,7 +123,7 @@
     url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/212c9818/Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.ttf') format('truetype');
 }*/
 
- 
+
 /* Noto Sans */
 /* @font-face {
   font-family: 'Noto Sans KR';

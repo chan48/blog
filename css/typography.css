@@ -46,7 +46,7 @@ html {
 	font-range: 480px 1280px;
 	line-height: 1.625;
 	color: #222;
-	font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+	font-family: 'Iropke Batang', 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
   -webkit-font-smoothing: antialiased;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -133,7 +133,7 @@ pre {
 	overflow: auto;
 }
 code, kbd, pre, samp {
-	font-family: 'Droid Sans Mono', monospace, Courier;
+	font-family: 'Menlo Regular', 'Droid Sans Mono', monospace, Courier;
 }
 code {
 	display: block;
@@ -468,7 +468,7 @@ abbr[title] {
 	border-bottom: 1px dotted;
 }
 b, strong {
-	font-weight: 700;
+	font-weight: 400;
 	background-color: transparent;
 	background-image: linear-gradient(to bottom,rgba(39,243,106,.1),rgba(39,243,106,.1));
 }
