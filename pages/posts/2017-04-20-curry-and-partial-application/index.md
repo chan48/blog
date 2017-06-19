@@ -5,7 +5,7 @@ date: "2017-04-20"
 layout: post
 mainImage:
 tags:
-  - Javascript
+  - JavaScript
   - 함수형 프로그래밍
   - Ramda
 path: "/posts/2017-04-20-curry-and-partial-application"

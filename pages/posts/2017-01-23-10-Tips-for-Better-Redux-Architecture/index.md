@@ -7,7 +7,7 @@ mainImage:
 tags:
   - Redux
   - React
-  - Javascript
+  - JavaScript
   - Front-end
   - 번역
 path: "/posts/2017-01-23-10-Tips-for-Better-Redux-Architecture"

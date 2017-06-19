@@ -7,7 +7,7 @@ mainImage:
 tags:
   - TypeScript
   - Flow
-  - Javascript
+  - JavaScript
 path: "/posts/2017-06-11-adopting-flow-and-typescript"
 ---
 
