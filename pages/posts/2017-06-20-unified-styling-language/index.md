@@ -90,11 +90,9 @@ console.log(title)
 
 이 클래스 선택자의 범위 지정은 관련 코드의 범위 지정 규칙과 일치한다. 이 선택자들을 앱의 다른 영역에서 사용하고 싶다면 자바스크립트 모듈로 변환해서 필요한 곳에서 불러오면(import) 된다. *어떤 코드에서도 주어진 스타일을 쉽게 추적할 수 있게 만드는 일*은 코드베이스를 지속적으로 유지보수성이 있도록 한다는 측면에서 무척 강력하다.
 
-***단순한 규칙을 사용하는 것에서 기본적으로 스타일의 범위가 지정되도록 강제하는 방향으로 나아감으로써 스타일 코드의 기본 퀄리티를 향상시켰다. 이로서 BEM은 선택하는 규칙이 아닌(not opt-in) 시스템에 포함된(baked-in) 규칙이 되었다.***
+***단순한 규칙을 사용하는 것에서 기본적으로 스타일의 범위가 지정되도록 강제하는 방향으로 나아감으로써 스타일 코드의 기본 퀄리티를 향상시켰다. 이로서 BEM은 선택가능한 옵션(opt-in)에서 시스템에 포함된(baked-in) 규칙이 되었다.***
 
----
-
-더 진행하기 전에 명확하게 하고 넘어가야할 매우 중요한 포인트가 있다.
+여기서 더 진행하기 전에 명확하게 하고 넘어가야할 매우 중요한 포인트가 있다.
 
 ***인라인(inline) 스타일이 아닌 CSS 직접 생산한다는 점이다.***
 
@@ -263,18 +261,22 @@ const appHtml = `
 
 CSS-in-JS를 서버에서 사용함으로써 싱글 페이지 앱이 자바스크립트 없이 작동하도록 할 뿐만 아니라 *더 빠르게 렌더링해줄 수 있다*.
 
-***셀렉터의 범위 지정과 마찬가지로 중요한 CSS를 렌더링하는 모범 사례는 이제 선택 가능한 것이 아니라 우리의 시스템에 포함되었다.***
+***셀렉터의 범위 지정과 마찬가지로 중요한 CSS를 렌더링하는 모범 사례는 이제 선택 가능한 옵션에서 시스템에 포함된 요소가 되었다.***
 
 
 ## 3.
 
 ### 더 똑똑한 최적화
 
-최근 Yahoo의 [Atomic CSS](https://acss.io/)나 Adam Morse의 [Tachyons](http://tachyons.io/) 등은 "의미론적(semantic) 클래스"
+최근 새로운 방식으로 CSS를 구성하는 방법들이 떠오르고 있다. Yahoo의 [Atomic CSS](https://acss.io/)나 Adam Morse의 [Tachyons](http://tachyons.io/)같은 라이브러리는 좁은 목적을 가진 작은 "의미론적(semantic) 클래스"의 사용을 삼가는 방식을 사용하고 있다. 예를 들어 Atomic CSS를 사용할 경우 적절한 스타일시트를 생성하기 위해 함수같은 방식의 문법을 사용해서 클래스를 적용한다.
 
+```html
+<div class="Bgc(#0280ae.5) C(#fff) P(20px)">
+  Atomic CSS
+</div>
+```
 
-
-as we ...
+목표는 CSS 번들을 가능한 낭비가 없게(lean) 만들어서 클래스의 재활용성을 극대화하고 클래스를 인라인 스타일처럼 효과적으로 사용하는 것이다. 파일의 사이즈가 줄어든다는 장점은 쉽게 파악될 수 있지만 당신의 코드베이스와 동료들에게 미치는 영향은 크지 않다. 이 최적화는 본질적으로 CSS와 마크업에 영향을 미치며 구조 설계에 더 많은 노력을 들이도록 한다.
 
 앞서 다루었듯이 CSS-in-JS나 CSS Modules를 사용하면 마크업에서 클래스 문자열을 직접 입력할 필요가 없다. 대신 라이브러리나 빌드 도구에 의해 자동 생성된 값에 대한 동적인 참조를 사용한다.
 
@@ -284,7 +286,7 @@ as we ...
 <aside className="sidebar" />
 ```
 
-이런 코드를 작성한다:
+이렇게 코드를 작성한다:
 
 ```html
 <aside className={styles.sidebar} />
@@ -348,7 +350,7 @@ injectStyle(styletron, {
 
 ![CSS-in-JS bundle size comparison using Airbnb’s styles](./css_in_js_bundle_size.png)
 
-CSS 최적화는 보통 작성한 스타일을 가장 효율적으로 재활용이 가능한 클래스들로 분리하는 순수 수작업으로 이루어지곤 한다. 하지만 이제는 라이브러리에 의해 완전히 자동화가 가능해졌다. 당신은 이 트렌드를 주목하기 시작할 필요가 있다. ***Atomic CSS는 이제 선택 사항이 아니라 시스템에 포함되었다.***
+CSS 최적화는 보통 작성한 스타일을 가장 효율적으로 재활용이 가능한 클래스들로 분리하는 순수 수작업으로 이루어지곤 한다. 하지만 이제는 라이브러리에 의해 완전히 자동화가 가능해졌다. 당신은 이 트렌드를 주목하기 시작할 필요가 있다. ***Atomic CSS는 이제 선택가능한 옵션에서 시스템에 포함된 요소가 되었다.***
 
 
 ## 4.
@@ -400,12 +402,114 @@ const styles = {
 
 ![Polished](./polished.png)
 
-Polished는 믹스인, 컬러 함수, 약칭 등의 완벽한 컬렉션을 제공하는 CSS-in-JS의 [Lodash](https://lodash.com/)라고 할 수 있다. Sass같은 언어에서 온 사람들에게 자바스크립트 안에서 스타일을 보다 친숙하게 작성할 수 있도록 도와준다. 핵심적인 차이는 Sass보다 조합, 공유, 테스트에 있어 더 뛰어나며 자바스킄립트 패키지 생태계를 마음껏 사용할 수 있다는 점이다.
+Polished는 믹스인, 컬러 함수, 약칭 등의 완벽한 컬렉션을 제공하는 CSS-in-JS의 [Lodash](https://lodash.com/)라고 할 수 있다. Sass같은 언어를 사용하던 사람들에게 자바스크립트 안에서 스타일을 보다 친숙하게 작성할 수 있도록 도와준다. 핵심적인 차이는 Sass보다 조합, 공유, 테스트에 있어 더 뛰어나며 자바스킄립트 패키지 생태계를 마음껏 사용할 수 있다는 점이다.
 
 그래서, CSS의 경우 어떻게 작고 재사용성이 있는 패키지를 조합하여 거대한 스타일 컬렉션을 구성하는, 자바스크립트와 같은 수준의 오픈소스 활동을 기대할 수 있을까? CSS를 다른 언어에 내장하고 자바스크립트 모듈을 최대한 활용하는 방법을 통해 가능할 것이다.
-
----
 
 ## 5.
 
 ### 비 브라우저 스타일
+
+지금껏 살펴본 내용들은 -CSS를 자바스크립트 안에서 작성하는 편이 확실히 쉬운데도 불구하고- 표준 CSS가 없다면 불가능하다. 이 사실이 내가 가장 흥미롭고 미래지향적인 주제를 맨 뒤로 미뤄둔 이유다. 이 주제는 오늘날의 CSS-in-JS 커뮤니티에서는 꼭 중요한 위치를 차지하고 있을 필요는 없지만 미래의 *디자인*에서 기반 기술이 될 가능성이 꽤 있다. 개발자뿐만 아니라 디자이너에게도 영향을 미치고 있는 이 기술은 이 두 분야가 서로 의사소통을 하는 방식을 근본적으로 바꿔놓았다.
+
+본격적으로 얘기하기에 앞서 우선 React에 대해 잠시 빠르게 훑어보고 지나갈 필요가 있다.
+
+React 모델은 최종 결과값을 즉시 렌더링하는 컴포넌트에 관한 모든 것이다. 브라우저에서 작업할 때는 DOM 요소를 직접 조작하기보다는 복잡한 트리 구조의 가상 DOM을 구성하게 된다.
+
+흥미로운 점은 이런 중요도에도 불구하고 DOM을 렌더링하는 기능은 React의 코어 라이브러리가 아닌 *react-dom*에서 제공한다는 사실이다.
+
+```javascript
+import { render } from 'react-dom'
+```
+
+React가 DOM을 위해 만들어졌고 브라우저 환경에서 가장 많이 사용되고는 있긴 하다. 하지만 React 모델은 새로운 렌더러를 도입함으로써 매우 다양한 환경에서 사용될 수 있다.
+
+JSX는 단지 가상(virtual) DOM에 관한 것만이 아니다 - JSX는 *무엇이든* 가상으로 만들 수 있다.
+
+네이티브 앱을 만들 수 있는 [React Native](https://facebook.github.io/react-native)가 그런 방식이다. 자바스크립트로 컴포넌트를 작성하면 아이폰이나 안드로이드폰 네이티브에 대응하는 가상 요소로 렌더링한다. *div*와 *span* 대신 *View*와 *Text*를 렌더링한다.
+
+CSS의 관점에서 React Native에서 가장 흥미로운 점은 그만의 [StyleSheet API](https://facebook.github.io/react-native/docs/stylesheet.html)를 가지고 있다는 사실이다.
+
+```javascript
+var styles = StyleSheet.create({
+  container: {
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#d6d7da',
+  },
+  title: {
+    fontSize: 19,
+    fontWeight: 'bold',
+  },
+  activeTitle: {
+    color: 'red',
+  }
+})
+```
+
+친숙한 스타일들을 확인할 수 있을 것이다. 위의 코드에서는 색상, 폰트, 보더 스타일을 정의하고 있다.
+
+이 규칙들은 무척 직관적이며 대부분의 UI 환경에 쉽게 매핑되지만 네이티브 레이아웃을 사용할 때 가장 재밌어진다.
+
+```javascript
+var styles = StyleSheet.create({
+  container: {
+    display: 'flex'
+  }
+})
+```
+
+브라우저가 아님에도 불구하고 *React Native는 [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)를 네이티브 환경에서 사용할 수 있는 구현체를 탑재하고 있다*.
+
+최초 배초시 [css-layout](https://www.npmjs.com/package/css-layout)이라고 불렸던 자바스크립트 패키지는 flexbox를 자바스크립트만으로 구현했고(종합적인 테스트 코드가 뒷받침하고 있다) 지금은 더 나은 이식성을 위해 C로 옮겨갔다.
+
+프로젝트의 범위와 중요성을 감안해서 Yoga라는 이름의 더 의미있는 브랜드를 부여받은 상태다.
+
+![Yoga](./yoga.png)
+
+Yoga는 CSS 컨셉을 비 브라우저 환경을 이식하는 프로젝트지만 CSS의 일부 특징에만 초점을 맞추고 있기 때문에 잠재적으로 관리 불가능한 영역이 존재한다.
+
+> "Yoga는 CSS의 완전한 구현이 아닌 풍부한 레이아웃 라이브러리의 구현에 초점을 맞추고 있다."
+
+이런 상충관계는 한계를 가지고 있는 것처럼 보인다. 하지만 CSS 구조의 역사를 실펴보면 확장성있는 CSS를 작성하는 일은 결국 언어에서 적합한 부분집합을 선택하는 일과 같다는 사실을 명백히 알 수 있을 것이다.
+
+Yoga의 경우 범위가 지정된 스타일의 중첩을 피하고 레이아웃 엔진을 전적으로 flexbox에 집중한다. 이는 많은 기능을 사용할 수 없게 하지만 스타일이 탑재된 컴포넌트를 복수의 플랫폼에서 사용할 수 있다는 놀라운 기회를 열어준다. 그리고 이미 이 사실을 입증하는 주목할만한 오픈소스 프로젝트들이 여럿 있다.
+
+Nicolas Gallagher의 [React Native for Web](https://github.com/necolas/react-native-web)은 React Native의 드랍 인(drop-in) 대체에 목표를 맞추고 있다. webpack같은 번들러를 사용할 때 서드파티 플러그인에 별칭을 붙이는 방식은 무척 직관적이다.
+
+```javascript
+module: {
+  alias: {
+    'react-native': 'react-native-web'
+  }
+}
+```
+
+React Native for Web은 을 사용하면 React Native 컴포넌트를 브라우저 환경에서 사용할 수 있고 [React Native StyleSheet API](https://facebook.github.io/react-native/docs/stylesheet.html)의 브라우저 포팅 버전도 포함하고 있다.
+
+유사한 사례로 Leland Richardson의 [react-primitives](https://github.com/lelandrichardson/react-primitives)는 타겟 플랫폼의 상세 구현을 추상화함으로써 크로스 플랫폼 기본 컴포넌트의 실행 가능한 베이스라인을 만든다.
+
+심지어 마이크로소프트도 [ReactXP](https://microsoft.github.io/reactxp)를 소개하며 이 흐름에 동참하고 있다. 웹과 네이티브간의 코드 공유를 위한 수고를 덜 수 있도록 디자인되었으며 [플랫폼 독립적(platform-agnostic)인 스타일 구현](https://microsoft.github.io/reactxp/docs/styles.html)도 포함하고 있다.
+
+--
+
+당신이 네이티브 앱을 개발하지 않는다 하더라도 크로스 플랫폼 컴포넌트 추상화는 우리에게 사실상 제한이 없는 환경, 또는 전혀 상상하지 못했던 방식을 선택할 수 있도록 해준다는 점에서 꼭 주목해야 한다.
+
+이와 관련해서 내가 지금껏 봤던 가장 놀라운 사례는 Airbnb의 Jon Gold가 만든 [react-sketchapp](http://airbnb.io/react-sketchapp)이다.
+
+![react-sketchapp](./react_sketchapp.png)
+
+우리들 중 많은 사람들은 시스템에서 가능한 중복을 제거할 목적으로 디자인 언어를 표준화하는 일에 많은 시간을 할애한다. 불행히도 단 하나의 소스(single source of truth)만 가지고 싶지만 현실적으로 줄일 수 있는 최선은 2개-개발자를 위한 디자인 가이드와 *디자이너를 위한 정적인 스타일 가이드*-다. 예전에 비하면 많이 좋아진 편이지만 여전히 Sketch같은 디자인 도구를 수동으로 동기화시켜야 한다. 그런 이유에서 react-sketchapp이 등장했다.
+
+Sketch의 [자바스크립트 API](http://developer.sketchapp.com/reference/api)와 React의 브라우저가 아닌 다른 플랫폼으로 렌더링할 수 있는 능력 덕분에 react-sketchapp은 크로스 플랫폼 React 컴포넌트가 Sketch 문서로 렌더링해준다.
+
+![Profile Cards example powered by react-sketchapp](./react_sketchapp_profile_card.png)
+
+말할 필요도 없이, 이것은 디자이너와 개발자가 협력할 수 있는 방식을 완전히 바꿔버릴 수 있는 잠재력을 가지고 있다. 이제  디자인에서 반복적으로 사용되는 컴포넌트를 언급할 때 디자이너와 개발자가 각각 어떤 도구를 사용하든 동일한 컴포넌트를 참조할 수 있게 될 것이다.
+
+우리 업계는 Sketch의 symbols와 React의 컴포넌트와 함께 기본적으로 동일한 추상화에 수렴하기 시작했다. 이는 같은 도구를 공유하면서 더 긴밀히 협업할 수 있는 가능성을 열어줄 것이다.
+
+---
+
+
+
