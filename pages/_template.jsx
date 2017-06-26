@@ -7,8 +7,6 @@ import '../css/reset.css';
 import '../css/base.css';
 import '../css/typography.css';
 import '../css/font.css';
-// import '../static/fonts/NotoKR-Regular/stylesheet.css';
-
 
 class Template extends React.Component {
   // constructor(props) {
