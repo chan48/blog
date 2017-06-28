@@ -43,5 +43,7 @@ module.exports = React.createClass({
         </body>
       </html>
     );
+    // Noto Sans
+    // <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" />
   },
 });

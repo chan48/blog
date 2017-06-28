@@ -1,7 +1,7 @@
-/* @import를 이용한 폰트 추가는 AMP 스펙에 맞지 않음 */
-
 /* Noto Sans KR */
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+/* @import를 이용한 폰트 추가는 AMP 스펙에 맞지 않음. 대신 link 태그 사용 */
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); */
+/* <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" /> */
 
 /* Menlo */
 @font-face {

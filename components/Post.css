@@ -65,7 +65,7 @@
 .Post-iframeWrapper {
   position: relative;
   display: block;
-  padding-bottom: 56.25%; // 16:9
+  padding-bottom: 56.25%;
 }
 
 .Post-iframe {

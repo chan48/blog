@@ -108,7 +108,7 @@ path: "/posts/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time"
 나는 다양한 정렬 알고리즘에 대한 지식을 가지고 의식적으로 어떤 방법을 적용할지 고려하는 한 대부분의 경우 실제 애플리케이션의 성능 문제를 파악하기 어려울 것으로 생각한다. "선택의 역설"이 이와 관련이 있다.
 
 <div class="Post-iframeWrapper">
-<iframe class="Post-iframe" src="https://embed.ted.com/talks/barry_schwartz_on_the_paradox_of_choice"  frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe class="Post-iframe video" src="https://embed.ted.com/talks/barry_schwartz_on_the_paradox_of_choice" frameborder="0" scrolling="no" allowFullScreen></iframe>
 </div>
 
 성능에 관한 결론은 프로파일링을 먼저 하고 테스트를 한 후 애플리케이션에 정말로 병목 현상이 생기는 부분이 어디인지 파악하는 것이다. 문제를 찾았으면 그것을 고치는 일에 집중하면 된다.

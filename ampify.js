@@ -63,7 +63,7 @@ const ampify = function(html, filePath) {
 
   // The tags that we will convert to amp versions
   const tags = {
-    amp: ['img', 'video']
+    amp: ['img', 'video', 'iframe']
   };
 
   // Load the html so we can manipulate it with jQuery syntax on the server
@@ -115,6 +115,9 @@ const ampify = function(html, filePath) {
     $('head').append('<script async src="https://cdn.ampproject.org/v0.js"></script>');
   }
 
+  // amp-iframe.js
+  $('head').append('<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>')
+
   /**************************************************************************************
    * STYLES
    *************************************************************************************/
@@ -147,7 +150,7 @@ const ampify = function(html, filePath) {
   });
 
   // Add any needed fonts
-  $("head").append($('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C800&ver=4.6.1" />'));
+  // $("head").append($('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C800&ver=4.6.1" />'));
 
   // remove style attributes from everything. No inline styles with amp
   $( "*" ).removeAttr('style');
@@ -263,6 +266,16 @@ const ampify = function(html, filePath) {
   /**************************************************************************************
    * Replace certain elements on the page for AMP specifically
    *************************************************************************************/
+  $('amp-iframe')
+    .attr('allowfullscreen', '')
+    .attr('layout', 'responsive')
+    .attr('width', 'responsive')
+    .attr('frameborder', 0)
+    .attr('sandbox', 'allow-scripts');
+
+  $('amp-iframe.video')
+    .attr('width', 400)
+    .attr('height', 224);
 
   /**************************************************************************************
    * DONE
