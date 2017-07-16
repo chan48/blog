@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { config } from 'config';
 import Footer from '../components/Footer';
 import PostList from '../components/PostList';
 import styles from './index.css';
@@ -9,19 +8,21 @@ const cx = classNames.bind(styles);
 
 class SiteIndex extends React.Component {
   render() {
+    const siteMetadata = this.props.data.site.siteMetadata;
+
     return (
       <div>
         <Helmet
-          title={config.siteTitle}
+          title={siteMetadata.title}
           meta={[
-            { name: 'description', content: `${config.siteDesc}` },
+            { name: 'description', content: `${siteMetadata.desc}` },
             { property: 'og:type', content: 'article' },
-            { property: 'og:url', content: `${config.siteUrl}` },
-            { property: 'og:title', content: `${config.siteTitle}` },
-            { property: 'og:description', content: `${config.siteDesc}` },
+            { property: 'og:url', content: `${siteMetadata.url}` },
+            { property: 'og:title', content: `${siteMetadata.title}` },
+            { property: 'og:description', content: `${siteMetadata.desc}` },
           ]}
           link={[
-            { rel: 'canonical', href: `${config.siteUrl}` },
+            { rel: 'canonical', href: `${siteMetadata.url}` },
           ]}
         />
         <div className={cx('content')}>
@@ -35,6 +36,19 @@ class SiteIndex extends React.Component {
 
 SiteIndex.propTypes = {
   route: React.PropTypes.object,
+  data: React.PropTypes.object,
 };
 
 export default SiteIndex;
+
+export const pageQuery = graphql`
+  query SiteMetadataLookup($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        desc
+        url
+      }
+    }
+  }
+`;

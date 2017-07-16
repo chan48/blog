@@ -1,21 +1,21 @@
 import React from 'react';
-// import Link  from 'gatsby-link';
-import { config } from 'config';
 import './SiteLinks.css';
 
 class SiteLinks extends React.Component {
   render() {
+    const siteMetadata = this.props.data.site.siteMetadata;
+
     return (
       <div className="blog-social">
         <ul>
           <li>
-            <a href={config.siteGithubUrl}><i className="fa fa-github-alt" /></a>
+            <a href={siteMetadata.githubUrl}><i className="fa fa-github-alt" /></a>
           </li>
           <li>
-            <a href={config.siteEmailUrl}><i className="fa fa-envelope-o" /></a>
+            <a href={siteMetadata.emailUrl}><i className="fa fa-envelope-o" /></a>
           </li>
           <li>
-            <a href={config.siteRssUrl}><i className="fa fa-rss" /></a>
+            <a href={siteMetadata.rssUrl}><i className="fa fa-rss" /></a>
           </li>
         </ul>
       </div>
@@ -23,4 +23,20 @@ class SiteLinks extends React.Component {
   }
 }
 
+SiteLinks.propTypes = {
+  data: React.PropTypes.object,
+};
+
 export default SiteLinks;
+
+export const pageQuery = graphql`
+  query SiteMetadataLookup($slug: String!) {
+    site {
+      siteMetadata {
+        githubUrl
+        emailUrl
+        rssUrl
+      }
+    }
+}
+`;

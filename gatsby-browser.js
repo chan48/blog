@@ -1,5 +1,5 @@
-import ReactGA from 'react-ga'
-import {config} from 'config'
+import ReactGA from 'react-ga';
+import { config } from 'config';
 
 ReactGA.initialize(config.googleAnalyticsId);
 

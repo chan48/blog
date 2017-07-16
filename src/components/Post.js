@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import moment from 'moment';
 import 'moment/locale/ko';
 import Helmet from 'react-helmet';
-import { config } from 'config';
 // import ReadNext from './ReadNext';
 import Tags from './Tags';
 import Footer from './Footer';
@@ -42,19 +41,20 @@ class Post extends React.Component {
     const { route } = this.props;
     const post = route.page.data;
     const tags = post.tags;
+    const siteMetadata = this.props.data.site.siteMetadata;
 
     return (
       <div>
         <Helmet
           link={[
-            { rel: 'canonical', href: `${config.siteUrl}${post.path}/` },
+            { rel: 'canonical', href: `${siteMetadata.url}${post.path}/` },
           ]}
         >
           {this.getScriptSrc().map((src, i) =>
             <script async src={src} type="text/javascript" key={i} />
           )}
 
-          {/*Disqus 댓글
+          {/* Disqus 댓글
           https://rhostem.disqus.com/admin/settings/universalcode/*/}
           <script type="text/javascript">{`
             /**
@@ -114,7 +114,18 @@ Post.propTypes = {
   route: PropTypes.object,
   RouteHandler: PropTypes.object,
   Link: PropTypes.object,
-  config: PropTypes.object,
+  data: React.PropTypes.object,
 };
 
 export default Post;
+
+export const pageQuery = graphql`
+  query SiteMetadataLookup($slug: String!) {
+    site {
+      siteMetadata {
+        url
+      }
+    }
+  }
+`;
+
