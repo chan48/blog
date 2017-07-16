@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
-import { config } from 'config';
+// import Link  from 'gatsby-link';
+// import { config } from 'config';
 import Navigation from '../components/Navigation.js';
 import '../css/reset.css';
 import '../css/base.css';

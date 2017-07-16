@@ -2,8 +2,6 @@ import React, { PropTypes } from 'react';
 import moment from 'moment';
 import 'moment/locale/ko';
 import Helmet from 'react-helmet';
-// import { prefixLink } from 'gatsby-helpers';
-// import { RouteHandler, Link } from 'react-router';
 import { config } from 'config';
 // import ReadNext from './ReadNext';
 import Tags from './Tags';

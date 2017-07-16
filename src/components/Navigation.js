@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
-// import { prefixLink } from 'gatsby-helpers';
+import Link from 'gatsby-link';
 import styles from './Navigation.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 class Navigation extends React.Component {
   render() {
-    const { location } = this.props;
+    // const { location } = this.props;
     return (
       <nav className={cx('wrap')}>
         <div className={cx('navigation')}>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { RouteHandler, Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+// import Link  from 'gatsby-link';
 import { config } from 'config';
 import './SiteLinks.css';
 
