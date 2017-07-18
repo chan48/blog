@@ -17,6 +17,11 @@
   "keywords": [
     "gatsby"
   ],
+  "browserslist": [
+    "> 1%",
+    "IE >= 9",
+    "last 2 versions"
+  ],
   "author": "rhostem",
   "license": "MIT",
   "dependencies": {
@@ -27,6 +32,7 @@
     "gatsby-plugin-manifest": "latest",
     "gatsby-plugin-offline": "latest",
     "gatsby-plugin-sharp": "latest",
+    "gatsby-plugin-styled-components": "^1.0.1",
     "gatsby-source-filesystem": "latest",
     "gatsby-transformer-json": "latest",
     "gatsby-transformer-sharp": "latest",
@@ -34,9 +40,12 @@
     "mkdirp": "^0.5.1",
     "prop-types": "^15.5.8",
     "request": "^2.79.0",
-    "slug": "^0.9.1"
+    "slug": "^0.9.1",
+    "styled-components": "^2.1.1"
   },
   "devDependencies": {
+    "caniuse-db": "^1.0.30000702",
+    "flow-bin": "^0.50.0"
   },
   "jest": {
     "transform": {
