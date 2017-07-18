@@ -8,6 +8,7 @@ tags:
   - HTML
   - SVG
 path: "/posts/2017-05-29-few-html-tips"
+draft: false
 ---
 
 이글은 [hacks.mozilla.org](https://hacks.mozilla.org)에 게시된 [A few HTML tips](https://hacks.mozilla.org/2016/08/a-few-html-tips/)를 번역한 글입니다.

@@ -3,6 +3,8 @@ import * as PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { injectGlobal } from 'styled-components';
 import { normalize } from 'polished';
+import { TypographyStyle } from 'react-typography';
+import typography from './utils/typography';
 
 // normalize.css
 injectGlobal`${normalize()}`;
@@ -27,14 +29,45 @@ class Html extends Component {
     return (
       <html lang="ko">
         <head>
-          {this.props.headComponents}
-          <meta name="referrer" content="origin" />
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=3.0" />
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+          {/* <link
+            rel="preload"
+            href={`/static/spectral-latin-400.bc2de9de.woff2`}
+            as="font"
+            crossOrigin
+          />
+          <link
+            rel="preload"
+            href={`/static/spectral-latin-800.53eca5bf.woff2`}
+            as="font"
+            crossOrigin
+          />
+          <link
+            rel="prefetch"
+            href={`/static/spectral-latin-400italic.b0c97eb5.woff2`}
+          />
+          <link
+            rel="prefetch"
+            href={`/static/spectral-latin-700.601f0e2d.woff2`}
+          />
+          <link
+            rel="prefetch"
+            href={`/static/spectral-latin-700italic.64a7de98.woff2`}
+          />
+          <link
+            rel="prefetch"
+            href={`/static/space-mono-latin-400.a8338881.woff2`}
+          />
+          <link
+            rel="prefetch"
+            href={`/static/space-mono-latin-700.eadcd2d5.woff2`}
+          /> */}
           {title.toComponent()}
+          {this.props.headComponents}
+          <TypographyStyle typography={typography} />
           {css}
         </head>
         <body>

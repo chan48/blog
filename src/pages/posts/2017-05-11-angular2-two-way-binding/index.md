@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - Angular 2
 path: "/posts/2017-05-11-angular-2-two-way-binding"
+draft: false
 ---
 
 <figure>

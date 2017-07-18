@@ -9,6 +9,7 @@ tags:
   - Flow
   - JavaScript
 path: "/posts/2017-06-11-adopting-flow-and-typescript"
+draft: false
 ---
 
 이 글은 James Kyle의 [Adopting Flow & TypeScript - A comparison between the two on-boarding processes](http://thejameskyle.com/adopting-flow-and-typescript.html)를 번역한 글입니다.
