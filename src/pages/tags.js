@@ -4,7 +4,7 @@ import R from 'ramda';
 import Link from 'gatsby-link';
 import _ from 'lodash'
 
-type Tag = {
+export type Tag = {
   name: string,
   count: number,
 };
