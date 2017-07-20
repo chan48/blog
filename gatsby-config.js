@@ -9,6 +9,7 @@ module.exports = {
     rssUrl: '#',
     twitterUrl: '#',
   },
+  pathPrefix: '/',
   mapping: {
     "MarkdownRemark.frontmatter.author": `AuthorYaml`,
   },

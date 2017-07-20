@@ -84,6 +84,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     typeof node.slug === `undefined`
   ) {
     const fileNode = getNode(node.parent)
+
     createNodeField({
       node,
       name: `slug`,

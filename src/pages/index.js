@@ -6,10 +6,10 @@ import { rhythm, scale } from "../utils/typography"
 
 class Index extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    const author = this.props.data.site.siteMetadata.author
-    const authorTitle = this.props.data.site.siteMetadata.authorTitle
-    const description = this.props.data.site.siteMetadata.description
+    const posts = this.props.data.allMarkdownRemark.edges;
+    const author = this.props.data.site.siteMetadata.author;
+    const authorTitle = this.props.data.site.siteMetadata.authorTitle;
+    const description = this.props.data.site.siteMetadata.description;
 
     return (
       <div>
