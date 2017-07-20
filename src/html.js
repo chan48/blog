@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { injectGlobal } from 'styled-components';
-import { normalize } from 'polished';
 import { TypographyStyle } from 'react-typography';
 import typography from './utils/typography';
-
-// normalize.css
-injectGlobal`${normalize()}`;
-
 
 class Html extends Component {
   render() {

@@ -3,6 +3,21 @@ import Link from "gatsby-link"
 import styles from "../styles"
 import presets from "../utils/presets"
 import { rhythm, scale } from "../utils/typography"
+import { injectGlobal } from 'styled-components';
+import { normalize, fontFace } from 'polished';
+
+// inject global css
+injectGlobal`
+  ${normalize()}
+  ${fontFace({
+    'fontFamily': 'Menlo Regular',
+    'fontFilePath': '/fonts/menlo-regular'
+  })}
+  ${fontFace({
+    'fontFamily': 'Iropke Batang',
+    'fontFilePath': '/fonts/IropkeBatangM'
+  })}
+`;
 
 class Index extends React.Component {
   render() {
@@ -21,20 +36,6 @@ class Index extends React.Component {
               marginBottom: rhythm(2),
             }}
           >
-            This example demonstrates{` `}
-            <a href="https://www.gatsbyjs.org/docs/packages/gatsby-transformer-remark/">
-              gatsby-transformer-remark
-            </a>
-            {` `}
-            and its plugins. It uses{` `}
-            <a href="https://github.com/KyleAMathews/typography.js">
-              Typography.js
-            </a>
-            {` `}
-            and self-hosted fonts via the{` `}
-            <a href="https://github.com/KyleAMathews/typefaces">Typefaces</a>
-            {` `}
-            project.
           </h1>
           <ul
             css={{

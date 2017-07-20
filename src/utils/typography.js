@@ -13,6 +13,7 @@ const options = {
   blockMarginBottom: 0.75,
   headerWeight: 800,
   headerFontFamily: [
+    'Iropke Batang',
     `Spectral`,
     `-apple-system`,
     `BlinkMacSystemFont`,
@@ -27,6 +28,7 @@ const options = {
     `sans-serif`,
   ],
   bodyFontFamily: [
+    'Iropke Batang',
     `Spectral`,
     `-apple-system`,
     `BlinkMacSystemFont`,

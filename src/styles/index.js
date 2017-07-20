@@ -2,6 +2,7 @@ import { style } from 'glamor'
 import { colors } from './colors'
 import { rhythm } from '../utils/typography'
 import presets from '../utils/presets'
+import { TypographyStyle } from 'react-typography';
 
 const animations = {
   animationCurveFastOutSlowIn: `cubic-bezier(0.4, 0, 0.2, 1)`,
