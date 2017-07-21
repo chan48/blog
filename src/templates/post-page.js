@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import styles from '../styles';
 import { rhythm, scale } from '../utils/typography';
-import presets from '../utils/presets';
 import Tags from '../components/Tags';
 
 class BlogPostRoute extends Component {

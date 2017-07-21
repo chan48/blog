@@ -10,6 +10,11 @@ const colors = {
   white: `#fff`,
   link: `#03a9f4`,
   linkHover: `#ff5252`,
+  body: '#fafafa',
+  border: '#ebebeb',
+  'gray-01': 'rgba(0, 0, 0, 0.44)',
 }
 
 export default { colors, baseHsl }
+
+

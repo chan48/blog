@@ -1,6 +1,6 @@
 import Typography from "typography"
 import { baseHsl, colors } from "../styles/colors"
-import presets from "../utils/presets"
+import media from "../styles/media";
 
 const linkRaw = colors.link.substr(1)
 const linkHoverRaw = colors.linkHover.substr(1)
@@ -177,7 +177,7 @@ const options = {
         content: `" " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23${linkHoverRaw}'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E")`,
       },
       // Increase base font-size for phablet and desktop.
-      [presets.Phablet]: {
+      [media.Phablet]: {
         html: {
           fontSize: `${18 / 16 * 100}%`,
         },
@@ -185,7 +185,7 @@ const options = {
           ...scale(7 / 5),
         },
       },
-      [presets.Desktop]: {
+      [media.Desktop]: {
         html: {
           fontSize: `${20 / 16 * 100}%`,
         },

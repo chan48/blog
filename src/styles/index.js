@@ -1,7 +1,7 @@
 import { style } from 'glamor'
 import { colors } from './colors'
 import { rhythm } from '../utils/typography'
-import presets from '../utils/presets'
+import media from './media';
 import { TypographyStyle } from 'react-typography';
 
 const animations = {
@@ -14,8 +14,17 @@ const animations = {
   animationSpeedSlow: `300ms`,
 }
 
+const size = {
+  postWidth: '740px',
+  topNavHeight: '3rem',
+  footerHeight: '3.5rem',
+  mainWidthDesktop: '1070px',
+}
+
 export default {
   animations: animations,
+  media: media,
+  size: size,
   colors: colors,
   verticalPadding: style({
     padding: rhythm(3 / 4),

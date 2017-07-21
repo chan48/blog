@@ -1,4 +1,7 @@
 module.exports = {
+  'desktop-max': '1100px',
+  'tablet-max': '900px',
+  'mobile-max': '500px',
   mobile: `(min-width: 400px)`,
   Mobile: `@media (min-width: 400px)`,
   phablet: `(min-width: 550px)`,
