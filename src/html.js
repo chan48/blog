@@ -62,6 +62,8 @@ class Html extends Component {
           /> */}
           {title.toComponent()}
           {this.props.headComponents}
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
           <style>${normalize().toString()}</style>
           <TypographyStyle typography={typography} />
           {css}

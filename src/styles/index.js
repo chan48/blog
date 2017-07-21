@@ -16,8 +16,8 @@ const animations = {
 
 const size = {
   postWidth: '740px',
-  topNavHeight: '3rem',
-  footerHeight: '3.5rem',
+  topNavHeight: rhythm(2),
+  footerHeight: rhythm(2),
   mainWidthDesktop: '1020px',
 }
 

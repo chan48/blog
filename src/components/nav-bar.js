@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { clearFix } from 'polished';
 import styles from '../styles';
-import ContentWrapper from '../components/content-wrapper'
+import { ContentWrapper } from '../components/content-wrapper'
 import { rhythm } from '../utils/typography';
 
 const TopNav = styled.nav`
@@ -17,10 +17,6 @@ const TopNav = styled.nav`
   background: linear-gradient(to right, #4568dc, #b06ab3);
   border-bottom: 1px solid ${styles.colors.border};
 `
-
-const NavContentWrapper = ContentWrapper.extend`
-  margin-top: 0;
-`;
 
 const SiteTitle = styled.div`
   float: left;
@@ -41,9 +37,9 @@ const MenuWrap = styled.ul`
 `
 
 const Menu = styled.li`
-  font-size: 20px;
   line-height: ${styles.size.topNavHeight};
-  color: #222;
+  font-size: 1rem;
+  font-weight: 100;
   margin-bottom: 0;
   color: #fff;
   font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
@@ -53,7 +49,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <TopNav>
-        <NavContentWrapper>
+        <ContentWrapper>
           <Link to={'/'}>
             <SiteTitle>rhostem.github.io</SiteTitle>
           </Link>
@@ -62,7 +58,7 @@ class NavBar extends React.Component {
               <Menu>TAG</Menu>
             </Link>
           </MenuWrap>
-        </NavContentWrapper>
+        </ContentWrapper>
       </TopNav>
     );
   }

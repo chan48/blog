@@ -5,10 +5,9 @@ import Helmet from 'react-helmet';
 import styles from "../styles"
 import { rhythm, scale } from "../utils/typography"
 import { normalize, fontFace } from 'polished';
-import { MainContentWrapper } from '../components/content-wrapper';
+import { PageWrapper, ContentWrapper } from '../components/content-wrapper';
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
-
 
 class Index extends React.Component {
   render() {
@@ -16,7 +15,7 @@ class Index extends React.Component {
     const siteMetadata = this.props.data.site.siteMetadata;
 
     return (
-      <div>
+      <PageWrapper>
         <Helmet
           title={siteMetadata.title}
           meta={[
@@ -31,7 +30,7 @@ class Index extends React.Component {
           ]}
         />
         <NavBar />
-        <MainContentWrapper>
+        <ContentWrapper>
           <ul>
           {posts.map(post =>
             <li key={post.node.fields.slug}>
@@ -53,9 +52,9 @@ class Index extends React.Component {
             </li>
           )}
           </ul>
-        </MainContentWrapper>
-        <Footer></Footer>
-      </div>
+        </ContentWrapper>
+        <Footer />
+      </PageWrapper>
     )
   }
 }

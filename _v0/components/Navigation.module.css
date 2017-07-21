@@ -7,7 +7,7 @@
   left: 0;
   width: 100%;
   background: linear-gradient(to right, #4568dc, #b06ab3);
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid styles.colors.border;
 }
 
 .navigation {
