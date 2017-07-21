@@ -1,12 +1,14 @@
+// @flow
 import React from "react"
 import Link from "gatsby-link"
 import Helmet from 'react-helmet';
 import styles from "../styles"
 import { rhythm, scale } from "../utils/typography"
 import { normalize, fontFace } from 'polished';
-// import '../styles/global'; // inject global style
-import NavBar from '../components/NavBar';
-import ContentWrapper from '../components/content-wrapper';
+import { MainContentWrapper } from '../components/content-wrapper';
+import NavBar from '../components/nav-bar';
+import Footer from '../components/footer';
+
 
 class Index extends React.Component {
   render() {
@@ -29,7 +31,7 @@ class Index extends React.Component {
           ]}
         />
         <NavBar />
-        <ContentWrapper>
+        <MainContentWrapper>
           <ul>
           {posts.map(post =>
             <li key={post.node.fields.slug}>
@@ -51,7 +53,8 @@ class Index extends React.Component {
             </li>
           )}
           </ul>
-        </ContentWrapper>
+        </MainContentWrapper>
+        <Footer></Footer>
       </div>
     )
   }

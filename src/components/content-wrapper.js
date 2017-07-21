@@ -3,10 +3,9 @@ import styled from 'styled-components';
 import styles from "../styles";
 import { rhythm } from '../utils/typography';
 
-const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div`
   width: 100%;
   padding: 0 ${rhythm(1/2)};
-  margin-top: ${styles.size.topNavHeight};
 
   ${styles.media.Desktop} {
     width: ${styles.size.mainWidthDesktop};
@@ -16,4 +15,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-export default ContentWrapper;
+export const MainContentWrapper = ContentWrapper.extend`
+  margin-top: ${styles.size.topNavHeight};
+  margin-bottom: ${styles.size.footerHeight};
+`;

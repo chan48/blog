@@ -1,25 +1,74 @@
+// @flow
 import React, { PropTypes } from 'react';
-import styles from './Footer.module.css';
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
+import styled from 'styled-components';
+import { clearFix } from 'polished';
+import styles from '../styles';
+import { ContentWrapper } from '../components/content-wrapper'
 
-function Footer({}) {
+const FooterWrap = styled.footer`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid ${styles.colors.border};
+  line-height: ${styles.size.footerHeight};
+  font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
+`;
+
+const FooterContent = ContentWrapper.extend`
+  font-size: 0.8rem;
+`
+
+const Links = styled.div`
+  float: right;
+  font-size: 1rem;
+
+  & > * {
+    margin-left: 0.5em;
+  }
+`
+
+const CopyRight = styled.div`
+  float: left;
+`
+
+const OwnerLink = styled.a`
+  color: ${styles.colors.text};
+  text-decoration: underline;
+`
+
+const FooterLinks = styled.div`
+  float: right;
+  font-size: 1rem;
+
+  & > * {
+    margin-left: 0.5em;
+  }
+
+  i {
+    color: ${styles.colors.text};
+  }
+`
+
+function Footer() {
   return (
-    <div className={cx('wrap')}>
-      <div className={cx('Footer')}>
-        <div className={cx('copyright')}
-        >@2016 <a className={cx('owner')} href="https://www.github.com/rhostem" target="_blank">rhostem</a> All rights reserved</div>
-
-        <div className={cx('Footer-links')}>
+    <FooterWrap>
+      <FooterContent>
+        <CopyRight>
+          <span>@2016 </span>
+          <OwnerLink href="https://www.github.com/rhostem" >rhostem</OwnerLink>
+          <span> All rights reserved</span>
+        </CopyRight>
+        <FooterLinks>
           <a href="https://www.github.com/rhostem">
             <i className="fa fa-github" />
           </a>
           <a href="mailto:syoung.j@gmail.com">
             <i className="fa fa-envelope-o" />
           </a>
-        </div>
-      </div>
-    </div>
+        </FooterLinks>
+      </FooterContent>
+    </FooterWrap>
   );
 }
 
