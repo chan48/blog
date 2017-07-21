@@ -5,7 +5,7 @@ import { clearFix } from 'polished';
 import Link from 'gatsby-link';
 import _ from 'lodash';
 
-const Wrapper = styled.span`
+const Wrapper = styled.div`
   ${clearFix()}
 `;
 
@@ -32,16 +32,15 @@ const Tag = styled.span`
 /**
  * 태그 목록 컴포넌트. 태그 클릭시 해당 태그를 포함하고 있는 포스트 목록 페이지로 이동한다.
  *
- * @param {any} { tags }
+ * @param {{ tags: Array<string> }} { tags }
  * @returns
  */
-
 function Tags({ tags }: { tags: Array<string> }) {
   return (
     <Wrapper>
       {tags.map((tag: string) =>
-        <Link to={`/tags/${_.kebabCase(tag)}`}>
-          <Tag key={tag}>{tag}</Tag>
+        <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
+          <Tag>{tag}</Tag>
         </Link>
       )}
     </Wrapper>

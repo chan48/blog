@@ -46,7 +46,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        desc
+        author
+        description
+        githubUrl
         url
       }
     }

@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
+import Helmet from 'react-helmet';
 import styles from "../styles"
 import presets from "../utils/presets"
 import { rhythm, scale } from "../utils/typography"
@@ -7,31 +8,29 @@ import { injectGlobal } from 'styled-components';
 import { normalize, fontFace } from 'polished';
 import '../styles/global'; // inject global style
 
+
 class Index extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
-    const author = this.props.data.site.siteMetadata.author;
-    const authorTitle = this.props.data.site.siteMetadata.authorTitle;
-    const description = this.props.data.site.siteMetadata.description;
+    const siteMetadata = this.props.data.site.siteMetadata;
 
     return (
       <div>
+        <Helmet
+          title={siteMetadata.title}
+          meta={[
+            { name: 'description', content: `${siteMetadata.description}` },
+            { property: 'og:type', content: 'article' },
+            { property: 'og:url', content: `${siteMetadata.url}` },
+            { property: 'og:title', content: `${siteMetadata.title}` },
+            { property: 'og:description', content: `${siteMetadata.description}` },
+          ]}
+          link={[
+            { rel: 'canonical', href: `${siteMetadata.url}` },
+          ]}
+        />
         <div>
-          <h1
-            css={{
-              ...scale(4 / 5),
-              fontWeight: `800`,
-              marginBottom: rhythm(2),
-            }}
-          >
-          </h1>
           <ul
-            css={{
-              marginBottom: rhythm(2),
-              marginTop: rhythm(2),
-              marginLeft: 0,
-              listStyle: `none`,
-            }}
           >
             {posts.map(post =>
               <li key={post.node.fields.slug}>
@@ -68,6 +67,8 @@ export const pageQuery = graphql`
         title
         author
         description
+        githubUrl
+        url
       }
     }
     allMarkdownRemark(

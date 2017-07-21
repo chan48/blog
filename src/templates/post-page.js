@@ -8,35 +8,7 @@ import Tags from '../components/Tags';
 
 class BlogPostRoute extends Component {
   render() {
-    const post = this.props.data.markdownRemark
-
-
-    // let tags
-    // let tagsSection
-    // if (post.fields.tagSlugs) {
-    //   const tagsArray = post.fields.tagSlugs
-    //   tags = tagsArray.map((tag, i) => {
-    //     const divider = i < tagsArray.length - 1 && <span>{`, `}</span>
-    //     return (
-    //       <span key={tag}>
-    //         <Link to={tag}>
-    //           {post.frontmatter.tags[i]}
-    //         </Link>
-    //         {divider}
-    //       </span>
-    //     )
-    //   })
-    //   tagsSection = (
-    //     <span
-    //       css={{
-    //         fontStyle: `normal`,
-    //         textAlign: `left`,
-    //       }}
-    //     >
-    //       tagged {tags}
-    //     </span>
-    //   )
-    // }
+    const post = this.props.data.markdownRemark;
 
     return (
       <div
