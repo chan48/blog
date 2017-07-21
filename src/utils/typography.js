@@ -1,7 +1,7 @@
 import Typography from "typography"
 import { baseHsl, colors } from "../styles/colors"
 import media from "../styles/media";
-
+import '../styles/global';
 const linkRaw = colors.link.substr(1)
 const linkHoverRaw = colors.linkHover.substr(1)
 
@@ -196,9 +196,9 @@ const options = {
 
 const typography = new Typography(options)
 
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
-  typography.injectStyles()
-}
+// // Hot reload typography in development.
+// if (process.env.NODE_ENV !== `production`) {
+//   typography.injectStyles()
+// }
 
-module.exports = typography
+module.exports = typography;

@@ -18,7 +18,7 @@ const size = {
   postWidth: '740px',
   topNavHeight: '3rem',
   footerHeight: '3.5rem',
-  mainWidthDesktop: '1070px',
+  mainWidthDesktop: '1020px',
 }
 
 export default {

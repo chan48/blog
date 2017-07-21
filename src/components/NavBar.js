@@ -18,14 +18,6 @@ const TopNav = styled.nav`
   border-bottom: 1px solid ${styles.colors.border};
 `
 
-const NavInner = styled.div`
-  padding: 0 1rem;
-  margin: 0 auto;
-  ${styles.media.Desktop} {
-    width: ${styles.size.mainWidthDesktop};
-  }
-`;
-
 const NavContentWrapper = ContentWrapper.extend`
   margin-top: 0;
 `;

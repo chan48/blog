@@ -1,15 +1,12 @@
 module.exports = {
-  'desktop-max': '1100px',
-  'tablet-max': '900px',
-  'mobile-max': '500px',
   mobile: `(min-width: 400px)`,
   Mobile: `@media (min-width: 400px)`,
   phablet: `(min-width: 550px)`,
   Phablet: `@media (min-width: 550px)`,
   tablet: `(min-width: 750px)`,
   Tablet: `@media (min-width: 750px)`,
-  desktop: `(min-width: 1000px)`,
-  Desktop: `@media (min-width: 1000px)`,
+  desktop: `(min-width: 1060px)`,
+  Desktop: `@media (min-width: 1060px)`,
   hd: `(min-width: 1200px)`,
   Hd: `@media (min-width: 1200px)`,
 }

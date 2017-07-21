@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { TypographyStyle } from 'react-typography';
 import typography from './utils/typography';
+import { normalize } from 'polished';
 
 class Html extends Component {
   render() {
@@ -61,6 +62,7 @@ class Html extends Component {
           /> */}
           {title.toComponent()}
           {this.props.headComponents}
+          <style>${normalize().toString()}</style>
           <TypographyStyle typography={typography} />
           {css}
         </head>

@@ -3,9 +3,8 @@ import Link from "gatsby-link"
 import Helmet from 'react-helmet';
 import styles from "../styles"
 import { rhythm, scale } from "../utils/typography"
-import { injectGlobal } from 'styled-components';
 import { normalize, fontFace } from 'polished';
-import '../styles/global'; // inject global style
+// import '../styles/global'; // inject global style
 import NavBar from '../components/NavBar';
 import ContentWrapper from '../components/content-wrapper';
 
