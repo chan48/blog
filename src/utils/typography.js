@@ -8,7 +8,7 @@ const linkRaw = colors.link.substr(1)
 const linkHoverRaw = colors.linkHover.substr(1)
 
 const options = {
-  baseFontSize: `17px`,
+  baseFontSize: `18px`,
   baseLineHeight: 1.6,
   headerColor: `${colors.black}`,
   bodyColor: `${colors.text}`,

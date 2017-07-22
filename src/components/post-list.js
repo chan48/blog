@@ -32,8 +32,9 @@ const ListWrapper = styled.ul`
 const PostCard = styled.li`
   display: block;
   background-color: #fff;
+  border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, .09);
-  margin: ${rhythm(1)} 0;
+  margin: ${rhythm(2)} 0;
 
   &:first-child {
     margin-top: 0;
@@ -46,14 +47,15 @@ const PostCard = styled.li`
 const MainImage = styled.div`
   display: block;
   width: 100%;
-  height: 200px;
+  height: ${rhythm(6)};
   margin: 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, .09);
   background-size: cover;
   background-position: 50% 0;
   background-repeat: no-repeat;
 
   ${styles.media.Phablet} {
-    height: 250px;
+    height: ${rhythm(8)};
   }
 `
 
@@ -62,10 +64,9 @@ const PostInfo = styled.div`
 `
 
 const PostTitle = styled.h2`
-  margin: 0 0 ${rhythm(1/2)};
+  margin: 0;
   font-size: 1.45rem;
   font-weight: 400;
-  line-height: rhythm(1);
 `
 
 const PostCreated = styled.time`

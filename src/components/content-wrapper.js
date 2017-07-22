@@ -19,11 +19,11 @@ export const PageWrapper = styled.main`
 export const ContentWrapper = styled.div`
   width: 100%;
   padding: 0 ${rhythm(3/4)};
+  margin-left: auto;
+  margin-right: auto;
 
   ${styles.media.Desktop} {
     width: ${styles.sizes.mainWidthDesktop};
-    margin-left: auto;
-    margin-right: auto;
     padding: 0 ${rhythm(1)};
   }
 `

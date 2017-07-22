@@ -26,6 +26,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         }
+        site {
+          siteMetadata {
+            title
+            url
+          }
+        }
       }
     `
       ).then(result => {
