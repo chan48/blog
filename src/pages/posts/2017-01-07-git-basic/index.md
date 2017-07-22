@@ -3,7 +3,7 @@ title: "버전 관리 시스템 Git 기초"
 description: "버전 관리 시스템 Git 기초"
 date: "2017-01-08"
 layout: post
-mainImage: "/posts/2017-01-07-git-basic/file-status.png"
+mainImage: "/images/post-main/2017-01-07-git-basic/file-status.png"
 tags:
   - VCS
   - Git

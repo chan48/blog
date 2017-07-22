@@ -3,7 +3,7 @@ title: "Angular 2의 양방향 연결(two-way binding) 구현"
 description: "Angular 2에서 banana-in-box 표기법과 getter, setter를 이용해 양방향 바인딩을 어떻게 구현하지는 예제 코드와 함께 설명한다."
 date: "2017-05-11"
 layout: post
-mainImage: "/posts/2017-05-11-angular-2-two-way-binding/karina-carvalho-94650.jpg"
+mainImage: "/images/post-main/2017-05-11-angular2-two-way-binding/karina-carvalho-94650.jpg"
 tags:
   - JavaScript
   - Angular 2

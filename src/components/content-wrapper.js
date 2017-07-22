@@ -6,11 +6,11 @@ import { rhythm } from '../utils/typography';
 /**
  * 전체 페이지 박스
  */
-export const PageWrapper = styled.div`
+export const PageWrapper = styled.main`
   position: relative;
   min-height: 100vh;
-  padding-top: ${styles.size.topNavHeight};
-  padding-bottom: ${styles.size.footerHeight};
+  padding-top: ${styles.sizes.topNavHeight};
+  padding-bottom: ${styles.sizes.footerHeight};
 `
 
 /**
@@ -20,12 +20,8 @@ export const ContentWrapper = styled.div`
   width: 100%;
   padding: 0 ${rhythm(3/4)};
 
-
-  ${styles.media.Tablet} {
-  }
-
   ${styles.media.Desktop} {
-    width: ${styles.size.mainWidthDesktop};
+    width: ${styles.sizes.mainWidthDesktop};
     margin-left: auto;
     margin-right: auto;
     padding: 0 ${rhythm(1)};

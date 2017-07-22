@@ -1,3 +1,5 @@
+// @flow
+
 import Typography from "typography"
 import { baseHsl, colors } from "../styles/colors"
 import media from "../styles/media";
@@ -13,6 +15,7 @@ const options = {
   blockMarginBottom: 0.75,
   headerWeight: 800,
   headerFontFamily: [
+    // 'Noto Sans KR',
     'Iropke Batang',
     `Spectral`,
     `-apple-system`,
@@ -101,7 +104,7 @@ const options = {
       },
       // Code highlighting.
       "tt, code": {
-        fontFamily: `"Space Mono",Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Menlo,Courier,monospace`,
+        fontFamily: `Menlo,"Space Mono",Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Courier,monospace`,
         // Disable ligatures as they look funny w/ Space Mono as code.
         fontVariant: `none`,
         WebkitFontFeatureSettings: `"clig" 0, "calt" 0`,

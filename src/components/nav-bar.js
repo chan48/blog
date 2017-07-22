@@ -25,7 +25,7 @@ const SiteTitle = styled.div`
   font-weight: 100;
   font-size: 1.2rem;
   font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
-  line-height: ${styles.size.topNavHeight};
+  line-height: ${styles.sizes.topNavHeight};
   letter-spacing: -1px;
 `;
 
@@ -37,7 +37,7 @@ const MenuWrap = styled.ul`
 `
 
 const Menu = styled.li`
-  line-height: ${styles.size.topNavHeight};
+  line-height: ${styles.sizes.topNavHeight};
   font-size: 1rem;
   font-weight: 100;
   margin-bottom: 0;

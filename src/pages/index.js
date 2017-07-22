@@ -8,6 +8,7 @@ import { normalize, fontFace } from 'polished';
 import { PageWrapper, ContentWrapper } from '../components/content-wrapper';
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
+import PostList from '../components/post-list';
 
 class Index extends React.Component {
   render() {
@@ -31,27 +32,7 @@ class Index extends React.Component {
         />
         <NavBar />
         <ContentWrapper>
-          <ul>
-          {posts.map(post =>
-            <li key={post.node.fields.slug}>
-              <span
-                css={{
-                  color: styles.colors.light,
-                  display: `block`,
-                  [styles.media.Tablet]: {
-                    float: `right`,
-                    marginLeft: `1rem`,
-                  },
-                }}
-              >
-                {post.node.frontmatter.date}
-              </span>
-              <Link to={post.node.fields.slug} className="link-underline">
-                {post.node.frontmatter.title}
-              </Link>
-            </li>
-          )}
-          </ul>
+          <PostList posts={posts} />
         </ContentWrapper>
         <Footer />
       </PageWrapper>
@@ -84,11 +65,11 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY-MM-DD")
+            mainImage
           }
         }
       }
     }
   }
 `
-

@@ -9,6 +9,7 @@ injectGlobal`
   })}
   ${fontFace({
     'fontFamily': 'Iropke Batang',
+    'fileFormats': ['eot', 'woff'],
     'fontFilePath': '/fonts/IropkeBatangM'
   })}
   ${fontFace({

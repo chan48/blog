@@ -3,12 +3,11 @@ title: "[번역] 통합 스타일링 언어"
 description: ""
 date: "2017-06-24"
 layout: post
-mainImage: "/posts/2017-06-24-unified-styling-language/main_image.png"
+mainImage: "/images/post-main/2017-06-24-unified-styling-language/main-image.png"
 tags:
   - CSS
   - JavaScript
   - React
-path: "/posts/2017-06-24-unified-styling-language"
 draft: false
 ---
 

@@ -56,8 +56,6 @@ class PostList extends Component {
                   style={{
                     backgroundImage: `url(${mainImage})`
                   }}
-                  // src={mainImage}
-                  // alt={`${title}: 메인이미지`}
                 />
               }
             <div className={cx('postInfo')}>

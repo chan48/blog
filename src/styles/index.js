@@ -3,28 +3,13 @@ import { colors } from './colors'
 import { rhythm } from '../utils/typography'
 import media from './media';
 import { TypographyStyle } from 'react-typography';
-
-const animations = {
-  animationCurveFastOutSlowIn: `cubic-bezier(0.4, 0, 0.2, 1)`,
-  animationCurveLinearOutSlowIn: `cubic-bezier(0, 0, 0.2, 1)`,
-  animationCurveFastOutLinearIn: `cubic-bezier(0.4, 0, 1, 1)`,
-  animationCurveDefault: `cubic-bezier(0.4, 0, 0.2, 1)`,
-  animationSpeedDefault: `250ms`,
-  animationSpeedFast: `200ms`,
-  animationSpeedSlow: `300ms`,
-}
-
-const size = {
-  postWidth: '740px',
-  topNavHeight: rhythm(2),
-  footerHeight: rhythm(2),
-  mainWidthDesktop: '1020px',
-}
+import animations from './animations';
+import sizes from './sizes';
 
 export default {
   animations: animations,
   media: media,
-  size: size,
+  sizes: sizes,
   colors: colors,
   verticalPadding: style({
     padding: rhythm(3 / 4),

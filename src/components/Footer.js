@@ -11,7 +11,7 @@ const FooterWrap = styled.footer`
   width: 100%;
   background-color: #fff;
   border-top: 1px solid ${styles.colors.border};
-  line-height: ${styles.size.footerHeight};
+  line-height: ${styles.sizes.footerHeight};
   font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
 `;
 
