@@ -5,10 +5,11 @@
   "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
-    "build": "npm run clean && gatsby build && node ampify.js && npm run copy:html",
-    "deploy": "npm run build && gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\"",
+    "build": "npm run clean && gatsby build && npm run ampify",
+    "ampify": "node ampify.js",
+    "deploy:gh-pages": "gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\"",
+    "deploy": "npm run build && npm run deploy:gh-pages",
     "serve:build": "npm run build && gatsby serve-build",
-    "copy:html": "cp -r html/ public/",
     "clean": "rm -rf public/*",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "jest --watch",
@@ -30,7 +31,7 @@
     "gatsby": "latest",
     "gatsby-link": "latest",
     "gatsby-plugin-catch-links": "latest",
-    "gatsby-plugin-glamor": "^1.1.0",
+    "gatsby-plugin-glamor": "latest",
     "gatsby-plugin-google-analytics": "latest",
     "gatsby-plugin-manifest": "latest",
     "gatsby-plugin-offline": "latest",
@@ -47,6 +48,7 @@
     "gatsby-transformer-remark": "latest",
     "gatsby-transformer-sharp": "latest",
     "gatsby-transformer-yaml": "latest",
+    "gh-pages": "^1.0.0",
     "lodash": "^4.16.4",
     "lodash-webpack-plugin": "^0.11.4",
     "mkdirp": "^0.5.1",
@@ -63,7 +65,7 @@
     "typography": "^0.15.12"
   },
   "devDependencies": {
-    "caniuse-db": "^1.0.30000702",
+    "caniuse-db": "1.0.30000652",
     "flow-bin": "^0.50.0"
   },
   "jest": {

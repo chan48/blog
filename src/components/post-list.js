@@ -68,7 +68,7 @@ const PostTitle = styled.h2`
 `
 
 const PostCreated = styled.time`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.44);
 `
 

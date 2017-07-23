@@ -85,7 +85,7 @@ const options = {
         marginBottom: rhythm(0.5),
       },
       blockquote: {
-        borderLeft: `${rhythm(1 / 4)} solid hsla(${baseHsl},0.1)`,
+        borderLeft: `${rhythm(1 / 5)} solid hsla(${baseHsl},0.1)`,
         color: `hsla(${baseHsl},0.8)`,
         fontStyle: `italic`,
         marginLeft: 0,

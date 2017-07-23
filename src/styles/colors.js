@@ -10,8 +10,6 @@ const colors = {
   white: `#fff`,
   link: `#2e2e2e`,
   linkHover: '#4568dc',
-  // link: `#03a9f4`,
-  // linkHover: `#ff5252`,
   body: '#fafafa',
   border: '#ebebeb',
   'gray-01': 'rgba(0, 0, 0, 0.44)',
