@@ -1,16 +1,16 @@
 {
-  "version": "1.3.0",
+  "version": "2.0.0",
   "name": "blog",
   "description": "rhostem's blog powered by Gatsby",
   "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
     "build": "npm run clean && gatsby build && npm run ampify",
-    "ampify": "node ampify.js",
-    "deploy:gh-pages": "gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\"",
     "deploy": "npm run build && npm run deploy:gh-pages",
-    "serve:build": "npm run build && gatsby serve-build",
+    "deploy:gh-pages": "gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\"",
+    "ampify": "node ampify.js",
     "clean": "rm -rf public/*",
+    "serve:build": "npm run build && gatsby serve-build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "jest --watch",
     "flow": "flow"
