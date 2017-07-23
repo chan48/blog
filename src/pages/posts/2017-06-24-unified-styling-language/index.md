@@ -571,8 +571,8 @@ CSS-in-JS는 짧은 시간 만에 놀라울 정도로 큰 변화를 만들어냈
 
 이 글은 독일 베를린에서 개최된 CSSconf EU 2017에서 발표된 같은 제목을 가진 세션과 함께 작성되었다. 영상은 [Youtube에서 시청할 수 있다](https://www.youtube.com/watch?v=X_uTCnaRe94).
 
-<div class="Post-iframeWrapper">
-  <iframe class="Post-iframe video" src="https://www.youtube.com/embed/X_uTCnaRe94" frameborder="0" scrolling="no" allowFullScreen></iframe>
+<div class="iframe-video-wrapper">
+  <iframe class="iframe-video video" src="https://www.youtube.com/embed/X_uTCnaRe94" frameborder="0" scrolling="no" allowFullScreen></iframe>
 </div>
 
 

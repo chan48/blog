@@ -1,5 +1,6 @@
 import { injectGlobal } from 'styled-components';
 import { fontFace } from 'polished';
+import { rhythm } from '../utils/typography';
 
 // inject global css
 injectGlobal`
@@ -27,4 +28,19 @@ injectGlobal`
     'fontWeight': 700,
     'fontFilePath': 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold'
   })}
+
+  .iframe-video-wrapper {
+    position: relative;
+    display: block;
+    padding-bottom: 56.25%;
+    margin: 3.2rem 0;
+  }
+
+  .iframe-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
