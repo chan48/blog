@@ -5,7 +5,7 @@ date: "2017-05-11"
 layout: post
 mainImage: "/images/post-main/2017-05-11-angular2-two-way-binding/karina-carvalho-94650.jpg"
 tags:
-  - JavaScript
+  - Javascript
   - Angular 2
 path: "/posts/2017-05-11-angular-2-two-way-binding"
 draft: false

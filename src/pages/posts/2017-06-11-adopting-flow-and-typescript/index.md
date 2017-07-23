@@ -5,9 +5,9 @@ date: "2017-06-11"
 layout: post
 mainImage:
 tags:
-  - TypeScript
+  - Typescript
   - Flow
-  - JavaScript
+  - Javascript
 path: "/posts/2017-06-11-adopting-flow-and-typescript"
 draft: false
 ---
@@ -33,7 +33,7 @@ square("oops");
 둘다 간단하게 파일별로 채택이 가능하다.
 
 - Flow: `// @flow` 코멘트를 파일 최상단에 추가한다.
-- TypeScript: 파일의 확장자 `.js`를 `.ts`로 변경한다.
+- Typescript: 파일의 확장자 `.js`를 `.ts`로 변경한다.
 
 하지만 각각 어떤 일이 일어나는지 비교해보자.
 

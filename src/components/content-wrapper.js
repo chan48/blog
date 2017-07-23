@@ -27,3 +27,16 @@ export const ContentWrapper = styled.div`
     padding: 0 ${rhythm(1)};
   }
 `
+
+/**
+ * 포스트 컨텐츠
+ */
+export const PostContentWrapper = ContentWrapper.extend`
+  margin-top: ${rhythm(2)};
+  margin-bottom: ${rhythm(2)};
+
+  ${styles.media.Tablet} {
+    width: ${styles.sizes.postWidth};
+  }
+`
+

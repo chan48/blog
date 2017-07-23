@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'rhostem.github.io',
-    author: 'rhostem',
+    author: 'rhostem(syoung.j@gmail.com)',
     description: '프론트엔드 개발 기술 블로그입니다. 정적 사이트 생성기(static site generator) gatsby를 기반으로 만들어졌습니다.',
     githubUrl: 'https://github.com/rhostem/blog',
     url: 'https://rhostem.github.io',

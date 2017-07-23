@@ -22,6 +22,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
               frontmatter {
                 tags
+                title
+                date
+                mainImage
+                description
               }
             }
           }
@@ -30,6 +34,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           siteMetadata {
             title
             url
+            author
           }
         }
       }

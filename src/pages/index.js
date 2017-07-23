@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import styles from "../styles"
 import { rhythm, scale } from "../utils/typography"
 import { normalize, fontFace } from 'polished';
-import { PageWrapper, ContentWrapper } from '../components/content-wrapper';
+import { PageWrapper, PostContentWrapper } from '../components/content-wrapper';
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
 import PostList from '../components/post-list';
@@ -31,9 +31,9 @@ class Index extends React.Component {
           ]}
         />
         <NavBar />
-        <ContentWrapper>
+        <PostContentWrapper>
           <PostList posts={posts} />
-        </ContentWrapper>
+        </PostContentWrapper>
         <Footer />
       </PageWrapper>
     )

@@ -5,19 +5,11 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { clearFix } from 'polished';
 import styles from '../styles';
-import { rhythm, scale } from '../utils/typography';
-import { ContentWrapper, PageWrapper } from '../components/content-wrapper';
+import { rhythm } from '../utils/typography';
+import { PageWrapper, PostContentWrapper } from '../components/content-wrapper';
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
 import Tags from '../components/tags';
-
-const PostContentWrapper = ContentWrapper.extend`
-  margin-top: ${rhythm(2)};
-
-  ${styles.media.Tablet} {
-    width: ${styles.sizes.postWidth};
-  }
-`
 
 const PostTitle = styled.h1`
   text-align: left;
@@ -93,6 +85,11 @@ class BlogPostRoute extends Component {
           link={[
             { rel: 'canonical', href: `${siteMetadata.url}${this.props.location.pathname}` },
           ]}
+          meta={[
+            { name: 'author', content: `${siteMetadata.author}` },
+            { name: 'keywords', content: `${post.frontmatter.tags.join(`,`)}` },
+            { name: 'description', content: `${post.frontmatter.description}` },
+          ]}
         >
           {this.getScriptSrc().map((src, i) =>
             <script async src={src} type="text/javascript" key={i} />
@@ -136,6 +133,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         url
+        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -148,6 +146,7 @@ export const pageQuery = graphql`
         title
         tags
         date(formatString: "YYYY-MM-DD")
+        description
       }
     }
   }

@@ -2,6 +2,7 @@
 import Link from 'gatsby-link';
 import React, { Component, PropTypes } from 'react';
 import { rhythm, scale } from '../utils/typography';
+import { wordWrap } from 'polished';
 import styles from '../styles';
 import styled from 'styled-components';
 import moment from 'moment';
@@ -13,8 +14,6 @@ type Post = {
     },
     frontmatter: {
       date: string;
-      image: string;
-      path: string;
       title: string;
       mainImage: string;
     }
@@ -24,9 +23,6 @@ type Post = {
 const ListWrapper = styled.ul`
   width: 100%;
   margin: ${rhythm(2)} auto;
-  ${styles.media.Tablet} {
-    width: ${styles.sizes.postWidth};
-  }
 `
 
 const PostCard = styled.li`
@@ -64,9 +60,11 @@ const PostInfo = styled.div`
 `
 
 const PostTitle = styled.h2`
+  font-weight: 100;
   margin: 0;
-  font-size: 1.45rem;
-  font-weight: 400;
+  font-size: 1.4rem;
+  ${wordWrap('keep-all')}
+  line-height: ${rhythm(1.4)};
 `
 
 const PostCreated = styled.time`

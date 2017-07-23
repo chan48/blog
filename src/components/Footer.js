@@ -16,6 +16,8 @@ const FooterWrap = styled.footer`
 `;
 
 const FooterContent = ContentWrapper.extend`
+  font-family: 'Noto Sans Kr';
+  font-weight: 100;
   font-size: 0.8rem;
 `
 

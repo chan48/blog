@@ -5,7 +5,7 @@ date: "2017-01-03"
 layout: post
 mainImage:
 tags:
-  - JavaScript
+  - Javascript
   - React
   - ES6
   - ES7

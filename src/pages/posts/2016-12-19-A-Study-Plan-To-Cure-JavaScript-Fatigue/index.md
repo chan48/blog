@@ -6,7 +6,7 @@ layout: post
 mainImage: "https://cdn-images-1.medium.com/max/1000/1*9aqEe1RQXAh77hA07VZN0w.png"
 tags:
   - 번역
-  - JavaScript
+  - Javascript
   - React
   - Redux
   - ES6
