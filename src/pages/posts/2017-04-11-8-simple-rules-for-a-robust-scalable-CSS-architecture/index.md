@@ -5,7 +5,6 @@ date: "2017-04-11"
 layout: post
 mainImage:
 tags:
-  - Front-end
   - CSS
 path: "/posts/2017-04-11-8-simple-rules-for-a-robust-scalable-CSS-architecture"
 ---

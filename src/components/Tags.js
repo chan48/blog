@@ -7,10 +7,13 @@ import _ from 'lodash';
 import { rhythm } from '../utils/typography';
 
 const Wrapper = styled.div`
+  margin-left: -0.3rem;
   ${clearFix()}
 `;
 
 const Tag = styled.span`
+  font-family: 'Noto Sans Kr';
+  font-weight: 100;
   display: block;
   float: left;
   padding: 4px 10px;
@@ -24,10 +27,6 @@ const Tag = styled.span`
 
   &:hover {
     background-color: rgba(0,0,0, 0.1);
-  }
-
-  &:first-child {
-    margin-left: 0;
   }
 `;
 

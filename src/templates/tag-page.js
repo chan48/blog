@@ -9,12 +9,20 @@ import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
 import PostList from '../components/post-list';
 
-const TagTitle = styled.header`
+const Title = styled.h1`
   font-family: 'Noto Sans Kr';
   font-size: 2.5rem;
   font-weight: 100;
   line-height: ${rhythm(2)};
+  margin-top: ${rhythm(2)};
 `
+
+const TagCount = styled.p`
+  font-family: 'Noto Sans Kr';
+  font-size: 1.5rem;
+  font-weight: 100;
+`
+
 const ShowAllTags = styled.span`
   font-family: 'Noto Sans Kr';
   font-weight: 100;
@@ -35,11 +43,12 @@ class TagRoute extends React.Component {
       <PageWrapper>
         <NavBar />
         <PostContentWrapper>
-          <TagTitle>
+          <Title>
             {this.props.pathContext.tag}
-            <span> - </span>
+          </Title>
+          <TagCount>
             {this.props.data.allMarkdownRemark.totalCount}개의 글
-          </TagTitle>
+          </TagCount>
           <PostList posts={posts} />
           <ShowAllTags>
             <Link to="/tags/">모든 태그 보기</Link>

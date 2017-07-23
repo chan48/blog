@@ -3,11 +3,26 @@ import React, { Component } from 'react';
 import R from 'ramda';
 import Link from 'gatsby-link';
 import _ from 'lodash'
+import styled from 'styled-components';
+import { rhythm } from '../utils/typography';
+import { PageWrapper, PostContentWrapper } from '../components/content-wrapper';
+import NavBar from '../components/nav-bar';
+import Footer from '../components/footer';
+
+import Tags from '../components/tags';
 
 export type Tag = {
   name: string,
   count: number,
 };
+
+const Title = styled.h1`
+  font-family: 'Noto Sans Kr';
+  font-size: 2.5rem;
+  font-weight: 100;
+  line-height: ${rhythm(2)};
+  margin-top: ${rhythm(2)};
+`
 
 /**
  * 모든 태그 목록
@@ -15,7 +30,7 @@ export type Tag = {
  * @class Tags
  * @extends {Component}
  */
-class Tags extends Component {
+class TagsRoute extends Component {
   tags: Array<Tag> = [];
 
   componentWillMount() {
@@ -36,23 +51,21 @@ class Tags extends Component {
   }
 
   render() {
+    const tags = this.tags.map(tag => tag.name);
     return (
-      <div>
-        <h1>tags</h1>
-        <ul>
-          {this.tags.map(tag =>
-            <li key={tag.name}>
-              <Link to={`/tags/${_.kebabCase(tag.name)}/`}>{tag.name} {tag.count}</Link>
-            </li>
-          )}
-        </ul>
-
-      </div>
+      <PageWrapper>
+        <NavBar />
+        <PostContentWrapper>
+          <Title>모든 태그</Title>
+          <Tags tags={tags}></Tags>
+        </PostContentWrapper>
+        <Footer />
+      </PageWrapper>
     );
   }
 }
 
-export default Tags;
+export default TagsRoute;
 
 export const tagsQuery = graphql`
   query TagQuery {

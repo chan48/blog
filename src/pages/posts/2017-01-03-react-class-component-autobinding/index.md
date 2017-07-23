@@ -9,7 +9,6 @@ tags:
   - React
   - ES6
   - ES7
-  - Front-end
 path: "/posts/2017-01-03-react-class-component-autobinding"
 ---
 
