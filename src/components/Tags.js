@@ -13,13 +13,13 @@ const Wrapper = styled.div`
 
 const Tag = styled.span`
   font-family: 'Noto Sans Kr';
+  font-size: ${props => props.fontSize ? props.fontSize : '0.8rem'};
   font-weight: 100;
   display: block;
   float: left;
-  padding: 4px 10px;
-  margin-bottom: 4px;
-  margin-left: 0.3rem;
-  font-size: 0.8rem;
+  padding: 0.25em 0.625em;
+  margin-bottom: 0.35em;
+  margin-left: 0.35em;
   line-height: ${rhythm(1)};
   color: rgba(0,0,0, 0.6);
   background-color: rgba(0,0,0, 0.04);
@@ -30,17 +30,25 @@ const Tag = styled.span`
   }
 `;
 
+type TagProps = {
+  tags: Array<string>;
+  fontSize: string;
+}
+
 /**
  * 태그 목록 컴포넌트. 태그 클릭시 해당 태그를 포함하고 있는 포스트 목록 페이지로 이동한다.
  *
  * @param {{ tags: Array<string> }} { tags }
  * @returns
  */
-function Tags({ tags }: { tags: Array<string> }) {
+function Tags({
+  tags,
+  fontSize = '0.8rem' }: TagProps
+) {
   return (
     <Wrapper>
       {tags.map((tag: string) =>
-        <Tag key={tag}>
+        <Tag key={tag} fontSize={fontSize}>
           <Link to={`/tags/${_.kebabCase(tag)}`}>
             {tag}
           </Link>
@@ -52,6 +60,7 @@ function Tags({ tags }: { tags: Array<string> }) {
 
 Tags.propTypes = {
   tags: PropTypes.array,
+  fontSize: PropTypes.string,
 };
 
 export default Tags;

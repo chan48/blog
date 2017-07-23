@@ -3,23 +3,4 @@ node_modules/
 npm-debug.log
 public
 .gatsby-context.js
-pages/.manifest
 .idea
-gatsby-starter-lumen.iml
-
-
-###SublimeText###
-# cache files for sublime text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-
-# workspace files are user-specific
-*.sublime-workspace
-
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-# *.sublime-project
-
-# sftp configuration file
-sftp-config.json
