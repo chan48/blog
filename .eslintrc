@@ -2,6 +2,7 @@
   "extends": "eslint-config-airbnb",
   "globals": {
     "__PREFIX_LINKS__": true,
+    "graphql": true
   },
   "env": {
     "browser": true,
@@ -24,6 +25,6 @@
     // 'gatsby-helper', 'config'
     "import/no-extraneous-dependencies": [0],
     "import/imports-first": [0],
-    "import/newline-after-import": [0],
+    "import/newline-after-import": [0]
   }
 }

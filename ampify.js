@@ -124,7 +124,7 @@ const ampify = function(html, filePath) {
   // We are using Sass so we need to get each of the styles we need for the amp version of the pages
   // and compile it to minified sass.
 
-  var css = sass.renderSync({file: './css/amponly.scss', outputStyle: 'compressed'}).css.toString();
+  var css = sass.renderSync({file: './src/styles/amponly.scss', outputStyle: 'compressed'}).css.toString();
 
   // Remove our styles and add them to the css we are going to put in the custom amp
   // style element

@@ -1,8 +1,3 @@
-import ReactGA from 'react-ga'
-import {config} from 'config'
-
-ReactGA.initialize(config.googleAnalyticsId);
-
-exports.onRouteUpdate = (state, page, pages) => {
-  ReactGA.pageview(state.pathname);
-};
+exports.onClientEntry = function() {
+  require(`es6-object-assign`).polyfill()
+}

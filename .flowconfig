@@ -2,5 +2,5 @@
 .*/__tests__/.*
 .*/node_modules/.*
 
-
 [libs]
+./flow-typed/*.js
