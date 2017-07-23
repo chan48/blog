@@ -87,7 +87,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
   if (node.internal.type === `File`) {
     const parsedFilePath = path.parse(node.absolutePath)
-    const slug = `/${parsedFilePath.dir.split(`src/pages/posts/`)[1]}/`
+    const slug = `/${parsedFilePath.dir.split(`src/pages/`)[1]}/`
     createNodeField({ node, name: `slug`, value: slug })
   } else if (
     node.internal.type === `MarkdownRemark` &&
