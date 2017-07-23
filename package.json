@@ -10,7 +10,7 @@
     "deploy:gh-pages": "gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\"",
     "ampify": "node ampify.js",
     "clean": "rm -rf public/*",
-    "serve:build": "npm run build && gatsby serve-build",
+    "serve:build": "npm run build && gatsby serve",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "jest --watch",
     "flow": "flow"
