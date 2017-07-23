@@ -80,7 +80,9 @@ class BlogPostRoute extends Component {
             </TagsWrapper>
           </header>
 
+          {/* post는 utils/typograyph.js 에서 사용하는 클래스네임이다 */}
           <Post
+            className="post"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
           <div id="disqus_thread" />

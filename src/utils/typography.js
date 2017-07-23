@@ -1,5 +1,4 @@
 // @flow
-
 import Typography from "typography"
 import { baseHsl, colors } from "../styles/colors"
 import media from "../styles/media";
@@ -8,7 +7,7 @@ const linkRaw = colors.link.substr(1)
 const linkHoverRaw = colors.linkHover.substr(1)
 
 const options = {
-  baseFontSize: `18px`,
+  baseFontSize: `16px`,
   baseLineHeight: 1.6,
   headerColor: `${colors.black}`,
   bodyColor: `${colors.text}`,
@@ -52,6 +51,39 @@ const options = {
         color: `${colors.link}`,
         textDecoration: `none`,
       },
+      h1: {
+        // ...scale(1.5), // scale(0) === font-size: 1rem; line-height: 1.6;
+        fontSize: '2.4rem',
+        lineHeight: rhythm(2),
+        marginTop: rhythm(4),
+        marginBottom: rhythm(1),
+      },
+      h2: {
+        fontSize: '1.6875rem',
+        lineHeight: rhythm(2),
+        marginTop: rhythm(3),
+        marginBottom: rhythm(1),
+      },
+      h3: {
+        fontSize: '1.375rem',
+        marginTop: rhythm(2),
+        marginBottom: rhythm(1),
+      },
+      h4: {
+        fontSize: '1.2rem',
+        marginTop: rhythm(1.5),
+        marginBottom: rhythm(0.5),
+      },
+      h5: {
+        fontSize: '1rem',
+        marginTop: rhythm(1.5),
+        marginBottom: rhythm(0.5),
+      },
+      h6: {
+        fontSize: '1rem',
+        marginTop: rhythm(1.5),
+        marginBottom: rhythm(0.5),
+      },
       blockquote: {
         borderLeft: `${rhythm(1 / 4)} solid hsla(${baseHsl},0.1)`,
         color: `hsla(${baseHsl},0.8)`,
@@ -67,7 +99,11 @@ const options = {
       },
       hr: {
         background: `${colors.smoke}`,
-        height: `2px`,
+        margin: `${rhythm(2)} auto`,
+        width: '50%',
+        height: '1px',
+        color: colors.black,
+        backgroundImage: 'linear-gradient(90deg,rgba(34,34,34,.2),rgba(34,34,34,.75),rgba(34,34,34,.2))',
       },
       // Style gatsby-remark-images elements.
       ".gatsby-resp-image-link": {
@@ -111,8 +147,10 @@ const options = {
         fontFeatureSettings: `"clig" 0, "calt" 0`,
         paddingTop: `0.1em`,
         paddingBottom: `0.1em`,
-        backgroundColor: `#fef9ec`,
+        backgroundColor: `#f8f8f8`,
+        // backgroundColor: `#fef9ec`,
         borderRadius: `2px`,
+        fontSize: '0.85em',
       },
       // Add space before and after code/tt elements.
       // @see https://github.com/KyleAMathews/typography.js/blob/66f78f0f4b8d2c5abf0262bcc1118610139c3b5f/packages/typography-plugin-code/src/index.js#L38-L46
@@ -126,7 +164,8 @@ const options = {
       },
       // Highlighted code blocks in Markdown via gatsby-remark-prismjs.
       ".gatsby-highlight": {
-        backgroundColor: `#fef9ec`,
+        backgroundColor: `#f8f8f8`,
+        // backgroundColor: `#fef9ec`,
         borderRadius: `.15rem`,
         marginTop: `0`,
         marginBottom: rhythm(3 / 4),
@@ -175,6 +214,7 @@ const options = {
       // @see https://github.com/comfusion/after-dark/blob/8fdbe2f480ac40315cf0e01cece785d2b5c4b0c3/layouts/partials/critical-theme.css#L36-L39
       ".post a[href*='//']:after": {
         content: `" " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23${linkRaw}'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E")`,
+        paddingRight: '0.2rem',
       },
       ".post a[href*='//']:hover:after": {
         content: `" " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23${linkHoverRaw}'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E")`,
@@ -183,9 +223,6 @@ const options = {
       [media.Phablet]: {
         html: {
           fontSize: `${18 / 16 * 100}%`,
-        },
-        h1: {
-          ...scale(7 / 5),
         },
       },
       [media.Desktop]: {
@@ -199,9 +236,9 @@ const options = {
 
 const typography = new Typography(options)
 
-// // Hot reload typography in development.
-// if (process.env.NODE_ENV !== `production`) {
-//   typography.injectStyles()
-// }
+// Hot reload typography in development.
+if (process.env.NODE_ENV !== `production`) {
+  typography.injectStyles()
+}
 
 module.exports = typography;

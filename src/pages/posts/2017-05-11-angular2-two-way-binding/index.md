@@ -11,10 +11,8 @@ path: "/posts/2017-05-11-angular-2-two-way-binding"
 draft: false
 ---
 
-<figure>
-<img src="/posts/2017-05-11-angular-2-two-way-binding/karina-carvalho-94650.jpg">
-<figcaption>https://unsplash.com/@nickeedoo</figcaption>
-</figure>
+![CSS Modules](./karina-carvalho-94650.jpg)
+*https://unsplash.com/@nickeedoo*
 
 ## one-way binding
 

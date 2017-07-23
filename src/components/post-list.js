@@ -34,7 +34,7 @@ const PostCard = styled.li`
   background-color: #fff;
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, .09);
-  margin: ${rhythm(2)} 0;
+  margin: ${rhythm(1.5)} 0;
 
   &:first-child {
     margin-top: 0;
