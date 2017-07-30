@@ -6,7 +6,7 @@ layout: post
 mainImage: "/images/post-main/2017-05-11-angular2-two-way-binding/karina-carvalho-94650.jpg"
 tags:
   - Javascript
-  - Angular 2
+  - Angular
 path: "/posts/2017-05-11-angular-2-two-way-binding"
 draft: false
 ---
@@ -152,7 +152,7 @@ export class NgModelSample {
 
 ## Syntactic sugar
 
-Angular에서 양방향 바인딩은 [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)(문법을 사용하기 쉽게 표현한 형태)일 뿐이며 단방향으로 구현되어 있다. 프레임워크가 어려운 일을 대산해주면 사용하는 입장에서는 편하지만 표준에서는 멀어진다는 단점이 있다. React.js가 [컴포넌트 메소드 자동 바인딩을 제거한 사례](https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding)도 그런 철학에 기반한 것으로 여겨진다. 좋은 도구를 사용하면서도 항상 원리에 접근하려는 자세를 가져야 하겠다.
+Angular에서 양방향 바인딩은 [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)(문법을 사용하기 쉽게 표현한 형태)일 뿐이며 단방향으로 구현되어 있다. 프레임워크가 어려운 일을 대신 해주면 사용하는 입장에서는 편하지만 표준에서는 멀어진다는 단점이 있다. React.js가 [컴포넌트 메소드 자동 바인딩을 제거한 사례](https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding)도 그런 철학에 기반한 것으로 여겨진다. 좋은 도구를 사용하면서도 항상 원리에 접근하려는 자세를 가져야 하겠다.
 
 ## 참고자료
 

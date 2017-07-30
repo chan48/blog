@@ -4,7 +4,7 @@
   "description": "rhostem's blog powered by Gatsby",
   "main": "n/a",
   "scripts": {
-    "dev": "gatsby develop",
+    "start": "gatsby develop",
     "build": "npm run clean && gatsby build && npm run ampify",
     "deploy": "npm run build && npm run deploy:gh-pages",
     "deploy:gh-pages": "gh-pages -d public -r \"https://github.com/rhostem/rhostem.github.io.git\" -b \"master\"",

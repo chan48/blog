@@ -8,7 +8,6 @@ tags:
   - VCS
   - Git
   - SVN
-  - Git flow
 path: "/posts/2017-01-07-git-basic"
 ---
 

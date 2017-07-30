@@ -32,7 +32,7 @@ const Tag = styled.span`
 
 type TagProps = {
   tags: Array<string>;
-  fontSize: string;
+  fontSize?: string;
 }
 
 /**
