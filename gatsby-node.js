@@ -89,11 +89,17 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
   if (node.internal.type === `File`) {
     const parsedFilePath = path.parse(node.absolutePath)
-    const slug = `${parsedFilePath.dir.split(`src/pages/posts/`)[1]}`;
+    const isPostsFolder = parsedFilePath.dir.indexOf('pages/posts') > -1;
+
+    const slug = isPostsFolder ?
+      `/${parsedFilePath.dir.split(`src/pages/posts/`)[1]}/`
+      :
+      `/${parsedFilePath.dir.split(`src/pages/`)[1]}/`
+
     createNodeField({
       node,
       name: `slug`,
-      value: `/posts/${slug}/`
+      value: `${isPostsFolder ? '/posts' : '' }${slug}`
     })
 
   } else if (

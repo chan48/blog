@@ -88,14 +88,20 @@ const options = {
         borderLeft: `${rhythm(1 / 5)} solid hsla(${baseHsl},0.1)`,
         color: `hsla(${baseHsl},0.8)`,
         fontStyle: `italic`,
-        marginLeft: 0,
-        marginRight: rhythm(1),
+        marginLeft: rhythm(-3 / 4),
+        marginRight: rhythm(-3 / 4),
         marginTop: rhythm(1),
         marginBottom: rhythm(1),
-        paddingLeft: rhythm(2 / 4),
-        paddingRight: 0,
+        paddingLeft: rhythm(3/4 - 1/5),
+        paddingRight: rhythm(3 / 4),
         paddingTop: 0,
         paddingBottom: 0,
+      },
+      [media.Phablet]: {
+        blockquote: {
+          marginLeft: 0,
+          marginRight: 0,
+        },
       },
       hr: {
         background: `${colors.smoke}`,
@@ -164,8 +170,7 @@ const options = {
       },
       // Highlighted code blocks in Markdown via gatsby-remark-prismjs.
       ".gatsby-highlight": {
-        backgroundColor: `#f8f8f8`,
-        // backgroundColor: `#fef9ec`,
+        backgroundColor: `rgba(0,0,0, 0.04)`,
         borderRadius: `.15rem`,
         marginTop: `0`,
         marginBottom: rhythm(3 / 4),
@@ -222,12 +227,12 @@ const options = {
       // Increase base font-size for phablet and desktop.
       [media.Phablet]: {
         html: {
-          fontSize: `${18 / 16 * 100}%`,
+          fontSize: `${17.5 / 16 * 100}%`,
         },
       },
       [media.Desktop]: {
         html: {
-          fontSize: `${20 / 16 * 100}%`,
+          fontSize: `${19 / 16 * 100}%`,
         },
       },
     }
