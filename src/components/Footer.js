@@ -1,8 +1,8 @@
 // @flow
-import React, { PropTypes } from 'react';
-import styled from 'styled-components';
-import { clearFix } from 'polished';
-import styles from '../styles';
+import React, { PropTypes } from 'react'
+import styled from 'styled-components'
+import { clearFix } from 'polished'
+import styles from '../styles'
 import { ContentWrapper } from '../components/content-wrapper'
 
 const FooterWrap = styled.footer`
@@ -13,7 +13,7 @@ const FooterWrap = styled.footer`
   border-top: 1px solid ${styles.colors.border};
   line-height: ${styles.sizes.footerHeight};
   font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
-`;
+`
 
 const FooterContent = ContentWrapper.extend`
   font-family: 'Noto Sans Kr';
@@ -30,9 +30,7 @@ const Links = styled.div`
   }
 `
 
-const CopyRight = styled.div`
-  float: left;
-`
+const CopyRight = styled.div`float: left;`
 
 const OwnerLink = styled.a`
   color: ${styles.colors.text};
@@ -58,7 +56,7 @@ function Footer() {
       <FooterContent>
         <CopyRight>
           <span>@2016 </span>
-          <OwnerLink href="https://www.github.com/rhostem" >rhostem</OwnerLink>
+          <OwnerLink href="https://www.github.com/rhostem">rhostem</OwnerLink>
           <span> All rights reserved</span>
         </CopyRight>
         <FooterLinks>
@@ -71,10 +69,9 @@ function Footer() {
         </FooterLinks>
       </FooterContent>
     </FooterWrap>
-  );
+  )
 }
 
-Footer.propTypes = {
-};
+Footer.propTypes = {}
 
-export default Footer;
+export default Footer

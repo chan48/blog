@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import * as PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { TypographyStyle } from 'react-typography';
-import typography from './utils/typography';
-import { normalize } from 'polished';
+import React, { Component } from 'react'
+import * as PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { TypographyStyle } from 'react-typography'
+import typography from './utils/typography'
+import { normalize } from 'polished'
 
 class Html extends Component {
   render() {
-    const { body } = this.props;
-    const { title } = Helmet.rewind();
-    let css;
+    const { body } = this.props
+    const { title } = Helmet.rewind()
+    let css
 
     if (process.env.NODE_ENV === 'production') {
       css = (
@@ -18,7 +18,7 @@ class Html extends Component {
             __html: require('!raw!../public/styles.css'),
           }}
         />
-      );
+      )
     }
 
     return (
@@ -26,7 +26,10 @@ class Html extends Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=3.0" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0 maximum-scale=3.0"
+          />
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
           {/* <link
             rel="preload"
@@ -63,8 +66,13 @@ class Html extends Component {
           {title.toComponent()}
           {this.props.headComponents}
 
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-          <style>${normalize().toString()}</style>
+          <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          />
+          <style>
+            ${normalize().toString()}
+          </style>
           <TypographyStyle typography={typography} />
           {css}
         </head>
@@ -76,7 +84,7 @@ class Html extends Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    );
+    )
   }
 }
 
@@ -84,6 +92,6 @@ Html.propTypes = {
   headComponents: PropTypes.node.isRequired,
   body: PropTypes.node.isRequired,
   postBodyComponents: PropTypes.node.isRequired,
-};
+}
 
-module.exports = Html;
+module.exports = Html

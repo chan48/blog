@@ -8,4 +8,4 @@ const animations = {
   animationSpeedSlow: `300ms`,
 }
 
-export default animations;
+export default animations

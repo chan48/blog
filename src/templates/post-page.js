@@ -1,69 +1,63 @@
 // @flow
-import React, { Component } from 'react';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
-import styled from 'styled-components';
-import { clearFix } from 'polished';
-import styles from '../styles';
-import { rhythm } from '../utils/typography';
-import { PageWrapper, PostContentWrapper } from '../components/content-wrapper';
-import NavBar from '../components/nav-bar';
-import Footer from '../components/footer';
-import Tags from '../components/tags';
+import React, { Component } from 'react'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import { clearFix } from 'polished'
+import styles from '../styles'
+import { rhythm } from '../utils/typography'
+import { PageWrapper, PostContentWrapper } from '../components/content-wrapper'
+import NavBar from '../components/nav-bar'
+import Footer from '../components/footer'
+import Tags from '../components/tags'
 
 const PostTitle = styled.h1`
   text-align: left;
   font-weight: bold;
 `
 
-const PostInfo = styled.div`
-  ${clearFix()}
-  font-size: 0.9rem;
-`
+const PostInfo = styled.div`${clearFix()} font-size: 0.9rem;`
 
-const TagsWrapper = styled.div`
-  margin-top: ${rhythm(1/2)};
-`
+const TagsWrapper = styled.div`margin-top: ${rhythm(1 / 2)};`
 
-const TimeToRead = styled.div`
-`
+const TimeToRead = styled.div``
 
-const Post = styled.article`
-  margin-top: ${rhythm(2)};
-`
+const Post = styled.article`margin-top: ${rhythm(2)};`
 
 class BlogPostRoute extends Component {
   getScriptSrc() {
-    const scripts = [];
-    const scriptRegex = /<script[^>].*<\/script>/ig;
-    let match = [];
+    const scripts = []
+    const scriptRegex = /<script[^>].*<\/script>/gi
+    let match = []
 
     // get script tags
     while (match) {
-      match = scriptRegex.exec(this.props.data.markdownRemark.html);
+      match = scriptRegex.exec(this.props.data.markdownRemark.html)
       if (match) {
-        scripts.push(match[0]);
+        scripts.push(match[0])
       } else {
-        break;
+        break
       }
     }
 
     // parse src from script tags
-    return scripts.map((script) => {
-      return /(src=)"(.+)"/.exec(script)[2];
-    });
+    return scripts.map(script => {
+      return /(src=)"(.+)"/.exec(script)[2]
+    })
   }
 
   render() {
-    const post = this.props.data.markdownRemark;
-    const siteMetadata = this.props.data.site.siteMetadata;
+    const post = this.props.data.markdownRemark
+    const siteMetadata = this.props.data.site.siteMetadata
 
     return (
       <PageWrapper>
         <NavBar />
         <PostContentWrapper>
           <header>
-            <PostTitle>{post.frontmatter.title}</PostTitle>
+            <PostTitle>
+              {post.frontmatter.title}
+            </PostTitle>
             <PostInfo>
               {post.frontmatter.date} &middot; 읽기 {post.timeToRead}분
             </PostInfo>
@@ -79,20 +73,22 @@ class BlogPostRoute extends Component {
           />
           <div id="disqus_thread" />
         </PostContentWrapper>
-        <Footer></Footer>
+        <Footer />
 
         <Helmet
           link={[
-            { rel: 'canonical', href: `${siteMetadata.url}${this.props.location.pathname}` },
+            {
+              rel: 'canonical',
+              href: `${siteMetadata.url}${this.props.location.pathname}`,
+            },
           ]}
           meta={[
             { name: 'author', content: `${siteMetadata.author}` },
             { name: 'keywords', content: `${post.frontmatter.tags.join(`,`)}` },
             { name: 'description', content: `${post.frontmatter.description}` },
-          ]}
-        >
+          ]}>
           {this.getScriptSrc().map((src, i) =>
-            <script async src={src} type="text/javascript" key={i} />
+            <script async src={src} type="text/javascript" key={i} />,
           )}
           {/* Disqus 댓글
           https://rhostem.disqus.com/admin/settings/universalcode/*/}

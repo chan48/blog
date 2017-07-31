@@ -14,7 +14,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     graphql(
     `
       {
-        allMarkdownRemark(limit: 1000) {
+        allMarkdownRemark(
+          limit: 1000,
+          sort: { order: DESC, fields: [frontmatter___date] }
+        ) {
           edges {
             node {
               fields {
@@ -66,9 +69,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       })
       tags = _.uniq(tags)
       tags.forEach(tag => {
-        const tagPath = `/tags/${_.kebabCase(tag)}/`
         createPage({
-          path: tagPath,
+          path: `/tags/${_.kebabCase(tag)}/`,
           component: tagPagesTemplate,
           context: {
             tag,
@@ -106,12 +108,14 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   ) {
     const fileNode = getNode(node.parent)
 
+    // 마크다운인데 slug(경로)가 지정되지 않은 node가 있다면
     createNodeField({
       node,
       name: `slug`,
       value: fileNode.fields.slug,
     })
 
+    // 포스트 frontmatter에 tags 배열이 있으면 slug 필드를 추가한다.
     if (node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map(
         tag => `/tags/${_.kebabCase(tag)}/`

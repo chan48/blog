@@ -1,10 +1,10 @@
 import { style } from 'glamor'
 import { colors } from './colors'
 import { rhythm } from '../utils/typography'
-import media from './media';
-import { TypographyStyle } from 'react-typography';
-import animations from './animations';
-import sizes from './sizes';
+import media from './media'
+import { TypographyStyle } from 'react-typography'
+import animations from './animations'
+import sizes from './sizes'
 
 export default {
   animations: animations,
