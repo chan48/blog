@@ -1,15 +1,14 @@
 // @flow
-import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'styled-components';
-import { clearFix } from 'polished';
-import styles from '../styles';
+import React from 'react'
+import Link from 'gatsby-link'
+import styled from 'styled-components'
+import { clearFix } from 'polished'
+import styles from '../styles'
 import { ContentWrapper } from '../components/content-wrapper'
-import { rhythm } from '../utils/typography';
+import { rhythm } from '../utils/typography'
 
 const TopNav = styled.nav`
-  ${clearFix()}
-  position: absolute;
+  ${clearFix()} position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
@@ -27,7 +26,7 @@ const SiteTitle = styled.div`
   font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
   line-height: ${styles.sizes.topNavHeight};
   letter-spacing: -1px;
-`;
+`
 
 const MenuWrap = styled.ul`
   float: right;
@@ -60,11 +59,10 @@ class NavBar extends React.Component {
           </MenuWrap>
         </ContentWrapper>
       </TopNav>
-    );
+    )
   }
 }
 
-NavBar.propTypes = {
-};
+NavBar.propTypes = {}
 
-export default NavBar;
+export default NavBar

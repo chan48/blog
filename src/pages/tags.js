@@ -1,20 +1,20 @@
 // @flow
-import React, { Component } from 'react';
-import R from 'ramda';
-import Link from 'gatsby-link';
+import React, { Component } from 'react'
+import R from 'ramda'
+import Link from 'gatsby-link'
 import _ from 'lodash'
-import styled from 'styled-components';
-import { rhythm } from '../utils/typography';
-import { PageWrapper, PostContentWrapper } from '../components/content-wrapper';
-import NavBar from '../components/nav-bar';
-import Footer from '../components/footer';
+import styled from 'styled-components'
+import { rhythm } from '../utils/typography'
+import { PageWrapper, PostContentWrapper } from '../components/content-wrapper'
+import NavBar from '../components/nav-bar'
+import Footer from '../components/footer'
 
-import Tags from '../components/tags';
+import Tags from '../components/tags'
 
 export type Tag = {
   name: string,
   count: number,
-};
+}
 
 const Title = styled.h1`
   font-family: 'Noto Sans Kr';
@@ -31,27 +31,27 @@ const Title = styled.h1`
  * @extends {Component}
  */
 class TagsRoute extends Component {
-  tags: Array<Tag> = [];
+  tags: Array<Tag> = []
 
   componentWillMount() {
-    const { allMarkdownRemark } = this.props.data;
+    const { allMarkdownRemark } = this.props.data
     const allTags = R.flatten(
-      allMarkdownRemark.edges.map((edge) => edge.node.frontmatter.tags)
-    );
-    const allUniqTags = R.uniq(allTags);
-    const tagCounts = R.countBy(t => R.toLower(t), allTags);
+      allMarkdownRemark.edges.map(edge => edge.node.frontmatter.tags),
+    )
+    const allUniqTags = R.uniq(allTags)
+    const tagCounts = R.countBy(t => R.toLower(t), allTags)
 
     this.tags = R.pipe(
       R.map(tag => ({
         name: tag,
         count: tagCounts[R.toLower(tag)],
       })),
-      R.sort((tagA, tagB) => tagB.count - tagA.count)
-    )(allUniqTags);
+      R.sort((tagA, tagB) => tagB.count - tagA.count),
+    )(allUniqTags)
   }
 
   render() {
-    const tags = this.tags.map(tag => tag.name);
+    const tags = this.tags.map(tag => tag.name)
     return (
       <PageWrapper>
         <NavBar />
@@ -61,17 +61,15 @@ class TagsRoute extends Component {
         </PostContentWrapper>
         <Footer />
       </PageWrapper>
-    );
+    )
   }
 }
 
-export default TagsRoute;
+export default TagsRoute
 
 export const tagsQuery = graphql`
   query TagQuery {
-    allMarkdownRemark(
-      limit: 2000
-    ) {
+    allMarkdownRemark(limit: 2000) {
       edges {
         node {
           frontmatter {

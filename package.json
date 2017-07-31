@@ -4,6 +4,7 @@
   "description": "rhostem's blog powered by Gatsby",
   "main": "n/a",
   "scripts": {
+    "precommit": "lint-staged",
     "start": "gatsby develop",
     "build": "npm run clean && gatsby build && npm run ampify",
     "deploy": "npm run build && npm run deploy:gh-pages",
@@ -14,6 +15,12 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "jest --watch",
     "flow": "flow"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --no-semi --single-quote --jsx-bracket-same-line --print-width 80 --trailing-comma all --parser flow --write",
+      "git add"
+    ]
   },
   "keywords": [
     "gatsby"
@@ -49,11 +56,14 @@
     "gatsby-transformer-sharp": "latest",
     "gatsby-transformer-yaml": "latest",
     "gh-pages": "^1.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
     "lodash": "^4.16.4",
     "lodash-webpack-plugin": "^0.11.4",
     "mkdirp": "^0.5.1",
     "moment": "^2.18.1",
     "polished": "^1.3.0",
+    "prettier": "^1.5.3",
     "prop-types": "^15.5.8",
     "ramda": "^0.24.1",
     "react-helmet": "^5.1.3",

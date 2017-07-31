@@ -1,24 +1,24 @@
 // @flow
-import Link from 'gatsby-link';
-import React, { Component, PropTypes } from 'react';
-import { rhythm, scale } from '../utils/typography';
-import { wordWrap } from 'polished';
-import styles from '../styles';
-import styled from 'styled-components';
-import moment from 'moment';
+import Link from 'gatsby-link'
+import React, { Component, PropTypes } from 'react'
+import { rhythm, scale } from '../utils/typography'
+import { wordWrap } from 'polished'
+import styles from '../styles'
+import styled from 'styled-components'
+import moment from 'moment'
 
 type Post = {
   node: {
     fields: {
-      slug: string;
+      slug: string,
     },
     frontmatter: {
-      date: string;
-      title: string;
-      mainImage: string;
-    }
-  }
-};
+      date: string,
+      title: string,
+      mainImage: string,
+    },
+  },
+}
 
 const ListWrapper = styled.ul`
   width: 100%;
@@ -55,16 +55,13 @@ const MainImage = styled.div`
   }
 `
 
-const PostInfo = styled.div`
-  padding: ${rhythm(2/3)} ${rhythm(1)};
-`
+const PostInfo = styled.div`padding: ${rhythm(2 / 3)} ${rhythm(1)};`
 
 const PostTitle = styled.h2`
   font-weight: 100;
   margin: 0;
   font-size: 1.4rem;
-  ${wordWrap('keep-all')}
-  line-height: ${rhythm(1.4)};
+  ${wordWrap('keep-all')} line-height: ${rhythm(1.4)};
 `
 
 const PostCreated = styled.time`
@@ -81,23 +78,22 @@ const PostCreated = styled.time`
 class PostList extends Component {
   static propTypes = {
     posts: PropTypes.array,
-  };
+  }
 
   render() {
-    const posts: Array<Post> = this.props.posts;
+    const posts: Array<Post> = this.props.posts
 
     return (
       <ListWrapper>
-        {posts.map((post) => (
+        {posts.map(post =>
           <PostCard key={post.node.fields.slug}>
             <Link to={post.node.fields.slug}>
               {post.node.frontmatter.mainImage &&
                 <MainImage
                   style={{
-                    backgroundImage: `url(${post.node.frontmatter.mainImage})`
+                    backgroundImage: `url(${post.node.frontmatter.mainImage})`,
                   }}
-                />
-              }
+                />}
               <PostInfo>
                 <PostTitle>
                   {post.node.frontmatter.title}
@@ -106,13 +102,12 @@ class PostList extends Component {
                   {post.node.frontmatter.date}
                 </PostCreated>
               </PostInfo>
-
             </Link>
-          </PostCard>
-        ))}
+          </PostCard>,
+        )}
       </ListWrapper>
     )
   }
 }
 
-export default PostList;
+export default PostList

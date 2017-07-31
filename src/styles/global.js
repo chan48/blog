@@ -1,32 +1,33 @@
-import { injectGlobal } from 'styled-components';
-import { fontFace } from 'polished';
-import { rhythm } from '../utils/typography';
+import { injectGlobal } from 'styled-components'
+import { fontFace } from 'polished'
+import { rhythm } from '../utils/typography'
 
 // inject global css
 injectGlobal`
   ${fontFace({
-    'fontFamily': 'Menlo Regular',
-    'fontFilePath': '/fonts/menlo-regular'
+    fontFamily: 'Menlo Regular',
+    fontFilePath: '/fonts/menlo-regular',
   })}
   ${fontFace({
-    'fontFamily': 'Iropke Batang',
-    'fileFormats': ['eot', 'woff'],
-    'fontFilePath': '/fonts/IropkeBatangM'
+    fontFamily: 'Iropke Batang',
+    fileFormats: ['eot', 'woff'],
+    fontFilePath: '/fonts/IropkeBatangM',
   })}
   ${fontFace({
-    'fontFamily': 'Noto Sans KR',
-    'fontWeight': 100,
-    'fontFilePath': 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin'
+    fontFamily: 'Noto Sans KR',
+    fontWeight: 100,
+    fontFilePath: 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin',
   })}
   ${fontFace({
-    'fontFamily': 'Noto Sans KR',
-    'fontWeight': 400,
-    'fontFilePath': 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular'
+    fontFamily: 'Noto Sans KR',
+    fontWeight: 400,
+    fontFilePath:
+      'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular',
   })}
   ${fontFace({
-    'fontFamily': 'Noto Sans KR',
-    'fontWeight': 700,
-    'fontFilePath': 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold'
+    fontFamily: 'Noto Sans KR',
+    fontWeight: 700,
+    fontFilePath: 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold',
   })}
 
   .iframe-video-wrapper {
@@ -43,8 +44,7 @@ injectGlobal`
     width: 100%;
     height: 100%;
   }
-`;
-
+`
 
 /**
  * VS theme by Andrew Lock (https://andrewlock.net)

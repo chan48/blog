@@ -1,13 +1,13 @@
-import React from "react"
-import Link from "gatsby-link"
-import Helmet from 'react-helmet';
-import styled from 'styled-components';
-import { clearFix } from 'polished';
-import { rhythm } from '../utils/typography';
-import { PageWrapper, PostContentWrapper } from '../components/content-wrapper';
-import NavBar from '../components/nav-bar';
-import Footer from '../components/footer';
-import PostList from '../components/post-list';
+import React from 'react'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import { clearFix } from 'polished'
+import { rhythm } from '../utils/typography'
+import { PageWrapper, PostContentWrapper } from '../components/content-wrapper'
+import NavBar from '../components/nav-bar'
+import Footer from '../components/footer'
+import PostList from '../components/post-list'
 
 const Title = styled.h1`
   font-family: 'Noto Sans Kr';
@@ -36,7 +36,7 @@ class TagRoute extends React.Component {
         <Link to={post.node.fields.slug}>
           {post.node.frontmatter.title}
         </Link>
-      </li>
+      </li>,
     )
 
     return (
@@ -67,9 +67,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: { tags: { in: [$tag] } },
-      }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {

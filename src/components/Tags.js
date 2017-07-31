@@ -1,19 +1,19 @@
 // @flow
-import React, { PropTypes } from 'react';
-import styled from 'styled-components';
-import { clearFix } from 'polished';
-import Link from 'gatsby-link';
-import _ from 'lodash';
-import { rhythm } from '../utils/typography';
+import React, { PropTypes } from 'react'
+import styled from 'styled-components'
+import { clearFix } from 'polished'
+import Link from 'gatsby-link'
+import _ from 'lodash'
+import { rhythm } from '../utils/typography'
 
 const Wrapper = styled.div`
   margin-left: -0.3rem;
-  ${clearFix()}
-`;
+  ${clearFix()};
+`
 
 const Tag = styled.span`
   font-family: 'Noto Sans Kr';
-  font-size: ${props => props.fontSize ? props.fontSize : '0.8rem'};
+  font-size: ${props => (props.fontSize ? props.fontSize : '0.8rem')};
   font-weight: 100;
   display: block;
   float: left;
@@ -21,18 +21,18 @@ const Tag = styled.span`
   margin-bottom: 0.35em;
   margin-left: 0.35em;
   line-height: ${rhythm(1)};
-  color: rgba(0,0,0, 0.6);
-  background-color: rgba(0,0,0, 0.04);
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
 
   &:hover {
-    background-color: rgba(0,0,0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
   }
-`;
+`
 
 type TagProps = {
-  tags: Array<string>;
-  fontSize?: string;
+  tags: Array<string>,
+  fontSize?: string,
 }
 
 /**
@@ -41,10 +41,7 @@ type TagProps = {
  * @param {{ tags: Array<string> }} { tags }
  * @returns
  */
-function Tags({
-  tags,
-  fontSize = '0.8rem' }: TagProps
-) {
+function Tags({ tags, fontSize = '0.8rem' }: TagProps) {
   return (
     <Wrapper>
       {tags.map((tag: string) =>
@@ -52,15 +49,15 @@ function Tags({
           <Link to={`/tags/${_.kebabCase(tag)}`}>
             {tag}
           </Link>
-        </Tag>
+        </Tag>,
       )}
     </Wrapper>
-  );
+  )
 }
 
 Tags.propTypes = {
   tags: PropTypes.array,
   fontSize: PropTypes.string,
-};
+}
 
-export default Tags;
+export default Tags
