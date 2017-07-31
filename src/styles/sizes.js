@@ -12,4 +12,4 @@ const sizes = {
   mainWidthDesktop: '1020px',
 }
 
-export default sizes;
+export default sizes

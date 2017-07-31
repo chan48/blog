@@ -5,8 +5,8 @@ date: "2017-06-11"
 layout: post
 mainImage:
 tags:
-  - Typescript
   - Flow
+  - Typescript
   - Javascript
 path: "/posts/2017-06-11-adopting-flow-and-typescript"
 draft: false

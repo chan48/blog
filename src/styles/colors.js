@@ -16,5 +16,3 @@ const colors = {
 }
 
 export default { colors, baseHsl }
-
-

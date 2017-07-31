@@ -7,7 +7,6 @@ mainImage:
 tags:
   - Javascript
   - 함수형 프로그래밍
-  - Ramda
 path: "/posts/2017-04-20-curry-and-partial-application"
 ---
 

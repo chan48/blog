@@ -9,10 +9,8 @@ tags:
   - Javascript
   - React
   - Redux
-  - ES6
   - gatsby
-  - GraphQL
-  - Front-end
+  - ES6
 path: "/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue"
 ---
 <!-- path: "/hello-world/" -->

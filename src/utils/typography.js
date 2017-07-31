@@ -1,8 +1,8 @@
 // @flow
-import Typography from "typography"
-import { baseHsl, colors } from "../styles/colors"
-import media from "../styles/media";
-import '../styles/global';
+import Typography from 'typography'
+import { baseHsl, colors } from '../styles/colors'
+import media from '../styles/media'
+import '../styles/global'
 const linkRaw = colors.link.substr(1)
 const linkHoverRaw = colors.linkHover.substr(1)
 
@@ -88,14 +88,20 @@ const options = {
         borderLeft: `${rhythm(1 / 5)} solid hsla(${baseHsl},0.1)`,
         color: `hsla(${baseHsl},0.8)`,
         fontStyle: `italic`,
-        marginLeft: 0,
-        marginRight: rhythm(1),
+        marginLeft: rhythm(-3 / 4),
+        marginRight: rhythm(-3 / 4),
         marginTop: rhythm(1),
         marginBottom: rhythm(1),
-        paddingLeft: rhythm(2 / 4),
-        paddingRight: 0,
+        paddingLeft: rhythm(3 / 4 - 1 / 5),
+        paddingRight: rhythm(3 / 4),
         paddingTop: 0,
         paddingBottom: 0,
+      },
+      [media.Phablet]: {
+        blockquote: {
+          marginLeft: 0,
+          marginRight: 0,
+        },
       },
       hr: {
         background: `${colors.smoke}`,
@@ -103,18 +109,19 @@ const options = {
         width: '50%',
         height: '1px',
         color: colors.black,
-        backgroundImage: 'linear-gradient(90deg,rgba(34,34,34,.2),rgba(34,34,34,.75),rgba(34,34,34,.2))',
+        backgroundImage:
+          'linear-gradient(90deg,rgba(34,34,34,.2),rgba(34,34,34,.75),rgba(34,34,34,.2))',
       },
       // Style gatsby-remark-images elements.
-      ".gatsby-resp-image-link": {
+      '.gatsby-resp-image-link': {
         boxShadow: `none`,
       },
-      ".gatsby-resp-image-link:hover": {
+      '.gatsby-resp-image-link:hover': {
         background: `none`,
         boxShadow: `none`,
       },
-      "@media only screen and (min-width:38rem)": {
-        ".gatsby-resp-image-link": {
+      '@media only screen and (min-width:38rem)': {
+        '.gatsby-resp-image-link': {
           borderRadius: `.15rem`,
           overflow: `hidden`,
         },
@@ -123,12 +130,12 @@ const options = {
       // padding of their container.
       // Note that we only do this for code blocks that are direct children of
       // .post so that code blocks are correctly indented e. g. in lists.
-      ".post > .gatsby-highlight, .gatsby-resp-iframe-wrapper, .gatsby-resp-image-link": {
+      '.post > .gatsby-highlight, .gatsby-resp-iframe-wrapper, .gatsby-resp-image-link': {
         marginLeft: rhythm(-3 / 4), // 3/4 rhythm is amount of padding on mobile.
         marginRight: rhythm(-3 / 4),
       },
       // Fake image captions.
-      ".post .gatsby-resp-image-link + em": {
+      '.post .gatsby-resp-image-link + em': {
         ...scale(0 / 5),
         fontFamily: `Spectral, serif`,
         lineHeight: 1.4,
@@ -139,7 +146,7 @@ const options = {
         color: `${colors.light}`,
       },
       // Code highlighting.
-      "tt, code": {
+      'tt, code': {
         fontFamily: `Menlo,"Space Mono",Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Courier,monospace`,
         // Disable ligatures as they look funny w/ Space Mono as code.
         fontVariant: `none`,
@@ -154,18 +161,17 @@ const options = {
       },
       // Add space before and after code/tt elements.
       // @see https://github.com/KyleAMathews/typography.js/blob/66f78f0f4b8d2c5abf0262bcc1118610139c3b5f/packages/typography-plugin-code/src/index.js#L38-L46
-      "code:before,code:after,tt:before,tt:after": {
+      'code:before,code:after,tt:before,tt:after': {
         letterSpacing: `-0.2em`,
         content: `"\u00A0"`,
       },
       // But don't add spaces if the code is inside a pre.
-      "pre code:before,pre code:after,pre tt:before,pre tt:after": {
+      'pre code:before,pre code:after,pre tt:before,pre tt:after': {
         content: `""`,
       },
       // Highlighted code blocks in Markdown via gatsby-remark-prismjs.
-      ".gatsby-highlight": {
-        backgroundColor: `#f8f8f8`,
-        // backgroundColor: `#fef9ec`,
+      '.gatsby-highlight': {
+        backgroundColor: `rgba(0,0,0, 0.04)`,
         borderRadius: `.15rem`,
         marginTop: `0`,
         marginBottom: rhythm(3 / 4),
@@ -182,7 +188,7 @@ const options = {
         minWidth: `100%`,
         textShadow: `none`,
       },
-      ".gatsby-highlight-code-line": {
+      '.gatsby-highlight-code-line': {
         background: `#fff2cc`,
         display: `block`,
         marginRight: rhythm(-3 / 4),
@@ -192,7 +198,7 @@ const options = {
         borderLeft: `${rhythm(1 / 4)} solid #ffd9b3`,
       },
       // Fancy underline links in .post.
-      ".post a:not(.gatsby-resp-image-link):not(.anchor), .link-underline": {
+      '.post a:not(.gatsby-resp-image-link):not(.anchor), .link-underline': {
         position: `relative`,
         backgroundImage: `linear-gradient(${colors.link},${colors.link})`,
         textShadow: `0.03em 0 ${colors.white}, -0.03em 0 ${colors.white}, 0 0.03em ${colors.white}, 0 -0.03em ${colors.white}, 0.06em 0 ${colors.white}, -0.06em 0 ${colors.white}, 0.09em 0 ${colors.white}, -0.09em 0 ${colors.white}, 0.12em 0 ${colors.white}, -0.12em 0 ${colors.white}, 0.15em 0 ${colors.white}, -0.15em 0 ${colors.white}`,
@@ -201,11 +207,11 @@ const options = {
         backgroundRepeat: `repeat-x`,
         backgroundSize: `1px 1px`,
       },
-      ".post a:not(.gatsby-resp-image-link):not(.anchor):hover, .link-underline:hover": {
+      '.post a:not(.gatsby-resp-image-link):not(.anchor):hover, .link-underline:hover': {
         color: `${colors.linkHover}`,
         backgroundImage: `linear-gradient(${colors.linkHover},${colors.linkHover})`,
       },
-      ".post a.anchor": {
+      '.post a.anchor': {
         textShadow: `0 !important`,
         backgroundImage: `0 !important`,
       },
@@ -222,12 +228,12 @@ const options = {
       // Increase base font-size for phablet and desktop.
       [media.Phablet]: {
         html: {
-          fontSize: `${18 / 16 * 100}%`,
+          fontSize: `${17.5 / 16 * 100}%`,
         },
       },
       [media.Desktop]: {
         html: {
-          fontSize: `${20 / 16 * 100}%`,
+          fontSize: `${19 / 16 * 100}%`,
         },
       },
     }
@@ -241,4 +247,4 @@ if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
 }
 
-module.exports = typography;
+module.exports = typography
