@@ -9,7 +9,7 @@ tags:
   - Javascript
   - React
   - Redux
-  - gatsby
+  - Gatsby
   - ES6
 path: "/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue"
 ---
@@ -172,7 +172,7 @@ path: "/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue"
 
 싱글 페이지 앱으로 스태틱 페이지를 만드는 것은 맞지 않는 일이지만 리액트는 비밀 무기: [개츠비(Gatsby)](https://github.com/gatsbyjs/gatsby)를 가지고 있다. 개츠비는 리액트 기반의 스태틱 사이트 제네레이터(static site generator)로서 아무런 어려움 없이 리액트의 모든 장점을 가져올 수 있는 치트키라고 할 수 있다.
 
-![gatsby](https://cdn-images-1.medium.com/max/1000/1*nnHXMTKwXxCWJiY9yX2ZMA.gif)
+![Gatsby](https://cdn-images-1.medium.com/max/1000/1*nnHXMTKwXxCWJiY9yX2ZMA.gif)
 
 개츠비가 리액트를 시작하기 좋은 도구인 이유는 아래와 같다.
 
