@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { clearFix } from 'polished'
 import styles from '../styles'
 import { ContentWrapper } from '../components/content-wrapper'
+import SITE_CONFIG from '../../site-config'
 
 const FooterWrap = styled.footer`
   position: absolute;
@@ -55,16 +56,19 @@ function Footer() {
     <FooterWrap>
       <FooterContent>
         <CopyRight>
-          <span>@2016 </span>
+          <span>Copyright © 2016. </span>
           <OwnerLink href="https://www.github.com/rhostem">rhostem</OwnerLink>
           <span> All rights reserved</span>
         </CopyRight>
         <FooterLinks>
-          <a href="https://www.github.com/rhostem">
+          <a href={SITE_CONFIG.githubUrl}>
             <i className="fa fa-github" />
           </a>
-          <a href="mailto:syoung.j@gmail.com">
+          <a href={`mailto:${SITE_CONFIG.authorEmail}`}>
             <i className="fa fa-envelope-o" />
+          </a>
+          <a href={`${SITE_CONFIG.siteRss}`}>
+            <i className="fa fa-rss" />
           </a>
         </FooterLinks>
       </FooterContent>
