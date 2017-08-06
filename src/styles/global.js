@@ -16,18 +16,17 @@ injectGlobal`
   ${fontFace({
     fontFamily: 'Noto Sans KR',
     fontWeight: 100,
-    fontFilePath: 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin',
+    fontFilePath: '/fonts/notokr-thin',
   })}
   ${fontFace({
     fontFamily: 'Noto Sans KR',
     fontWeight: 400,
-    fontFilePath:
-      'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular',
+    fontFilePath: '/fonts/notokr-regular',
   })}
   ${fontFace({
     fontFamily: 'Noto Sans KR',
     fontWeight: 700,
-    fontFilePath: 'http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold',
+    fontFilePath: '/fonts/notokr-bold',
   })}
 
   .iframe-video-wrapper {

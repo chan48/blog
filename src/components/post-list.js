@@ -30,7 +30,7 @@ const PostCard = styled.li`
   background-color: #fff;
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, .09);
-  margin: ${rhythm(1.5)} 0;
+  margin: ${rhythm(1.75)} 0;
 
   &:first-child {
     margin-top: 0;
@@ -55,7 +55,7 @@ const MainImage = styled.div`
   }
 `
 
-const PostInfo = styled.div`padding: ${rhythm(2 / 3)} ${rhythm(1)};`
+const PostInfo = styled.div`padding: ${rhythm(3 / 4)} ${rhythm(1)};`
 
 const PostTitle = styled.h2`
   font-weight: 100;
@@ -64,9 +64,11 @@ const PostTitle = styled.h2`
   ${wordWrap('keep-all')} line-height: ${rhythm(1.4)};
 `
 
-const PostCreated = styled.time`
-  font-size: 0.9rem;
+const PostCreatedAt = styled.time`
+  display: block;
+  font-size: 0.85rem;
   color: rgba(0, 0, 0, 0.44);
+  margin-top: ${rhythm(1 / 4)};
 `
 
 /**
@@ -98,9 +100,9 @@ class PostList extends Component {
                 <PostTitle>
                   {post.node.frontmatter.title}
                 </PostTitle>
-                <PostCreated>
+                <PostCreatedAt>
                   {post.node.frontmatter.date}
-                </PostCreated>
+                </PostCreatedAt>
               </PostInfo>
             </Link>
           </PostCard>,
