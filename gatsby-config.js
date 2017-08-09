@@ -1,24 +1,26 @@
 const SITE_CONFIG = require('./site-config');
 
-const pathPrefix = SITE_CONFIG.pathPrefix;
+const getPathPrefix = (path) => {
+  return path === '/' ? '' : path;
+}
 
 module.exports = {
-  pathPrefix: pathPrefix,
+  pathPrefix: SITE_CONFIG.pathPrefix,
   siteMetadata: {
     title: SITE_CONFIG.title,
     description: SITE_CONFIG.description,
     author: SITE_CONFIG.author,
     githubUrl: 'https://github.com/rhostem/blog',
-    url: `${SITE_CONFIG.siteUrl}${pathPrefix}`,
+    url: `${SITE_CONFIG.siteUrl}${getPathPrefix(SITE_CONFIG.pathPrefix)}`,
     emailUrl: 'syoung.j@gmail.com',
-    siteUrl: `${SITE_CONFIG.siteUrl}${pathPrefix}`, // sitemap plugin
+    siteUrl: `${SITE_CONFIG.siteUrl}${getPathPrefix(SITE_CONFIG.pathPrefix)}`, // sitemap plugin
     googleAnalyticsID: SITE_CONFIG.googleAnalyticsID,
     rssMetadata: {
-      site_url: `${SITE_CONFIG.siteUrl}${pathPrefix}`,
-      feed_url: `${SITE_CONFIG.siteUrl}${pathPrefix}${SITE_CONFIG.siteRss}`,
+      site_url: `${SITE_CONFIG.siteUrl}${getPathPrefix(SITE_CONFIG.pathPrefix)}`,
+      feed_url: `${SITE_CONFIG.siteUrl}${getPathPrefix(SITE_CONFIG.pathPrefix)}${SITE_CONFIG.siteRss}`,
       title: SITE_CONFIG.title,
       description: SITE_CONFIG.description,
-      image_url: `${SITE_CONFIG.siteUrl}${pathPrefix}/logos/logo-512.png`,
+      image_url: `${SITE_CONFIG.siteUrl}${getPathPrefix(SITE_CONFIG.pathPrefix)}/logos/logo-512.png`,
       author: SITE_CONFIG.author,
       copyright: SITE_CONFIG.copyright
     },
