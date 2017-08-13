@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+  "javascript.validate.enable": false,
+  "javascript.nameSuggestions": false,
+  "typescript.validate.enable": false
+}
