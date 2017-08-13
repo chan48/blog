@@ -137,13 +137,17 @@ const options = {
       // Fake image captions.
       '.post .gatsby-resp-image-link + em': {
         ...scale(0 / 5),
-        fontFamily: `Spectral, serif`,
+        fontSize: '0.85em',
         lineHeight: 1.4,
         display: `block`,
         textAlign: `right`,
         marginTop: rhythm(2 / 4),
         marginBottom: rhythm(1),
         color: `${colors.light}`,
+      },
+      '.post .gatsby-resp-image-link + em > a': {
+        color: `${colors.light}`,
+        backgroundImage: 'none !important',
       },
       // Code highlighting.
       'tt, code': {

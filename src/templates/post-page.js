@@ -22,7 +22,10 @@ const TagsWrapper = styled.div`margin-top: ${rhythm(1 / 2)};`
 
 const TimeToRead = styled.div``
 
-const Post = styled.article`margin-top: ${rhythm(2)};`
+const Post = styled.article`
+  margin-top: ${rhythm(2)};
+  margin-bottom: ${rhythm(2)};
+`
 
 class BlogPostRoute extends Component {
   getScriptSrc() {
