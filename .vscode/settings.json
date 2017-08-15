@@ -3,5 +3,15 @@
   "editor.rulers": [80],
   "javascript.validate.enable": false,
   "javascript.nameSuggestions": false,
-  "typescript.validate.enable": false
+  "typescript.validate.enable": false,
+  "search.exclude": {
+    "**/out/**": true,
+    "**/node_modules/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/flow-typed/**": true,
+    "**/.vscode/**": true,
+    "**/public/**": true
+  }
 }

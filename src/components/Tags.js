@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `
 
 const Tag = styled.span`
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-size: ${props => (props.fontSize ? props.fontSize : '0.8rem')};
   font-weight: 100;
   display: block;

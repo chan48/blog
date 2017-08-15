@@ -15,6 +15,7 @@ const TopNav = styled.nav`
   width: 100%;
   background: linear-gradient(to right, #4568dc, #b06ab3);
   border-bottom: 1px solid ${styles.colors.border};
+  letter-spacing: -1px;
 `
 
 const SiteTitle = styled.div`
@@ -23,9 +24,8 @@ const SiteTitle = styled.div`
   color: #fff;
   font-weight: 100;
   font-size: 1.2rem;
-  font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
+  font-family: 'Roboto', 'PT Sans Narrow', sans-serif;
   line-height: ${styles.sizes.topNavHeight};
-  letter-spacing: -1px;
 `
 
 const MenuWrap = styled.ul`
@@ -39,7 +39,7 @@ const Menu = styled(Link)`
   float: left;
   line-height: ${styles.sizes.topNavHeight};
   margin-bottom: 0;
-  font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
+  font-family: 'Roboto', 'PT Sans Narrow', sans-serif;
   font-size: 1rem;
   font-weight: 100;
   color: #fff;
@@ -58,8 +58,8 @@ class NavBar extends React.Component {
             <SiteTitle>rhostem.github.io</SiteTitle>
           </Link>
           <MenuWrap>
-            <Menu to={'/tags'}>TAG</Menu>
-            <Menu to={'/archive'}>ARCHIVE</Menu>
+            <Menu to={'/tags'}>Tag</Menu>
+            <Menu to={'/archive'}>Archive</Menu>
           </MenuWrap>
         </ContentWrapper>
       </TopNav>

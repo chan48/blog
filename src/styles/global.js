@@ -1,9 +1,60 @@
 import { injectGlobal } from 'styled-components'
 import { fontFace } from 'polished'
 import { rhythm } from '../utils/typography'
+import { normalize } from 'polished'
 
 // inject global css
 injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,700,700i');
+
+  @font-face {
+    font-family: 'Nanum Square';
+    src: url('/fonts/nanum-square/fonts/NanumSquareL.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/nanum-square/fonts/NanumSquareL.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/nanum-square/fonts/NanumSquareL.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/nanum-square/fonts/NanumSquareL.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/nanum-square/fonts/NanumSquareOTFLight.svg#017f9c78318bcde3d1dc4451e8eaca0a') format('svg'); /* Legacy iOS */
+
+    font-style:   normal;
+    font-weight:  300;
+  }
+
+  @font-face {
+    font-family: 'Nanum Square';
+    src: url('/fonts/nanum-square/fonts/NanumSquareR.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/nanum-square/fonts/NanumSquareR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/nanum-square/fonts/NanumSquareR.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/nanum-square/fonts/NanumSquareR.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/nanum-square/fonts/NanumSquareOTFR.svg#9e23ceb0c858ca37642ba540402577eb') format('svg'); /* Legacy iOS */
+
+    font-style:   normal;
+    font-weight:  400;
+  }
+
+  @font-face {
+    font-family: 'Nanum Square';
+    src: url('/fonts/nanum-square/fonts/NanumSquareB.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/nanum-square/fonts/NanumSquareB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/nanum-square/fonts/NanumSquareB.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/nanum-square/fonts/NanumSquareB.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/nanum-square/fonts/NanumSquareOTFB.svg#a41a1fda1fdf3dafd3394867a156b1cf') format('svg'); /* Legacy iOS */
+
+    font-style:   normal;
+    font-weight:  700;
+  }
+
+  @font-face {
+    font-family: 'Nanum Square';
+    src: url('/fonts/nanum-square/fonts/NanumSquareEB.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/nanum-square/fonts/NanumSquareEB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/nanum-square/fonts/NanumSquareEB.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/nanum-square/fonts/NanumSquareEB.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/nanum-square/fonts/NanumSquareOTFExtraBold.svg#090d6763bc81b49309446d23fbd10e87') format('svg'); /* Legacy iOS */
+
+    font-style:   normal;
+    font-weight:  900;
+  }
+
   ${fontFace({
     fontFamily: 'Menlo Regular',
     fontFilePath: '/fonts/menlo-regular',
@@ -12,21 +63,6 @@ injectGlobal`
     fontFamily: 'Iropke Batang',
     fileFormats: ['eot', 'woff'],
     fontFilePath: '/fonts/IropkeBatangM',
-  })}
-  ${fontFace({
-    fontFamily: 'Noto Sans KR',
-    fontWeight: 100,
-    fontFilePath: '/fonts/notokr-thin',
-  })}
-  ${fontFace({
-    fontFamily: 'Noto Sans KR',
-    fontWeight: 400,
-    fontFilePath: '/fonts/notokr-regular',
-  })}
-  ${fontFace({
-    fontFamily: 'Noto Sans KR',
-    fontWeight: 700,
-    fontFilePath: '/fonts/notokr-bold',
   })}
 
   .iframe-video-wrapper {

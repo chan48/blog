@@ -14,8 +14,8 @@ const options = {
   blockMarginBottom: 0.75,
   headerWeight: 800,
   headerFontFamily: [
-    // 'Noto Sans KR',
-    'Iropke Batang',
+    'Nanum Square',
+    'Roboto',
     `Spectral`,
     `-apple-system`,
     `BlinkMacSystemFont`,
@@ -30,7 +30,7 @@ const options = {
     `sans-serif`,
   ],
   bodyFontFamily: [
-    'Iropke Batang',
+    'Nanum Square',
     `Spectral`,
     `-apple-system`,
     `BlinkMacSystemFont`,
