@@ -29,19 +29,24 @@ const SiteTitle = styled.div`
 `
 
 const MenuWrap = styled.ul`
-  float: right;
+  ${clearFix()} float: right;
   list-style: none;
   padding-left: 0;
   margin: 0;
 `
 
-const Menu = styled.li`
+const Menu = styled(Link)`
+  float: left;
   line-height: ${styles.sizes.topNavHeight};
+  margin-bottom: 0;
+  font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
   font-size: 1rem;
   font-weight: 100;
-  margin-bottom: 0;
   color: #fff;
-  font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
+
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
 `
 
 class NavBar extends React.Component {
@@ -53,9 +58,8 @@ class NavBar extends React.Component {
             <SiteTitle>rhostem.github.io</SiteTitle>
           </Link>
           <MenuWrap>
-            <Link to={'/tags'}>
-              <Menu>TAG</Menu>
-            </Link>
+            <Menu to={'/tags'}>TAG</Menu>
+            <Menu to={'/archive'}>ARCHIVE</Menu>
           </MenuWrap>
         </ContentWrapper>
       </TopNav>

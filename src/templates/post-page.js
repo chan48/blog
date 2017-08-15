@@ -52,7 +52,6 @@ class BlogPostRoute extends Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteMetadata = this.props.data.site.siteMetadata
-
     return (
       <PageWrapper>
         <NavBar />
@@ -89,6 +88,16 @@ class BlogPostRoute extends Component {
             { name: 'author', content: `${siteMetadata.author}` },
             { name: 'keywords', content: `${post.frontmatter.tags.join(`,`)}` },
             { name: 'description', content: `${post.frontmatter.description}` },
+            { property: 'og:type', content: 'article' },
+            {
+              property: 'og:url',
+              content: `${siteMetadata.url}${this.props.location.pathname}`,
+            },
+            { property: 'og:title', content: `${post.frontmatter.title}` },
+            {
+              property: 'og:description',
+              content: `${post.frontmatter.description}`,
+            },
           ]}>
           {this.getScriptSrc().map((src, i) =>
             <script async src={src} type="text/javascript" key={i} />,

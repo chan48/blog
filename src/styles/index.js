@@ -5,8 +5,10 @@ import media from './media'
 import { TypographyStyle } from 'react-typography'
 import animations from './animations'
 import sizes from './sizes'
+import mixins from './mixins'
 
 export default {
+  mixins,
   animations: animations,
   media: media,
   sizes: sizes,

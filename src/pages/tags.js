@@ -56,7 +56,7 @@ class TagsRoute extends Component {
       <PageWrapper>
         <NavBar />
         <PostContentWrapper>
-          <Title>모든 태그</Title>
+          <Title>TAG</Title>
           <Tags tags={tags} fontSize="1rem" />
         </PostContentWrapper>
         <Footer />
