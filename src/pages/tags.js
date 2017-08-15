@@ -17,7 +17,7 @@ export type Tag = {
 }
 
 const Title = styled.h1`
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-size: 2.5rem;
   font-weight: 100;
   line-height: ${rhythm(2)};
@@ -56,7 +56,7 @@ class TagsRoute extends Component {
       <PageWrapper>
         <NavBar />
         <PostContentWrapper>
-          <Title>TAG</Title>
+          <Title>Tag</Title>
           <Tags tags={tags} fontSize="1rem" />
         </PostContentWrapper>
         <Footer />

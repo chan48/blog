@@ -13,11 +13,11 @@ const FooterWrap = styled.footer`
   background-color: #fff;
   border-top: 1px solid ${styles.colors.border};
   line-height: ${styles.sizes.footerHeight};
-  font-family: 'Noto Sans KR', 'PT Sans Narrow', sans-serif;
+  font-family: 'Roboto', 'PT Sans Narrow', sans-serif;
 `
 
 const FooterContent = ContentWrapper.extend`
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-weight: 100;
   font-size: 0.8rem;
 `

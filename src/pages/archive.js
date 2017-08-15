@@ -13,7 +13,7 @@ import Tags from '../components/tags'
 import R from 'ramda'
 
 const Title = styled.h1`
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-size: 2.5rem;
   font-weight: 100;
   line-height: ${rhythm(2)};
@@ -56,16 +56,16 @@ const YearTitle = styled.h2`
   padding-left: 1rem;
   margin-top: ${rhythm(1)};
   margin-bottom: ${rhythm(1)};
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-weight: 400;
 
   &::before {
     position: absolute;
     content: ' ';
-    top: 0.7rem;
+    top: 0.9rem;
     left: 0;
-    width: 5px;
-    height: 1.7rem;
+    width: 3px;
+    height: 1.4rem;
     background-color: #4568dc;
   }
 `
@@ -74,7 +74,7 @@ const PostTitleLink = styled(Link)`
   position: relative;
   list-style: disc;
   display: block;
-  margin: ${rhythm(0.5)} 0 ${rhythm(0.5)} 0.5rem;
+  margin: ${rhythm(0.5)} 0 ${rhythm(0.5)} 0;
   padding-left: 0.8rem;
 
   &::before {
@@ -82,11 +82,11 @@ const PostTitleLink = styled(Link)`
     content: ' ';
     top: 0.65rem;
     left: 0;
-    width: 0.3rem;
-    height: 0.3rem;
+    width: 0.2rem;
+    height: 0.2rem;
     background-color: #4568dc;
     opacity: 0.6;
-    border-radius: 2px;
+    border-radius: 1px;
   }
 
   &:hover {
@@ -143,7 +143,7 @@ class ArchiveRoute extends Component {
       <PageWrapper>
         <NavBar />
         <PostContentWrapper>
-          <Title>ARCHIVE</Title>
+          <Title>Archive</Title>
 
           {this.postByYear.map(item =>
             <YearArchive key={item.year}>

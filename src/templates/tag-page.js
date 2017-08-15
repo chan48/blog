@@ -10,7 +10,7 @@ import Footer from '../components/footer'
 import PostList from '../components/post-list'
 
 const Title = styled.h1`
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-size: 2.5rem;
   font-weight: 100;
   line-height: ${rhythm(2)};
@@ -18,13 +18,13 @@ const Title = styled.h1`
 `
 
 const TagCount = styled.p`
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-size: 1.5rem;
   font-weight: 100;
 `
 
 const ShowAllTags = styled.span`
-  font-family: 'Noto Sans Kr';
+  font-family: 'Roboto';
   font-weight: 100;
 `
 

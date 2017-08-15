@@ -1,9 +1,11 @@
 import { injectGlobal } from 'styled-components'
 import { fontFace } from 'polished'
 import { rhythm } from '../utils/typography'
+import { normalize } from 'polished'
 
 // inject global css
 injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,700,700i');
   ${fontFace({
     fontFamily: 'Menlo Regular',
     fontFilePath: '/fonts/menlo-regular',
@@ -12,21 +14,6 @@ injectGlobal`
     fontFamily: 'Iropke Batang',
     fileFormats: ['eot', 'woff'],
     fontFilePath: '/fonts/IropkeBatangM',
-  })}
-  ${fontFace({
-    fontFamily: 'Noto Sans KR',
-    fontWeight: 100,
-    fontFilePath: '/fonts/notokr-thin',
-  })}
-  ${fontFace({
-    fontFamily: 'Noto Sans KR',
-    fontWeight: 400,
-    fontFilePath: '/fonts/notokr-regular',
-  })}
-  ${fontFace({
-    fontFamily: 'Noto Sans KR',
-    fontWeight: 700,
-    fontFilePath: '/fonts/notokr-bold',
   })}
 
   .iframe-video-wrapper {
