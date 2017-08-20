@@ -144,14 +144,13 @@ class ArchiveRoute extends Component {
         <NavBar />
         <PostContentWrapper>
           <Title>Archive</Title>
-
           {this.postByYear.map(item =>
             <YearArchive key={item.year}>
               <YearTitle>
                 {item.year}
               </YearTitle>
               {item.posts.map(post =>
-                <PostTitleLink to={post.fields.slug}>
+                <PostTitleLink key={post.fields.slug} to={post.fields.slug}>
                   {post.frontmatter.title}
                 </PostTitleLink>,
               )}

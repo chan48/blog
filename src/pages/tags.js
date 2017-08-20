@@ -8,8 +8,8 @@ import { rhythm } from '../utils/typography'
 import { PageWrapper, PostContentWrapper } from '../components/content-wrapper'
 import NavBar from '../components/nav-bar'
 import Footer from '../components/footer'
-
 import Tags from '../components/tags'
+import TagsTreepmap from '../components/TagsTreepmap'
 
 export type Tag = {
   name: string,
@@ -57,7 +57,7 @@ class TagsRoute extends Component {
         <NavBar />
         <PostContentWrapper>
           <Title>Tag</Title>
-          <Tags tags={tags} fontSize="1rem" />
+          <TagsTreepmap tags={this.tags} history={this.props.history} />
         </PostContentWrapper>
         <Footer />
       </PageWrapper>
