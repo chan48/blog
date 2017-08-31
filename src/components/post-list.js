@@ -96,6 +96,7 @@ class PostList extends Component {
                     backgroundImage: `url(${post.node.frontmatter.mainImage})`,
                   }}
                 />}
+
               <PostInfo>
                 <PostTitle>
                   {post.node.frontmatter.title}

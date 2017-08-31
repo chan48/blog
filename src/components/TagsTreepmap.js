@@ -100,7 +100,8 @@ const MapRect = props => {
         fill="#fff"
         fontSize={fontSize}
         width={width}
-        height={height}>
+        height={height}
+        onClick={handleClick}>
         <tspan>
           {trimmedName}
         </tspan>
