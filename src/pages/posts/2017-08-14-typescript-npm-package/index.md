@@ -7,7 +7,7 @@ mainImage: ""
 tags:
   - Typescript
   - Angular
-  - NPM
+  - npm
 draft: false
 ---
 
@@ -175,6 +175,3 @@ npm version 명령어를 사용하면 package.json에 명시된 버전을 자동
 그리고 내가 배포한 패키지의 다운로드 수가 적다 하더라도 불특정 다수에게 공개된다고 생각하니 코드 작성에 더 신중해지고 오류가 발생해도 빠르게 대처하게 되었다. 이는 자율적으로 하는 작업과 실무처럼 외부의 요구에 의해 하는 작업의 차이에서 왔을 것이다. 구글같은 회사에서 왜 직원들에게 일정 시간은 개인 프로젝트를 진행하게 하는지 그 이유를 제대로 알게 되었다고나 할까.
 
 이번에 개발한 패키지는 [ng2-simple-autocomplete](https://www.npmjs.com/package/ng2-simple-autocomplete)라는 이름을 가지고 NPM 저장소에 배포되어 있다.
-
-
-
