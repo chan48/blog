@@ -12,7 +12,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const tagPagesTemplate = path.resolve(`src/templates/tag-page.js`)
 
     graphql(
-      `
+    `
       {
         allMarkdownRemark(
           limit: 1000,
@@ -41,8 +41,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         }
       }
-    `,
-    ).then(result => {
+    `
+      ).then(result => {
       if (result.errors) {
         console.log(result.errors)
       }
@@ -89,17 +89,19 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
   if (node.internal.type === `File`) {
     const parsedFilePath = path.parse(node.absolutePath)
-    const isPostsFolder = parsedFilePath.dir.indexOf('pages/posts') > -1
+    const isPostsFolder = parsedFilePath.dir.indexOf('pages/posts') > -1;
 
-    const slug = isPostsFolder
-      ? `/${parsedFilePath.dir.split(`src/pages/posts/`)[1]}/`
-      : `/${parsedFilePath.dir.split(`src/pages/`)[1]}/`
+    const slug = isPostsFolder ?
+      `/${parsedFilePath.dir.split(`src/pages/posts/`)[1]}/`
+      :
+      `/${parsedFilePath.dir.split(`src/pages/`)[1]}/`
 
     createNodeField({
       node,
       name: `slug`,
-      value: `${isPostsFolder ? '/posts' : ''}${slug}`,
+      value: `${isPostsFolder ? '/posts' : '' }${slug}`
     })
+
   } else if (
     node.internal.type === `MarkdownRemark` &&
     typeof node.slug === `undefined`
@@ -116,7 +118,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     // 포스트 frontmatter에 tags 배열이 있으면 slug 필드를 추가한다.
     if (node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map(
-        tag => `/tags/${_.kebabCase(tag)}/`,
+        tag => `/tags/${_.kebabCase(tag)}/`
       )
       createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
     }
@@ -131,5 +133,5 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       break
   }
 
-  return config
+  return config;
 }

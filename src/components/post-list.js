@@ -40,18 +40,17 @@ const PostCard = styled.li`
   }
 `
 
-const MainImage = styled.div`
-  display: block;
-  width: 100%;
-  height: ${rhythm(6)};
-  margin: 0 auto;
-  border-bottom: 1px solid rgba(0, 0, 0, .09);
-  background-size: cover;
-  background-position: 50% 0;
-  background-repeat: no-repeat;
+const MainImageContainer = styled.div`
+  max-height: ${rhythm(6)};
+  overflow: hidden;
+  border-bottom: 1px solid ${styles.colors.border};
 
   ${styles.media.Phablet} {
-    height: ${rhythm(8)};
+    max-height: ${rhythm(8)};
+  }
+
+  & > img {
+    width: 100%;
   }
 `
 
@@ -91,11 +90,9 @@ class PostList extends Component {
           <PostCard key={post.node.fields.slug}>
             <Link to={post.node.fields.slug}>
               {post.node.frontmatter.mainImage &&
-                <MainImage
-                  style={{
-                    backgroundImage: `url(${post.node.frontmatter.mainImage})`,
-                  }}
-                />}
+                <MainImageContainer>
+                  <img src={post.node.frontmatter.mainImage} alt="" />
+                </MainImageContainer>}
 
               <PostInfo>
                 <PostTitle>

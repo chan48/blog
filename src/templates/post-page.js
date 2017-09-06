@@ -54,29 +54,6 @@ class BlogPostRoute extends Component {
     const siteMetadata = this.props.data.site.siteMetadata
     return (
       <PageWrapper>
-        <NavBar />
-        <PostContentWrapper>
-          <header>
-            <PostTitle>
-              {post.frontmatter.title}
-            </PostTitle>
-            <PostInfo>
-              {post.frontmatter.date} &middot; 읽기 {post.timeToRead}분
-            </PostInfo>
-            <TagsWrapper>
-              <Tags tags={post.frontmatter.tags} />
-            </TagsWrapper>
-          </header>
-
-          {/* post는 utils/typograyph.js 에서 사용하는 클래스네임이다 */}
-          <Post
-            className="post"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-          <div id="disqus_thread" />
-        </PostContentWrapper>
-        <Footer />
-
         <Helmet
           link={[
             {
@@ -128,6 +105,28 @@ class BlogPostRoute extends Component {
             Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
           `}</noscript>
         </Helmet>
+        <NavBar />
+        <PostContentWrapper>
+          <header>
+            <PostTitle>
+              {post.frontmatter.title}
+            </PostTitle>
+            <PostInfo>
+              {post.frontmatter.date} &middot; 읽기 {post.timeToRead}분
+            </PostInfo>
+            <TagsWrapper>
+              <Tags tags={post.frontmatter.tags} />
+            </TagsWrapper>
+          </header>
+
+          {/* post는 utils/typograyph.js 에서 사용하는 클래스네임이다 */}
+          <Post
+            className="post"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          <div id="disqus_thread" />
+        </PostContentWrapper>
+        <Footer />
       </PageWrapper>
     )
   }

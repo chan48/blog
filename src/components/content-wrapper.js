@@ -33,7 +33,6 @@ export const ContentWrapper = styled.div`
  */
 export const PostContentWrapper = ContentWrapper.extend`
   margin-top: ${rhythm(2)};
-  margin-bottom: ${rhythm(2)};
 
   ${styles.media.Tablet} {
     width: ${styles.sizes.postWidth};
