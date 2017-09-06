@@ -13,5 +13,5 @@
     "**/flow-typed/**": true,
     "**/.vscode/**": true,
     "**/public/**": true
-  }
+  },
 }

@@ -38,6 +38,7 @@ class TagsRoute extends Component {
     const allTags = R.flatten(
       allMarkdownRemark.edges.map(edge => edge.node.frontmatter.tags),
     )
+
     const allUniqTags = R.uniq(allTags)
     const tagCounts = R.countBy(t => R.toLower(t), allTags)
 

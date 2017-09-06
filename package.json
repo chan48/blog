@@ -35,6 +35,8 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "es6-object-assign": "^1.1.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
     "gatsby": "latest",
     "gatsby-link": "latest",
     "gatsby-plugin-catch-links": "latest",
@@ -81,7 +83,12 @@
     "typography": "^0.15.12"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "caniuse-db": "1.0.30000652",
+    "eslint": "^4.6.1",
+    "eslint-config-react-app": "^2.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-react": "^7.3.0",
     "flow-bin": "^0.50.0"
   },
   "jest": {
