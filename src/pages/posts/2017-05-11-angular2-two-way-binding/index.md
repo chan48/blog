@@ -11,9 +11,6 @@ path: "/posts/2017-05-11-angular-2-two-way-binding"
 draft: false
 ---
 
-![CSS Modules](./karina-carvalho-94650.jpg)
-*https://unsplash.com/@nickeedoo*
-
 ## one-way binding
 
 Angular 2(Angular >= 2.x, 이하 Angular로 표기)는 React.js, Vue.js처럼 데이터의 흐름이 단방향(one-way binding)이다. 최근 대부분의 모던 자바스크립트 프레임워크들은 단방향 데이터 연결을 지향하고 있다. 그 이유는 앱 구조를 보다 명확하게 할 수 있고 확실한 명령을 통해서만 앱 상태를 변경하기에 사이드 이펙트 발생을 줄이고 컴포넌트간의 데이터 흐름을 직관적으로 만들어주기 때문이다.

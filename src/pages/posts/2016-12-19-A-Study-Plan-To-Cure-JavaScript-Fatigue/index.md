@@ -21,8 +21,6 @@ path: "/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue"
 
 ---
 
-![react ecosystem](https://cdn-images-1.medium.com/max/1000/1*9aqEe1RQXAh77hA07VZN0w.png)
-
 많은 이들처럼 나도 최근 Jose Aguinaga의 글 ["How it feels to learn JavaScript in 2016"](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.5wjpn7svo)을 읽었다.
 
 

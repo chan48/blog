@@ -3,7 +3,7 @@ title: "Redux-Saga를 활용한 Redux 비동기 액션 처리"
 description: "사이드 이펙트를 효율적으로 관리할 수 있는 Redux 미들웨어 Redux-saga. 토스트 메시지를 표시하고 제거하는 과정을 Redux-saga를 사용해 간단히 구현한 예제를 제공"
 date: "2017-09-07"
 layout: post
-mainImage: "/images/post-main/2017-09-07-redux-saga-toast-control/Redux-Saga-Logo-Landscape.png"
+mainImage: ""
 tags:
   - React
   - Redux

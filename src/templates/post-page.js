@@ -22,6 +22,16 @@ const TagsWrapper = styled.div`margin-top: ${rhythm(1 / 2)};`
 
 const TimeToRead = styled.div``
 
+const MainImage = styled.div`
+  margin-top: ${rhythm(2)};
+  margin-left: -1.2rem;
+  margin-right: -1.2rem;
+
+  & > a {
+    width: 100%;
+  }
+`
+
 const Post = styled.article`
   margin-top: ${rhythm(2)};
   margin-bottom: ${rhythm(2)};
@@ -119,6 +129,11 @@ class BlogPostRoute extends Component {
             </TagsWrapper>
           </header>
 
+          {post.frontmatter.mainImage &&
+            <MainImage>
+              <img src={post.frontmatter.mainImage} alt="메인이미지" />
+            </MainImage>}
+
           {/* post는 utils/typograyph.js 에서 사용하는 클래스네임이다 */}
           <Post
             className="post"
@@ -154,6 +169,7 @@ export const pageQuery = graphql`
         tags
         date(formatString: "YYYY-MM-DD")
         description
+        mainImage
       }
     }
   }
