@@ -46,7 +46,7 @@ const MainImageContainer = styled.div`
   border-bottom: 1px solid ${styles.colors.border};
   background: url(${props => props.imgUrl}) no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 `
 
 const PostInfo = styled.div`padding: ${rhythm(3 / 4)} ${rhythm(1)};`

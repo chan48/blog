@@ -27,9 +27,16 @@ const MainImage = styled.div`
   margin-left: -1.2rem;
   margin-right: -1.2rem;
 
-  & > a {
+  & > img {
     width: 100%;
+    margin-bottom: 0;
   }
+`
+
+const MainImageAlt = styled.p`
+  text-align: right;
+  font-size: 0.85rem;
+  font-style: italic;
 `
 
 const Post = styled.article`
@@ -132,6 +139,11 @@ class BlogPostRoute extends Component {
           {post.frontmatter.mainImage &&
             <MainImage>
               <img src={post.frontmatter.mainImage} alt="메인이미지" />
+
+              {post.frontmatter.mainImageAlt &&
+                <MainImageAlt>
+                  {post.frontmatter.mainImageAlt}
+                </MainImageAlt>}
             </MainImage>}
 
           {/* post는 utils/typograyph.js 에서 사용하는 클래스네임이다 */}
@@ -170,6 +182,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         description
         mainImage
+        mainImageAlt
       }
     }
   }

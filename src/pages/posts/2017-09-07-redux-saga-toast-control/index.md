@@ -127,8 +127,8 @@ export default function* toast() {
 
 실제 구현 예제는 아래의 링크에서 확인 가능하다.
 
-[https://rhostem.github.io/redux-saga-toast-control/](https://rhostem.github.io/redux-saga-toast-control/)
-[(source)](https://github.com/rhostem/redux-saga-toast-control)
+[https://rhostem.github.io/redux-saga-toaster-control/](https://rhostem.github.io/redux-saga-toaster-control/)
+[(source)](https://github.com/rhostem/redux-saga-toaster-control)
 
 ## Redux-Thunk에서 Redux-Saga로
 
