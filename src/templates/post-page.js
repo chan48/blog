@@ -137,14 +137,16 @@ class BlogPostRoute extends Component {
           </header>
 
           {post.frontmatter.mainImage &&
-            <MainImage>
-              <img src={post.frontmatter.mainImage} alt="메인이미지" />
+            <div>
+              <MainImage>
+                <img src={post.frontmatter.mainImage} alt="메인이미지" />
+              </MainImage>
 
               {post.frontmatter.mainImageAlt &&
                 <MainImageAlt>
                   {post.frontmatter.mainImageAlt}
                 </MainImageAlt>}
-            </MainImage>}
+            </div>}
 
           {/* post는 utils/typograyph.js 에서 사용하는 클래스네임이다 */}
           <Post
